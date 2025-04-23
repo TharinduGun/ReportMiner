@@ -1,4 +1,4 @@
-env/
+rmvenv/
 __pycache__/
 *.pyc
 *.pyo
