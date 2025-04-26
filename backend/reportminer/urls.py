@@ -1,3 +1,9 @@
+from django.contrib import admin
+from django.urls import path, include
+from .views import home  # 🆕 Import the new home view
+
+
+
 """
 URL configuration for reportminer project.
 
@@ -22,4 +28,7 @@ urlpatterns = [
 
     # Route all ingestion API calls to apps.ingestion
     path('api/ingestion/', include('apps.ingestion.urls')),
+
+    #home page route
+    path('',home),
 ]
