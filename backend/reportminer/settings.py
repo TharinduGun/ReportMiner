@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     #thirdparty apps
     'rest_framework',
+    'django_extensions',  # Useful for development and debugging
 ]
 
 MIDDLEWARE = [
@@ -88,13 +89,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'reportminer',
-        'USER': 'tharindu',
-        'PASSWORD': 'tharindu123',
+        'USER': 'postgres',
+        'PASSWORD': 'fucklife@6999',
         'HOST': 'localhost',
         'PORT': '5432',
-    }
+     
 }
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

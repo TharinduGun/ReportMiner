@@ -1,6 +1,28 @@
-rmvenv/
+# Database
+*.sqlite3
+db.sqlite3
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-db.sqlite3
+rmvenv/
+
+# Environment files
+.env
+.env.local
+
+# Django
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
