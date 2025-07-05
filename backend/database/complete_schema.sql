@@ -2,11 +2,11 @@
 -- REPORTMINER POSTGRESQL SCHEMA FOR WINDOWS
 -- =================================================================
 
--- Enable extensions (may need to install pgvector separately)
+-- Enable extensions (may need to install pgvector separately????????????)
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pg_trgm";
 CREATE EXTENSION IF NOT EXISTS "unaccent";
--- CREATE EXTENSION IF NOT EXISTS "vector";  -- Uncomment when pgvector is installed
+CREATE EXTENSION IF NOT EXISTS "vector";  -- Uncomment when pgvector is ready
 
 -- =================================================================
 -- 1. DOCUMENTS TABLE

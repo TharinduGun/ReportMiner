@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from pgvector.django import VectorField
 
 class Document(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -56,6 +57,9 @@ class DocumentTextSegment(models.Model):
     embedding_model = models.CharField(max_length=50, default='text-embedding-ada-002')
     extracted_entities = models.TextField(default='{}', blank=True)
     
+    # adding vector field
+    embedding = VectorField(dimensions=1536, null=True, blank=True)
+
     # Position (text storage for JSON)
     bbox_json = models.TextField(blank=True, null=True)
     font_info_json = models.TextField(blank=True, null=True)
@@ -159,3 +163,4 @@ class FileUpload(models.Model): #choice for file types
 
     def __str__(self):   # String representation of the object (for admin panel and logs)
         return self.filename
+    

@@ -8,7 +8,7 @@ import json
 from typing import List, Dict, Any, Tuple, Optional
 from django.utils import timezone
 from .models import Document, DocumentTextSegment, DocumentTable, DocumentStructuredData, DocumentKeyValue
-
+from .vector_processor import VectorProcessor
 
 class TextProcessor:
     """Enhanced text processor that segments content and extracts structured data"""
@@ -47,7 +47,30 @@ class TextProcessor:
             
             # 2. Create text segments in database
             self._save_text_segments(document, segments)
+
+            # 2.5. Generate embeddings for text segments
+            try:
+                from .vector_processor import VectorProcessor
+                print(f"Generating embeddings for document: {document.filename}")
+                
+                vector_processor = VectorProcessor()
+                embedding_results = vector_processor.generate_embeddings_for_document(str(document.id))
+                
+                processing_results['embeddings_generated'] = embedding_results['processed_segments']
+                processing_results['embedding_errors'] = embedding_results['failed_segments']
+                
+                if embedding_results['errors']:
+                    processing_results['errors'].extend(embedding_results['errors'])
+                
+                print(f"✅ Generated embeddings for {embedding_results['processed_segments']} segments")
+                    
+            except Exception as e:
+                error_msg = f"Embedding generation failed: {str(e)}"
+                processing_results['errors'].append(error_msg)
+                processing_results['embeddings_generated'] = 0
+                print(f"❌ {error_msg}")
             
+
             # 3. Detect and extract tables
             tables = self._detect_tables(raw_text)
             processing_results['tables_detected'] = len(tables)
