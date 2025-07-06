@@ -1,0 +1,41 @@
+
+Sheet: Monthly Sales Data
+
+Month      Product A    Product B    Product C    Total
+January    45,000      32,000       28,000      105,000
+February   52,000      38,000       31,000      121,000
+March      48,000      35,000       29,000      112,000
+April      55,000      42,000       33,000      130,000
+May        58,000      45,000       35,000      138,000
+June       62,000      48,000       38,000      148,000
+July       65,000      51,000       40,000      156,000
+August     68,000      54,000       42,000      164,000
+September  71,000      57,000       44,000      172,000
+October    74,000      60,000       46,000      180,000
+November   77,000      63,000       48,000      188,000
+December   80,000      66,000       50,000      196,000
+Total      715,000     591,000      464,000     1,770,000
+
+Sheet: Summary Statistics
+
+Metric                Value
+Total Annual Revenue  1,770,000
+Average Monthly Revenue  147,500
+Best Performing Month    December
+Best Product             Product A
+Growth Rate              12.5%
+Market Share             15.2%
+Customer Count           2,500
+Average Order Value      708
+Return Rate              2.3%
+Customer Satisfaction    4.6
+
+Sheet: Regional Performance
+
+Region      Q1         Q2         Q3         Q4         Total
+North       95,000     125,000    145,000    165,000    530,000
+South       85,000     110,000    135,000    155,000    485,000
+East        75,000     100,000    120,000    140,000    435,000
+West        65,000     85,000     105,000    125,000    380,000
+Total       320,000    420,000    505,000    585,000    1,830,000
+            

@@ -154,3 +154,54 @@ REST_FRAMEWORK = {
 
 # openAI API key
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+# Embedding Configuration
+ENABLE_AUTO_EMBEDDINGS = True
+MAX_SEGMENTS_SYNC = 10
+EMBEDDING_MIN_TEXT_LENGTH = 50
+EMBEDDING_BATCH_SIZE = 5
+EMBEDDING_REQUEST_TIMEOUT = 30
+EMBEDDING_MAX_RETRIES = 3
+MAX_DAILY_EMBEDDING_CALLS = 10000
+SKIP_EMBEDDING_TYPES = ['header', 'footer']
+
+# Logging Configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'apps.ingestion.vector_processor': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'apps.ingestion.text_processor': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
