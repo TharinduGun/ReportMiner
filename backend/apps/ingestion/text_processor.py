@@ -50,19 +50,25 @@ class TextProcessor:
 
             # 2.5. Generate embeddings for text segments
             try:
-                from .vector_processor import VectorProcessor
-                print(f"Generating embeddings for document: {document.filename}")
-                
-                vector_processor = VectorProcessor()
-                embedding_results = vector_processor.generate_embeddings_for_document(str(document.id))
-                
-                processing_results['embeddings_generated'] = embedding_results['processed_segments']
-                processing_results['embedding_errors'] = embedding_results['failed_segments']
-                
-                if embedding_results['errors']:
-                    processing_results['errors'].extend(embedding_results['errors'])
-                
-                print(f"✅ Generated embeddings for {embedding_results['processed_segments']} segments")
+                if self._should_generate_embeddings(segments, document):
+                    from .vector_processor import VectorProcessor
+                    print(f"Generating embeddings for document: {document.filename}")
+                    
+                    vector_processor = VectorProcessor()
+                    embedding_results = vector_processor.generate_embeddings_for_document(str(document.id))
+                    
+                    processing_results['embeddings_generated'] = embedding_results['processed_segments']
+                    processing_results['embedding_errors'] = embedding_results['failed_segments']
+                    
+                    if embedding_results['errors']:
+                        processing_results['errors'].extend(embedding_results['errors'])
+                    
+                    print(f"✅ Generated embeddings for {embedding_results['processed_segments']} segments")
+                else:
+                    processing_results['embeddings_generated'] = 0
+                    processing_results['embedding_errors'] = 0
+                    print(f"⚠️ Skipped embeddings for cost optimization")   
+
                     
             except Exception as e:
                 error_msg = f"Embedding generation failed: {str(e)}"
@@ -105,27 +111,35 @@ class TextProcessor:
     def _segment_text(self, text: str) -> List[Dict[str, Any]]:
         """
         Segment text into logical chunks (paragraphs, headings, etc.)
-        
-        Args:
-            text: Raw text to segment
-            
-        Returns:
-            List of text segments with metadata
         """
         segments = []
         self.sequence_counter = 0
         
-        # Clean up the text
+        # Clean up the text (but preserve newlines)
         text = self._clean_text(text)
         
-        # Split by multiple newlines (paragraph breaks)
-        paragraphs = re.split(r'\n\s*\n', text)
+        # Try multiple splitting strategies
+        paragraphs = []
+        
+        # Strategy 1: Split by double newlines (preferred)
+        if '\n\n' in text:
+            paragraphs = re.split(r'\n\s*\n', text)
+        # Strategy 2: Split by single newlines (fallback)
+        elif '\n' in text:
+            paragraphs = text.split('\n')
+        # Strategy 3: Split by sentences (final fallback)
+        else:
+            paragraphs = re.split(r'[.!?]+\s*', text)
         
         for paragraph in paragraphs:
             paragraph = paragraph.strip()
-            if not paragraph:
+            if not paragraph or len(paragraph) < 50:  # 10 to 50 after embedding hihg risk
                 continue
-                
+
+            # Skip very short segments for Excel
+            if len(paragraph.split()) < 5:  # Skip segments with less than 5 words
+                continue
+
             # Determine segment type
             segment_type = self._classify_segment(paragraph)
             
@@ -150,14 +164,14 @@ class TextProcessor:
     
     def _clean_text(self, text: str) -> str:
         """Clean and normalize text content"""
-        # Remove excessive whitespace
-        text = re.sub(r'\s+', ' ', text)
+        # Remove excessive spaces and tabs, but KEEP newlines
+        text = re.sub(r'[ \t]+', ' ', text)  # Only collapse spaces/tabs
         
         # Remove page numbers and headers/footers (basic patterns)
         text = re.sub(r'Page \d+', '', text, flags=re.IGNORECASE)
         text = re.sub(r'\d+\s*of\s*\d+', '', text)
         
-        # Normalize line breaks
+        # Keep line breaks but normalize them
         text = text.replace('\r\n', '\n').replace('\r', '\n')
         
         return text.strip()
@@ -211,6 +225,31 @@ class TextProcessor:
         # Bulk create for efficiency
         DocumentTextSegment.objects.bulk_create(segment_objects)
     
+
+
+    def _should_generate_embeddings(self, segments: List[Dict[str, Any]], document: Document) -> bool:
+        """Determine if embeddings should be generated for this document"""
+        from django.conf import settings
+        
+        # Check if embeddings are enabled
+        if not getattr(settings, 'ENABLE_AUTO_EMBEDDINGS', True):
+            return False
+        
+        # Skip if document has too many segments
+        max_segments = getattr(settings, 'MAX_SEGMENTS_PER_DOCUMENT', 50)
+        if len(segments) > max_segments:
+            if getattr(settings, 'SKIP_LARGE_DOCUMENTS', True):
+                print(f"⚠️ Skipping embeddings for {document.filename}: {len(segments)} segments > {max_segments} limit")
+                return False
+        
+        # Skip certain file types for embeddings
+        if document.file_type == 'xlsx' and len(segments) > 30:
+            print(f"⚠️ Skipping embeddings for large Excel file: {document.filename}")
+            return False
+    
+        return True
+    
+
     def _detect_tables(self, text: str) -> List[Dict[str, Any]]:
         """
         Detect table-like structures in text

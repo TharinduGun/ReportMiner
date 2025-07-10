@@ -140,6 +140,7 @@ class DocumentKeyValue(models.Model):
     confidence_score = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
     is_verified = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    data_type = models.CharField(max_length=20, default='text')  # New field for data type
 
     class Meta:
         managed = True

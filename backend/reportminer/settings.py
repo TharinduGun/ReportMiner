@@ -155,15 +155,20 @@ REST_FRAMEWORK = {
 # openAI API key
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-# Embedding Configuration
+# Embedding Configuration - COST OPTIMIZED
 ENABLE_AUTO_EMBEDDINGS = True
-MAX_SEGMENTS_SYNC = 10
-EMBEDDING_MIN_TEXT_LENGTH = 50
-EMBEDDING_BATCH_SIZE = 5
+MAX_SEGMENTS_SYNC = 5              # Reduce from 10 to 5
+EMBEDDING_MIN_TEXT_LENGTH = 100    # Increase from 50 to 100
+EMBEDDING_BATCH_SIZE = 3           # Reduce from 5 to 3
 EMBEDDING_REQUEST_TIMEOUT = 30
-EMBEDDING_MAX_RETRIES = 3
-MAX_DAILY_EMBEDDING_CALLS = 10000
-SKIP_EMBEDDING_TYPES = ['header', 'footer']
+EMBEDDING_MAX_RETRIES = 2          # Reduce from 3 to 2
+MAX_DAILY_EMBEDDING_CALLS = 300    # Reduce from 10000 to 300
+SKIP_EMBEDDING_TYPES = ['header', 'footer', 'list_item']  # Add list_item
+
+# Add new cost control settings
+EMBEDDING_COST_ALERT = 100         # Alert at 100 calls
+MAX_SEGMENTS_PER_DOCUMENT = 50     # Limit segments per document
+SKIP_LARGE_DOCUMENTS = True        # Skip documents with too many segments
 
 # Logging Configuration
 LOGGING = {

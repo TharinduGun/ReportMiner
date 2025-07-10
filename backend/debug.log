@@ -1,0 +1,1502 @@
+INFO 2025-07-10 10:19:59,957 vector_processor 11008 968 Processing 1 segments for document: new_test_doc.pdf
+INFO 2025-07-10 10:19:59,957 vector_processor 11008 968 Generating embeddings for 1 segments
+INFO 2025-07-10 10:19:59,957 vector_processor 11008 968 Truncated text to 8000 characters
+DEBUG 2025-07-10 10:20:02,011 vector_processor 11008 968 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 10:20:02,019 vector_processor 11008 968 Generated embedding for segment 8f7fa5cd-b1ab-42ae-91c6-7681dbb48518 in 2.06s
+INFO 2025-07-10 10:20:02,019 vector_processor 11008 968 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 10:20:02,021 vector_processor 11008 968 Updated embedding status for document new_test_doc.pdf: completed
+INFO 2025-07-10 10:22:47,625 vector_processor 11008 30060 Processing 1 segments for document: new_test_doc.pdf
+INFO 2025-07-10 10:22:47,625 vector_processor 11008 30060 Generating embeddings for 1 segments
+INFO 2025-07-10 10:22:47,625 vector_processor 11008 30060 Truncated text to 8000 characters
+DEBUG 2025-07-10 10:22:50,592 vector_processor 11008 30060 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 10:22:50,597 vector_processor 11008 30060 Generated embedding for segment f92773da-5afe-47bc-9ee5-d64a45d1e352 in 2.97s
+INFO 2025-07-10 10:22:50,597 vector_processor 11008 30060 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 10:22:50,598 vector_processor 11008 30060 Updated embedding status for document new_test_doc.pdf: completed
+INFO 2025-07-10 10:23:22,063 vector_processor 11008 30060 Processing 1 segments for document: new_test_doc.pdf
+INFO 2025-07-10 10:23:22,064 vector_processor 11008 30060 Generating embeddings for 1 segments
+INFO 2025-07-10 10:23:22,064 vector_processor 11008 30060 Truncated text to 8000 characters
+DEBUG 2025-07-10 10:23:23,522 vector_processor 11008 30060 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 10:23:23,528 vector_processor 11008 30060 Generated embedding for segment 7f2d3df7-a733-4b8a-b258-9f416e17f708 in 1.46s
+INFO 2025-07-10 10:23:23,528 vector_processor 11008 30060 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 10:23:23,530 vector_processor 11008 30060 Updated embedding status for document new_test_doc.pdf: completed
+INFO 2025-07-10 10:44:20,599 vector_processor 29324 1780 Processing 1 segments for document: new_test_doc.pdf
+INFO 2025-07-10 10:44:20,599 vector_processor 29324 1780 Generating embeddings for 1 segments
+INFO 2025-07-10 10:44:20,599 vector_processor 29324 1780 Truncated text to 8000 characters
+DEBUG 2025-07-10 10:44:23,000 vector_processor 29324 1780 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 10:44:23,005 vector_processor 29324 1780 Generated embedding for segment c641e7cc-bde9-40e4-8987-3af7cc93e523 in 2.41s
+INFO 2025-07-10 10:44:23,005 vector_processor 29324 1780 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 10:44:23,055 vector_processor 29324 1780 Updated embedding status for document new_test_doc.pdf: completed
+INFO 2025-07-10 12:37:27,505 vector_processor 18284 18296 Processing 1 segments for document: test_excel.xlsx
+INFO 2025-07-10 12:37:27,506 vector_processor 18284 18296 Generating embeddings for 1 segments
+INFO 2025-07-10 12:37:27,507 vector_processor 18284 18296 Truncated text to 8000 characters
+DEBUG 2025-07-10 12:37:28,991 vector_processor 18284 18296 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 12:37:29,020 vector_processor 18284 18296 Generated embedding for segment 099378ee-cdc5-482c-82ca-bfd20e59e2e9 in 1.51s
+INFO 2025-07-10 12:37:29,020 vector_processor 18284 18296 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 12:37:29,023 vector_processor 18284 18296 Updated embedding status for document test_excel.xlsx: completed
+INFO 2025-07-10 12:52:25,631 vector_processor 18284 6996 Processing 1 segments for document: test_word.docx
+INFO 2025-07-10 12:52:25,631 vector_processor 18284 6996 Generating embeddings for 1 segments
+DEBUG 2025-07-10 12:52:27,931 vector_processor 18284 6996 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 12:52:27,976 vector_processor 18284 6996 Generated embedding for segment ce402c56-a8ea-462a-bae8-110d8e2bc87d in 2.34s
+INFO 2025-07-10 12:52:27,977 vector_processor 18284 6996 Batch processing complete: 1 processed, 0 failed, 0 skipped
+INFO 2025-07-10 12:52:27,979 vector_processor 18284 6996 Updated embedding status for document test_word.docx: completed
+INFO 2025-07-10 13:16:34,470 vector_processor 13728 36412 Processing 9 segments for document: test_word.docx
+DEBUG 2025-07-10 13:16:34,470 vector_processor 13728 36412 Skipped segment 6de8b720-b489-48e8-a401-6f80f88f1f0f: Text too short (11 chars)
+INFO 2025-07-10 13:16:34,471 vector_processor 13728 36412 Generating embeddings for 8 segments
+DEBUG 2025-07-10 13:16:37,999 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:38,004 vector_processor 13728 36412 Generated embedding for segment 25ce8b3c-ec14-4fb1-915b-1922f53998b6 in 3.53s
+DEBUG 2025-07-10 13:16:39,270 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:39,273 vector_processor 13728 36412 Generated embedding for segment 93601e82-cd0a-41ca-94e5-cff0fd78ff27 in 1.27s
+DEBUG 2025-07-10 13:16:40,470 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:40,472 vector_processor 13728 36412 Generated embedding for segment a156e0b0-ba4b-4fc2-8aab-92dbf99a457e in 1.20s
+DEBUG 2025-07-10 13:16:41,617 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:41,619 vector_processor 13728 36412 Generated embedding for segment e0304d3f-a292-4bd9-88fc-bf42243c294a in 1.15s
+DEBUG 2025-07-10 13:16:42,993 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:42,996 vector_processor 13728 36412 Generated embedding for segment 061cb124-ee19-4bdb-96fc-52f1f699499a in 1.38s
+DEBUG 2025-07-10 13:16:44,706 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:44,709 vector_processor 13728 36412 Generated embedding for segment 9b16b851-ebc4-47f9-91d1-885f78c7bace in 1.21s
+DEBUG 2025-07-10 13:16:46,268 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:46,320 vector_processor 13728 36412 Generated embedding for segment 84cb0c82-dc0a-4767-952b-026d411fcc1c in 1.61s
+DEBUG 2025-07-10 13:16:47,881 vector_processor 13728 36412 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:16:47,884 vector_processor 13728 36412 Generated embedding for segment 0b616f97-090a-4a20-930c-1a4436fbd472 in 1.56s
+INFO 2025-07-10 13:16:47,884 vector_processor 13728 36412 Batch processing complete: 8 processed, 0 failed, 1 skipped
+INFO 2025-07-10 13:16:47,934 vector_processor 13728 36412 Updated embedding status for document test_word.docx: partial
+INFO 2025-07-10 13:30:07,028 vector_processor 13728 32000 Processing 5002 segments for document: test_excel.xlsx
+DEBUG 2025-07-10 13:30:07,028 vector_processor 13728 32000 Skipped segment b49a4319-ef5d-4a85-b006-d6aa3fd32c54: Text too short (13 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 82bf26e0-7d8e-4354-910b-0f3659ff5d56: Text too short (44 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 0800f577-0ce0-4b39-8bb1-8a248392ec32: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment da70acfe-531f-49fd-95b8-8c7c0b3b5a1b: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 3ef39545-003c-45a4-9760-91db30c42db1: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 22f8f0e6-d0e0-42e2-a924-9bceef1d5ce8: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 271f0573-e2d9-4529-94b4-f2e174435027: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment ed42dadb-5de5-477d-9408-f8e81b657d30: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment dc7c9b58-8bf5-4b64-9375-8f014ad8a944: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment fd50ddb9-46f0-4881-b119-0ade027381bb: Text too short (45 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 36ffa0fb-7746-40bc-8901-2114639badb8: Text too short (45 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 568a5079-3a7e-419c-a66c-cf0d3d09a267: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 95969f80-d8ac-4356-8c17-a43082820f6b: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 52c6f598-9b66-4621-8054-6118623bba80: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 6e5813ed-da5f-4abc-a6f8-32fee73b2217: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment c59c667a-a86a-4a6e-a9e0-01f3af9e84a4: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 038f6531-eebe-4809-8ac2-851153389fc2: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 9a5846ff-c4b3-41d1-a9e4-f0f5a1809b61: Text too short (48 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 756e2e81-c3b8-4bcc-980a-da7aedd42ed8: Text too short (45 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment 7acef332-ff67-4f67-aaea-2b50a12876eb: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,029 vector_processor 13728 32000 Skipped segment a4163f21-bbb5-4d9b-b1a2-b317f32a64d3: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 1527dbd6-0e22-4fa5-8b42-00936b062520: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 692f633b-012c-4c24-afe6-f5c969c4b176: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 72b96e42-a345-4194-ae3d-0310d44da1f1: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 0455ec3d-bd7d-4806-90a4-c95e835074f9: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment dba46766-169e-4452-9e09-b1e9ea82edf5: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 32582614-2976-4d68-9232-1acca42550da: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment d47045f0-45ec-4612-808c-d4aeba67a3ed: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 2d792bd2-b5d5-4947-b432-347cabeda1df: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 1b052aa8-3458-456e-8a9b-ffc5116082d8: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 9cdabbba-abd7-4d4e-85d4-25ef1117f061: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 59eeafbf-c205-45c5-8909-055cbb108b66: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 47031ad7-5ed1-4f62-89ad-045be2ee5748: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 913f1cf1-adae-4a1d-bfe4-a1579073dc33: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment dcf973a1-999d-4463-ac0e-d3a32ed94cd4: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment d0a45567-3cff-44f1-b584-02cb101bb260: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,030 vector_processor 13728 32000 Skipped segment 1c9014be-237e-4c76-9ce8-57f0640822c9: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 563d0142-df36-4f01-8f6d-e9fd969bb6bb: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 46ea7da4-a6c3-44f3-8e05-4029d6b97562: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 097877d8-855c-4b46-9e9d-0775b63464b8: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment d7c76afa-6409-4280-996e-bc63f151480c: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 1bbeca50-de1c-4e2f-b7ec-9850d3b98732: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment db373f5c-5b10-41fa-b3e2-57cc859d3f18: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment dc6bd657-b2d7-450e-8a48-365ddbdf70f4: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment bbc635b6-2274-49c9-b608-d65f057916ab: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment a5cb356d-c893-40fd-8f75-8453f316e805: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 05ddab97-8348-46f5-9479-00fa1473cb3f: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment d0d21469-ec4f-4ec0-adae-39899d608acb: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment ce4eb20c-cedb-4578-9e8a-58bb18b30b56: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 9d3d3bde-a710-4693-a8ae-fa3bd73a4e6f: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 602a6678-2bff-4cdb-b635-9bef3b751a9a: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment e2f072d1-e7c1-476f-84db-000377ac5bf3: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 1d2cac8e-3a8c-4bc9-8a49-9129021c01dd: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,031 vector_processor 13728 32000 Skipped segment 506bcb33-ec84-4f66-a750-8a0164b30661: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 1a241161-d194-4c6b-9aa3-ef96eb68203a: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 698cee94-f116-4bcf-957b-6529a29fe2bb: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 83bc9b57-c7cd-4f50-b4ec-7d6186a40418: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 30407530-b3f9-4fd2-8b01-4d1d89cb6f0a: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment d2232d2e-d6f0-41c1-b18d-f0e700acbfed: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 8947ecd8-0435-4f4a-bd53-464bb7eecbcd: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment d4e7f6fb-ab77-4f7a-9845-b23e4675de39: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 8d3a8c72-6667-48c3-a89c-8cf6227413f0: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 34e0bae2-2a2d-4512-9376-0d83d80c0dc2: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 0f7bd594-410e-4932-8810-39a613475434: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 589175eb-c291-4079-9878-1b478e8666a9: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 49866299-8789-485d-a8f6-119ef010630d: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 3744a91c-a857-43d8-a1e8-47c84131e3a5: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 9a278d9f-fadf-422e-a43e-092f17488d1e: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 39b29531-498c-4e29-bd4e-b92dd22ebc92: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 14133b97-e993-43ba-8390-bfe8939e6882: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 5e78f459-c826-4df5-a382-8f3d10eafea9: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 5260a9d6-0610-4f02-afa4-5fa44af2a99b: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 4ae44f5a-bfda-46c5-ad5a-0567497920fe: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 8a471b54-c7e6-4527-9067-077d6b1bc0e4: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 4660680e-5e9c-4d97-8980-e469f23a0a9c: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 8aeefbe5-e83a-4a1d-97f4-c9902159604c: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 02f824c4-ce03-47c2-a371-57857c1a048d: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment 1ddd23f5-0a30-4a5a-ac73-1c80f9d89328: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment bec92958-4adf-4240-a520-0c59c3b65c2a: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,032 vector_processor 13728 32000 Skipped segment acaf2b33-9768-45a0-9d36-3a317a70793e: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment c9d551a7-bca5-42c8-9cf0-e80628088600: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment 06776c34-2040-459d-81f8-f521c632785b: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment a2e069fe-5460-4b0d-8788-6f7ddec5f08f: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment 1ce556df-09b8-4c08-944e-26702c68db99: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment fba1b709-a44c-4525-965e-e28a88e3d4d1: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment c40992b7-71bf-48c4-b1e1-e2af6e4ffdec: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment 2870d781-2469-47f2-a77a-3b03978a3e41: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,033 vector_processor 13728 32000 Skipped segment 380d1b91-d0ec-4933-90ba-dd4af591bf8d: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 655819d0-f8e5-4c4b-96f2-b01a56b8113b: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment e9110669-9724-45d5-9e50-7f2cb0ac3001: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 97056dec-fe2d-42c9-b48b-22c38c14e532: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 7ff57b96-9c25-4e5c-a197-9175ecadccea: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 4df4f8b6-bee3-4410-8703-f1f3b14b087b: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 084832d4-310c-46d6-bf5a-a71bad5bfd88: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment e0ca039b-60f0-4d32-997a-4a6065f251a4: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 4e4edf51-8a29-43d5-9dbb-c6f930f4b100: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 8a87ed2a-cca3-4720-804b-7f2715cbfa37: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,034 vector_processor 13728 32000 Skipped segment 8264612f-b2ec-4541-acac-127a9f59eebc: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 8190dceb-6397-4986-8069-14da8a2e33b4: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 5436df1c-a31e-44d9-bf49-916dcfc8583a: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 13b4a437-6a60-4d73-96a2-a7b47ee02b75: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 160c8b36-ff9a-46cf-8e37-1c57599ff8af: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment f20b05d6-a11b-43b1-b3da-89ab5710581c: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment bb3fbd35-becd-4dba-b089-665161b6bb52: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 174ba217-7b54-4745-b068-03a310c6d1f7: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 91e678ab-b3f9-491e-8f6e-d416ba7b7dcd: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 18af1d38-9c25-4661-8c13-fd52518c0d91: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 8748a3d2-0689-44da-93a9-0c5f6012c7bd: Text too short (49 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment bb6f65a8-ad85-4913-a833-7332eeb9b1d7: Text too short (46 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 8cf73a6b-7d15-457e-a37c-4fad284dd088: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 49ce6c2e-5ed3-4a87-8db6-4dcf76d00fea: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,035 vector_processor 13728 32000 Skipped segment 1c3253c1-f140-4052-a9c2-1de94769c349: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 5b6ce908-6b03-4086-839a-25d837a3206b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 27a944d1-3682-4ba8-ad56-2bb362374e30: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 0c785fa6-92d2-4e6b-99c1-79f8b6e1c7b0: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 7a69406a-8089-44ff-85fe-21e4cae762de: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment c58e16e6-17ed-450c-81d4-20f934ae9ca6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 43f20ec2-bc8f-4d66-af89-19eecbf634e1: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment 57a03e8d-cc1d-4d9f-8244-7004173150b8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,036 vector_processor 13728 32000 Skipped segment c20a9a72-7598-4ce6-ae30-cb25f0c81ec4: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment dfca79bb-7db1-4afe-8bdf-4dc15276425b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment 6269fc29-ccc3-4fd2-9f9f-8ac340bd0e25: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment 134dd33b-5d41-456e-a4dd-cf4a9a7657fd: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment 4162c4c7-7a72-42e3-9189-5f712857dd29: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment 5870b175-14fd-4f0b-9fbd-9a9a6e20b12b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment ee48dcc2-3e3c-4273-bcfe-4ad9d91059a0: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment 193a2f97-95f8-4547-b574-1d837d165269: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,037 vector_processor 13728 32000 Skipped segment ead5b24f-350e-4ee2-a917-ef4101439526: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 903a0391-6c97-4325-95fc-bac553ead897: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 17941b9b-7a47-4d7d-8957-9b6260fe32c4: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment cac13ff1-f75b-46a0-89e4-039f4274f68f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 1f61a7dc-bb7a-442f-97b2-ec28ee238938: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 923e3b47-7548-4358-993b-9ab87b557a4f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment c30da2fe-3731-455b-b9ba-1473e1a20c00: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment a15bb740-16eb-4130-910e-38dd12a6bba4: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 272b90ae-6dad-4b36-a75a-3edb597ae895: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,038 vector_processor 13728 32000 Skipped segment 10b29e7d-d948-4a07-bc4f-39e5bb640078: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment 4a29e8a1-7b6f-4289-bb19-17ab10674a7a: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment d8cc25c1-5199-4309-9800-0cccbc4c4d5f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment 2a61cf38-4dd8-48bd-b080-7e2bdf4f82eb: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment 64d50d99-edbe-42d6-aadd-8d1395f331a3: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment bfebc6c0-961b-4a38-a3af-7a450bcba987: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment 613f4c8b-30bd-4d14-86ff-a761cbdce134: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,039 vector_processor 13728 32000 Skipped segment 18e5139c-4e95-459f-8a4d-9981d8161a92: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment a14d35b3-f232-4c58-b27f-dde0bc225e45: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 258d7251-6207-4ac3-add1-320b6d1f4e4b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 6b434b2c-9130-4f0b-b216-7cc8716e8a86: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 31a128f4-e791-4877-b7c0-c594358a7dd9: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment fa00a44f-7f03-4a4b-9109-6d62ff582a4c: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment d36ffd5f-1391-41f5-8a28-6bb397913bd9: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 0b536607-0482-41d6-ac66-f942b1cd28d1: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment a3dfcf45-05ae-4d37-b685-fc9c6e095a9f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment d3d1a5a4-6a6f-4b1f-86fd-8ebcbc13ae20: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 1efbf70f-6b32-4adc-a750-a4e774d0a551: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 0ceced34-5682-45aa-a537-26707ee4a0cd: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 549e5c99-065b-4527-a602-72ab03f48f0b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,040 vector_processor 13728 32000 Skipped segment 448806b9-765c-4920-9dd1-8e3e8d3c0cd6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,041 vector_processor 13728 32000 Skipped segment f9be0e62-44d8-4005-a798-291cc50795b6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,041 vector_processor 13728 32000 Skipped segment 2a9566d1-ac93-413a-a922-2ec534a15b00: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,043 vector_processor 13728 32000 Skipped segment d26775f7-55a0-4056-a3d5-a251a264ebe9: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,043 vector_processor 13728 32000 Skipped segment cf8799ca-41bd-4b5d-b996-dab383720521: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,043 vector_processor 13728 32000 Skipped segment 3152c0b2-9dcf-423d-9ee2-8edfe2b79df2: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,044 vector_processor 13728 32000 Skipped segment 6fc58233-1f3f-4345-978b-6c87bd7e56c6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,044 vector_processor 13728 32000 Skipped segment 093f9337-acfd-4445-8e5b-6b243ecf4cb0: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,044 vector_processor 13728 32000 Skipped segment edc61fa3-d08f-45f0-af33-cd5909d4f578: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,044 vector_processor 13728 32000 Skipped segment b5012ca2-b396-4307-929f-275e0688ed9b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,044 vector_processor 13728 32000 Skipped segment 52594c52-7294-46bd-af7a-3e3129a0f76a: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,045 vector_processor 13728 32000 Skipped segment 186dc369-53ae-4e37-965b-4da3cbe6a56f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,045 vector_processor 13728 32000 Skipped segment eca7f816-e18a-4e49-aa8a-112d17a73262: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,045 vector_processor 13728 32000 Skipped segment a09b70d8-a2bb-4af6-96f1-6eea796e3ac6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment 30974aff-7fca-4241-bdc4-b0ff566cab6d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment d366c741-3b19-48d4-ba73-24fddfed761d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment dfb31317-d3f4-4aa4-8467-07bed91b682c: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment 8c030655-cd84-4c5e-942f-85fd8bb53c61: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment 4c380b25-1886-4bfc-98ce-069ee12f955e: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment e06f886f-e3a1-4009-b30d-e1434f8d44c8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,046 vector_processor 13728 32000 Skipped segment 4f616890-056a-4660-b69e-ec0108097935: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment f7c871a0-dc6d-4ce6-ae03-58344f717d43: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment 10c5ca1d-ef4f-4e83-bf65-9a191bf5af03: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment 14647a6e-0b00-498f-a8a1-6738b2bbb030: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment 6a137345-f65b-48ff-9765-816ccafb7bd3: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment b17396fa-499d-471c-ac0c-e6ca812359a2: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment d6c1a74b-3a2d-48ae-abdf-8c1b9763b538: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,047 vector_processor 13728 32000 Skipped segment 45f41ba8-dcd3-4f00-af34-053037ea956d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment 550030fe-657b-4421-9e10-538457f8a3a6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment 6bdb4e07-83bb-4a4b-8dfe-ade193230452: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment ca590ac0-6e23-4043-8f80-55aea8296b04: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment d66fad44-9895-48e1-a9e5-8926af57c6a5: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment c6704494-f550-451d-b5d5-5d986b210350: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment 9ba197dc-9f66-41ac-be99-da9180d3f9d2: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment 9673941a-19c1-4d79-a32b-e33219aac31c: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,048 vector_processor 13728 32000 Skipped segment e04c55db-92f1-4767-9eec-3894dcc6ba16: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 5643e35c-5cd0-4c9d-83b8-fde6064ad082: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 358cee3c-2c23-4343-b669-4956f48f89cb: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment a3bd6d33-6f19-43e7-a099-a957fd5286d1: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 0224b3de-7896-4cc5-a653-5dfe58e55ef8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 6a210207-6afe-4d4f-8757-b09a1c04e2e8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 31913d44-72d3-4dc8-9a6c-b39167b0656d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment f33e7982-56d4-4bc8-be5c-b3f207124c2d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment a4acf3dd-644f-49de-be5a-2bffeb856c99: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,049 vector_processor 13728 32000 Skipped segment 0d82883d-7b68-4236-8db7-e0cd7c2ffe77: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment 9a6a21a8-db7c-4fef-a14c-86b3a5bc1a4a: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment e573fedf-f6ca-4c16-8a68-c377cd52d836: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment 279dbaca-3c1a-46c8-a6fa-55c2929870c6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment 01333ec9-9eef-4d03-ab67-13fa4b81d876: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment bd933c0c-a10f-4774-9979-8009abc069c8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment 5585ac3b-5e0a-4789-806e-32e616cc6104: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment ac402083-3faf-4f25-9746-01dc51f3801b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,050 vector_processor 13728 32000 Skipped segment 80c8edae-5b21-4b99-807c-7e491f361a1f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment e1eaa818-c0e4-4438-bb62-4d3a49a0ca81: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 11ed3693-271e-471b-b053-200619ca8a6d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 03853944-3526-4e6b-963e-5725e1f6ef7e: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment cabf54c7-44a1-45ef-83cf-6c7704ee9302: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 3e3c1bff-6a86-4793-94d7-948ed5ec7365: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 5f0a6a5a-66d8-4b99-9a6a-110eba9c1f07: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 52117ddf-9c66-4643-a38d-38f0dce0d034: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment b7c82a4a-2773-4a0e-8ded-938e5c99d23d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,051 vector_processor 13728 32000 Skipped segment 63f49988-a0ce-465e-98e6-c3fe60340e3f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,052 vector_processor 13728 32000 Skipped segment 20f5a726-5094-4f43-85b2-d0489f8dcfc8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,052 vector_processor 13728 32000 Skipped segment 1564cb22-e31b-4633-9cac-6cc066a520a6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,052 vector_processor 13728 32000 Skipped segment 25c2941a-c1f8-49d2-acfa-4cf332f5a7fc: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 75f67714-c5aa-4295-b322-43b71e26335b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment d183cab3-af1d-45a0-b88e-85246e942e85: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 1236836c-874a-46ed-aedb-3ce2622aa542: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 7f707800-ab5e-4865-a450-3385554bc798: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 229f936d-e057-487a-a1cb-f2b0bf6c37a8: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 7e3d08fd-1140-444d-a7e2-d52518a6f8a5: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment e167a85d-ca5a-46df-8709-ca0031edaef2: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 972e58dc-b780-4dd0-a55e-c83574c59def: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 94e1e759-4299-472e-afc8-7d84d1507934: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 70356dd8-4f3b-4585-81dc-27fc03a37b28: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment 6ded6404-1e8b-4ed8-99b4-ef0d9602748b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,053 vector_processor 13728 32000 Skipped segment ccfb55c8-1cfa-432c-b6dd-22f84c9e2b05: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,054 vector_processor 13728 32000 Skipped segment b555e0f9-6922-4a4c-a638-d02175f50045: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment d159ad0f-2754-422f-8d33-56492cf9cd3d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment 0eac6572-03d8-4460-b189-4cc1b222ce4c: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment df1ef697-b6db-41e3-ab7b-35b2e9fe5d60: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment 7d5bdc4a-8413-4e0b-80a6-fa0a147aa971: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment a5370ac5-350c-4673-94d9-5b715315bffc: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment 8572328d-2cfa-419e-bbac-a7163602aa9f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment e59f3853-f3a6-4c06-8528-b3e2b8544040: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment f84490b9-ebeb-4316-9742-7ededc62e31b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,055 vector_processor 13728 32000 Skipped segment 4701ae78-6b42-4f92-9e80-285547aff274: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 70f65316-e702-410c-ae6d-0b35f9fa5a81: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 9fc4cdf6-5530-49a0-bff7-d30cf6da2303: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment e5d07eeb-c838-43b3-983a-4f2a9850759b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 64b43191-a00d-473c-abd4-0bd37030e008: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 6468c423-f3e5-4b1c-b6ff-7c7065fbf268: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment bb1ffd8a-83c6-46c4-a2ae-6867f19daae6: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment dd2c2003-850f-4f0d-9c6c-3f24a70a4446: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 9078d6ae-dd20-41a8-8b9f-e0a9d9a3c0ea: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment c73cdc75-1a1c-4b31-931d-57b91ed9ecd1: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment 3b638c78-42bc-4e59-829f-4628d6ab2f50: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,056 vector_processor 13728 32000 Skipped segment e5d25b11-7542-4da5-a301-9bb61df6ddc5: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,057 vector_processor 13728 32000 Skipped segment 8fea21c4-fa89-4a23-b9f5-defc07d95211: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,057 vector_processor 13728 32000 Skipped segment c282a6f2-6401-446c-8bae-f03cdbdb9d7b: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,057 vector_processor 13728 32000 Skipped segment e54a80b2-7a2c-49f8-b06c-583f314fc53c: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,057 vector_processor 13728 32000 Skipped segment 13ae5f82-e15d-432e-b199-4dd993118d54: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment ef996f5a-135a-4d58-b837-4bfbbe3f4bee: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment a12de03f-eb1d-41d5-8e8d-5c279432a06e: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment 507aaf15-ad0b-4ba1-a8f1-ec6ebd47cc36: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment d936eba6-42b3-4abf-b2d2-ff8490fec497: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment 39801e64-4c14-4b18-944c-35eecbeffcf3: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment dfa2719d-0643-4c37-96c7-a91d05f600ba: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment c405301b-dfea-46d8-b738-4f2c5d86734f: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,058 vector_processor 13728 32000 Skipped segment 8983f471-0c2d-4e31-bc39-c08b80264f8d: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,059 vector_processor 13728 32000 Skipped segment cb76b2d5-e075-4048-9c88-17cf3a659b58: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,059 vector_processor 13728 32000 Skipped segment 35042dcf-4870-4df1-bf55-b56306125349: Text too short (47 chars)
+DEBUG 2025-07-10 13:30:07,059 vector_processor 13728 32000 Skipped segment 7142555d-f761-4d29-bb4c-af18794223e9: Text too short (47 chars)
+INFO 2025-07-10 13:30:07,059 vector_processor 13728 32000 Generating embeddings for 4733 segments
+DEBUG 2025-07-10 13:30:08,462 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:08,465 vector_processor 13728 32000 Generated embedding for segment d72fd52b-8f1a-4fec-9b7c-64b134f12fb9 in 1.41s
+DEBUG 2025-07-10 13:30:09,393 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:09,395 vector_processor 13728 32000 Generated embedding for segment b5c4fdc8-f47e-4a12-ace3-246b90fb81a6 in 0.93s
+DEBUG 2025-07-10 13:30:10,915 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:10,918 vector_processor 13728 32000 Generated embedding for segment cf50d414-9f36-4333-b09b-e72bcf462f68 in 1.52s
+DEBUG 2025-07-10 13:30:11,936 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:11,937 vector_processor 13728 32000 Generated embedding for segment 46ef13a7-d9ee-4cdd-9a10-c51a7f200a70 in 1.02s
+DEBUG 2025-07-10 13:30:12,983 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:12,986 vector_processor 13728 32000 Generated embedding for segment d345708a-f750-483a-b360-a50a975a4ab8 in 1.05s
+DEBUG 2025-07-10 13:30:15,537 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:15,590 vector_processor 13728 32000 Generated embedding for segment 575d3013-afe7-4ca8-a8b5-5114ca7541d9 in 2.10s
+DEBUG 2025-07-10 13:30:16,620 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:16,623 vector_processor 13728 32000 Generated embedding for segment 94697491-e41c-4c0d-b7ec-317bec46d5ef in 1.03s
+DEBUG 2025-07-10 13:30:18,554 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:18,578 vector_processor 13728 32000 Generated embedding for segment 2427f576-2dc0-482c-a65a-c7ce10d50ee2 in 1.96s
+DEBUG 2025-07-10 13:30:19,591 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:19,594 vector_processor 13728 32000 Generated embedding for segment a83652a0-49d4-477a-b59b-b0cd42c3f871 in 1.02s
+DEBUG 2025-07-10 13:30:21,072 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:21,126 vector_processor 13728 32000 Generated embedding for segment a75cdbc0-7602-4a3e-b4a1-393bd633ced2 in 1.53s
+DEBUG 2025-07-10 13:30:22,708 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:22,711 vector_processor 13728 32000 Generated embedding for segment 4c4ee411-93af-4c3f-9165-d3c503735a0a in 1.08s
+DEBUG 2025-07-10 13:30:23,075 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:23,076 vector_processor 13728 32000 Generated embedding for segment d8d18998-7878-4722-9564-66fdcafee06d in 0.37s
+DEBUG 2025-07-10 13:30:23,412 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:23,414 vector_processor 13728 32000 Generated embedding for segment 0a75503d-f9cc-4261-9774-a1e39a1e5514 in 0.34s
+DEBUG 2025-07-10 13:30:24,536 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:24,538 vector_processor 13728 32000 Generated embedding for segment 2f78df42-4102-4b25-8bf7-5ae8deb10981 in 1.12s
+DEBUG 2025-07-10 13:30:24,951 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:24,953 vector_processor 13728 32000 Generated embedding for segment 43189e13-e561-4439-8924-45a7ea7e9b48 in 0.42s
+DEBUG 2025-07-10 13:30:27,086 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:27,090 vector_processor 13728 32000 Generated embedding for segment bff9586c-159d-4a6a-a084-ac27e5176f1c in 1.64s
+DEBUG 2025-07-10 13:30:27,432 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:27,438 vector_processor 13728 32000 Generated embedding for segment 547cb78b-77ef-4ebe-8fca-a486cb4a31d1 in 0.35s
+DEBUG 2025-07-10 13:30:30,006 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:30,009 vector_processor 13728 32000 Generated embedding for segment 2c3cbf93-e1c7-49ed-9abb-830c31a7ba34 in 2.57s
+DEBUG 2025-07-10 13:30:30,535 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:30,537 vector_processor 13728 32000 Generated embedding for segment 5ccd268e-6b2e-4839-a30f-20e27c694292 in 0.53s
+DEBUG 2025-07-10 13:30:30,988 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:30,992 vector_processor 13728 32000 Generated embedding for segment 6f23b9fd-80c0-4ffc-be13-5c30c2627869 in 0.45s
+DEBUG 2025-07-10 13:30:31,924 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:31,926 vector_processor 13728 32000 Generated embedding for segment 42329d62-8a0b-4889-a855-88d8424ee155 in 0.43s
+DEBUG 2025-07-10 13:30:32,317 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:32,320 vector_processor 13728 32000 Generated embedding for segment e0fdf42a-e77a-4cc7-9237-db01609725e6 in 0.39s
+DEBUG 2025-07-10 13:30:32,662 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:32,663 vector_processor 13728 32000 Generated embedding for segment 3986aff0-521a-43d2-a517-a96a07c1f7c4 in 0.34s
+DEBUG 2025-07-10 13:30:32,998 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:33,000 vector_processor 13728 32000 Generated embedding for segment a4df98cb-ab8b-43e2-a048-a077b9574f7a in 0.34s
+DEBUG 2025-07-10 13:30:33,413 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:33,416 vector_processor 13728 32000 Generated embedding for segment 71d1e784-3fe2-47eb-b662-f2a7974a4d72 in 0.42s
+DEBUG 2025-07-10 13:30:34,279 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:34,281 vector_processor 13728 32000 Generated embedding for segment 15b3c816-c545-4c1f-b7e9-98eba7f48607 in 0.37s
+DEBUG 2025-07-10 13:30:35,862 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:35,865 vector_processor 13728 32000 Generated embedding for segment 9232c3b1-bc9c-4530-adad-a88d6b3f49ac in 1.58s
+DEBUG 2025-07-10 13:30:36,249 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:36,251 vector_processor 13728 32000 Generated embedding for segment 2f79acc1-4ed2-4c17-8aff-dcf22b30a13b in 0.39s
+DEBUG 2025-07-10 13:30:36,616 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:36,620 vector_processor 13728 32000 Generated embedding for segment f7ee829e-fa70-4a64-b534-e76eb791b7f8 in 0.37s
+DEBUG 2025-07-10 13:30:37,062 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:37,064 vector_processor 13728 32000 Generated embedding for segment 61003fbe-b2eb-4585-b17a-8a8d29dc4643 in 0.44s
+DEBUG 2025-07-10 13:30:38,492 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:38,495 vector_processor 13728 32000 Generated embedding for segment 52aa3c25-794f-4c99-964b-7cfc32cf84dd in 0.93s
+DEBUG 2025-07-10 13:30:41,908 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:41,911 vector_processor 13728 32000 Generated embedding for segment 7a83611f-fe3d-41d2-8b24-91c24b5acf13 in 3.42s
+DEBUG 2025-07-10 13:30:42,451 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:42,453 vector_processor 13728 32000 Generated embedding for segment 790030b0-9dee-4e12-8651-fe4b99f15f00 in 0.54s
+DEBUG 2025-07-10 13:30:42,836 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:42,838 vector_processor 13728 32000 Generated embedding for segment 6c805096-31e0-44b7-b5df-9cda2d059d3d in 0.38s
+DEBUG 2025-07-10 13:30:44,831 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:44,834 vector_processor 13728 32000 Generated embedding for segment 643f64df-de63-4803-bb69-a59b1586c146 in 2.00s
+DEBUG 2025-07-10 13:30:45,703 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:45,705 vector_processor 13728 32000 Generated embedding for segment 9549e68f-5083-4461-95d7-2c6b98d496af in 0.37s
+DEBUG 2025-07-10 13:30:46,088 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:46,142 vector_processor 13728 32000 Generated embedding for segment faf38196-8ccd-4cb7-abf5-52e2c7c55066 in 0.44s
+DEBUG 2025-07-10 13:30:46,864 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:46,866 vector_processor 13728 32000 Generated embedding for segment 604ffa2d-529e-4314-81db-f788524c41c1 in 0.72s
+DEBUG 2025-07-10 13:30:47,326 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:47,330 vector_processor 13728 32000 Generated embedding for segment e474c719-44dd-41d3-bc43-063a23684e71 in 0.46s
+DEBUG 2025-07-10 13:30:47,866 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:47,893 vector_processor 13728 32000 Generated embedding for segment 65a620e0-e3f5-4b92-a430-1ab1a9c022c3 in 0.56s
+DEBUG 2025-07-10 13:30:48,729 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:48,731 vector_processor 13728 32000 Generated embedding for segment 7175683f-9285-4676-8879-2989fe713c27 in 0.34s
+DEBUG 2025-07-10 13:30:49,059 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:49,062 vector_processor 13728 32000 Generated embedding for segment abea47cd-9a4b-4d52-9bcf-c11e00ca6742 in 0.33s
+DEBUG 2025-07-10 13:30:49,409 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:49,411 vector_processor 13728 32000 Generated embedding for segment d55189fe-b8de-46e8-a9e4-9d03be1b9b51 in 0.35s
+DEBUG 2025-07-10 13:30:50,587 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:50,591 vector_processor 13728 32000 Generated embedding for segment e9729d3f-214f-4d26-bb4b-2d5a9343579b in 1.18s
+DEBUG 2025-07-10 13:30:50,988 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:50,993 vector_processor 13728 32000 Generated embedding for segment 718fe1c4-0c54-49f2-ad02-89ae86fa71cc in 0.40s
+DEBUG 2025-07-10 13:30:52,176 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:52,181 vector_processor 13728 32000 Generated embedding for segment 8b155143-e7f4-41f1-ab63-22cb0e334b95 in 0.69s
+DEBUG 2025-07-10 13:30:52,555 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:52,557 vector_processor 13728 32000 Generated embedding for segment 88ea7b62-605b-4b30-b10b-c55e7e7b4517 in 0.38s
+DEBUG 2025-07-10 13:30:52,899 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:52,901 vector_processor 13728 32000 Generated embedding for segment d5a9e55d-4f5b-4824-a90b-7400989b5a15 in 0.34s
+DEBUG 2025-07-10 13:30:53,239 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:53,241 vector_processor 13728 32000 Generated embedding for segment e68b0ec5-9eee-40c6-a25f-16bd771d1f1d in 0.34s
+DEBUG 2025-07-10 13:30:53,644 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:53,646 vector_processor 13728 32000 Generated embedding for segment c9a0821c-d168-4366-93e8-ab015e1a723b in 0.41s
+DEBUG 2025-07-10 13:30:54,526 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:54,529 vector_processor 13728 32000 Generated embedding for segment 40deb010-3dc5-417c-9d39-257129ced625 in 0.38s
+DEBUG 2025-07-10 13:30:54,953 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:54,955 vector_processor 13728 32000 Generated embedding for segment b865205f-7fc4-4a58-bde6-e0ebc735fe4d in 0.43s
+DEBUG 2025-07-10 13:30:55,495 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:55,498 vector_processor 13728 32000 Generated embedding for segment 7d7313c4-197a-45ff-b8fb-2e91d65ded61 in 0.54s
+DEBUG 2025-07-10 13:30:55,936 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:55,939 vector_processor 13728 32000 Generated embedding for segment ca8861c7-a40d-44cf-a45e-9916b596ab79 in 0.44s
+DEBUG 2025-07-10 13:30:56,441 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:56,445 vector_processor 13728 32000 Generated embedding for segment 919a609d-d257-4f7a-81ac-557833c10c30 in 0.51s
+DEBUG 2025-07-10 13:30:57,796 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:57,799 vector_processor 13728 32000 Generated embedding for segment 1cf31b77-a29f-4532-ada3-cd66afe9e551 in 0.85s
+DEBUG 2025-07-10 13:30:58,276 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:58,278 vector_processor 13728 32000 Generated embedding for segment 1ccad8d4-d9ee-42ca-8610-619d3949da51 in 0.48s
+DEBUG 2025-07-10 13:30:58,609 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:58,611 vector_processor 13728 32000 Generated embedding for segment 97060f84-89ca-443c-bcf7-b255e373f34a in 0.33s
+DEBUG 2025-07-10 13:30:59,069 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:59,072 vector_processor 13728 32000 Generated embedding for segment 2ef8fbb4-0e4f-456c-aa6a-0696e4a010d5 in 0.46s
+DEBUG 2025-07-10 13:30:59,405 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:30:59,408 vector_processor 13728 32000 Generated embedding for segment eaae5df4-7cfb-4c4e-a985-24b35e4826b4 in 0.34s
+DEBUG 2025-07-10 13:31:00,355 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:00,372 vector_processor 13728 32000 Generated embedding for segment ffe0982e-eb4d-4a44-953c-b6499e1eb056 in 0.46s
+DEBUG 2025-07-10 13:31:00,824 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:00,826 vector_processor 13728 32000 Generated embedding for segment 89940bd9-419b-4111-9203-76fd57f7297f in 0.45s
+DEBUG 2025-07-10 13:31:01,216 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:01,219 vector_processor 13728 32000 Generated embedding for segment fc60691d-4956-451b-93f1-673756f75eab in 0.39s
+DEBUG 2025-07-10 13:31:01,616 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:01,618 vector_processor 13728 32000 Generated embedding for segment e9568cba-c095-4a4f-a7a6-8a97843739c1 in 0.40s
+DEBUG 2025-07-10 13:31:01,956 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:01,959 vector_processor 13728 32000 Generated embedding for segment 8b0fc258-2e4f-4424-896c-8f1cc1d5c489 in 0.34s
+DEBUG 2025-07-10 13:31:02,887 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:02,889 vector_processor 13728 32000 Generated embedding for segment ec8f37c2-ca8b-4105-9e4c-e2339afd2e09 in 0.43s
+DEBUG 2025-07-10 13:31:03,275 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:03,278 vector_processor 13728 32000 Generated embedding for segment 0b7013a0-7c76-4ee5-a76a-d6d2078a90c9 in 0.39s
+DEBUG 2025-07-10 13:31:03,963 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:04,001 vector_processor 13728 32000 Generated embedding for segment 5f12266b-4a0d-4417-9c1b-23d7e3a7c49e in 0.72s
+DEBUG 2025-07-10 13:31:04,332 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:04,334 vector_processor 13728 32000 Generated embedding for segment c0f45294-b309-4ffa-bdb1-f0a37637f289 in 0.33s
+DEBUG 2025-07-10 13:31:04,751 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:04,754 vector_processor 13728 32000 Generated embedding for segment f69ff303-2916-4d08-a44f-60ad44934811 in 0.42s
+DEBUG 2025-07-10 13:31:05,656 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:05,658 vector_processor 13728 32000 Generated embedding for segment fdbace68-c9f6-49bc-9cb6-7fe4f7e9a89e in 0.40s
+DEBUG 2025-07-10 13:31:06,084 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:06,086 vector_processor 13728 32000 Generated embedding for segment 169a2a34-8014-41cd-af60-209ff6220daf in 0.43s
+DEBUG 2025-07-10 13:31:06,484 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:06,486 vector_processor 13728 32000 Generated embedding for segment 5d3e9d2d-1cb9-4c24-8381-f070c94cf0be in 0.40s
+DEBUG 2025-07-10 13:31:07,002 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:07,004 vector_processor 13728 32000 Generated embedding for segment 2cf672c5-2a27-4789-b05f-ed1cc633cc67 in 0.52s
+DEBUG 2025-07-10 13:31:07,426 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:07,429 vector_processor 13728 32000 Generated embedding for segment 9ccc2af7-6f45-42d4-87a4-b842c732eeb7 in 0.43s
+DEBUG 2025-07-10 13:31:08,350 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:08,352 vector_processor 13728 32000 Generated embedding for segment 48964704-3044-40a1-8247-140956c10cd4 in 0.42s
+DEBUG 2025-07-10 13:31:08,774 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:08,816 vector_processor 13728 32000 Generated embedding for segment 4323e734-4289-4f61-80c3-a4683b2e85d0 in 0.46s
+DEBUG 2025-07-10 13:31:09,172 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:09,175 vector_processor 13728 32000 Generated embedding for segment 73cd669a-56c0-4e20-8236-067a06642f73 in 0.36s
+DEBUG 2025-07-10 13:31:09,614 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:09,615 vector_processor 13728 32000 Generated embedding for segment 284cf1cd-9812-4d3a-81d1-4f67704084d7 in 0.44s
+DEBUG 2025-07-10 13:31:10,109 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:10,112 vector_processor 13728 32000 Generated embedding for segment fc447c96-45f0-485d-b676-ceb865e89ab0 in 0.50s
+DEBUG 2025-07-10 13:31:11,020 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:11,022 vector_processor 13728 32000 Generated embedding for segment b977d2a7-0b46-45f5-a00b-ab31f46423b8 in 0.41s
+DEBUG 2025-07-10 13:31:11,366 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:11,369 vector_processor 13728 32000 Generated embedding for segment 32a83b02-f932-41ec-a650-2dc1e6ec3de6 in 0.35s
+DEBUG 2025-07-10 13:31:11,756 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:11,759 vector_processor 13728 32000 Generated embedding for segment 0f6e65ad-3639-4494-9f7f-a2a3ec478b75 in 0.39s
+DEBUG 2025-07-10 13:31:12,286 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:12,288 vector_processor 13728 32000 Generated embedding for segment 80bdbe12-2042-4511-90c1-aee857a923d9 in 0.53s
+DEBUG 2025-07-10 13:31:13,439 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:13,442 vector_processor 13728 32000 Generated embedding for segment 7286e6ad-c0ea-43b3-ba30-7c6e5aab2f46 in 1.15s
+DEBUG 2025-07-10 13:31:14,566 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:14,569 vector_processor 13728 32000 Generated embedding for segment e6734f5b-6544-475c-8820-71c33e50bfcb in 0.63s
+DEBUG 2025-07-10 13:31:15,077 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:15,079 vector_processor 13728 32000 Generated embedding for segment 3da7a477-0223-418d-8d04-8b97329101aa in 0.51s
+DEBUG 2025-07-10 13:31:15,473 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:15,475 vector_processor 13728 32000 Generated embedding for segment dc5c09be-6038-4956-bbe1-7acb3a0ea6ca in 0.40s
+DEBUG 2025-07-10 13:31:15,865 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:15,869 vector_processor 13728 32000 Generated embedding for segment 7f0f7123-64c2-4647-98ba-7a37c7a5b335 in 0.39s
+DEBUG 2025-07-10 13:31:16,316 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:16,318 vector_processor 13728 32000 Generated embedding for segment f162655d-1b52-48fd-bf37-a26eb86ed7e6 in 0.45s
+DEBUG 2025-07-10 13:31:17,180 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:17,182 vector_processor 13728 32000 Generated embedding for segment 913b9487-d127-4a72-8262-618b2b7bc42a in 0.36s
+DEBUG 2025-07-10 13:31:17,656 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:17,659 vector_processor 13728 32000 Generated embedding for segment 163fef53-ed05-4504-b74d-471983dac104 in 0.48s
+DEBUG 2025-07-10 13:31:18,048 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:18,051 vector_processor 13728 32000 Generated embedding for segment 0521886e-f361-4ca3-9608-37f253d17343 in 0.39s
+WARNING 2025-07-10 13:31:18,470 vector_processor 13728 32000 Embedding usage high: 101 calls today
+DEBUG 2025-07-10 13:31:18,470 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:18,474 vector_processor 13728 32000 Generated embedding for segment 1ad921e4-644c-4830-857d-83df4c792f5f in 0.42s
+WARNING 2025-07-10 13:31:18,847 vector_processor 13728 32000 Embedding usage high: 102 calls today
+DEBUG 2025-07-10 13:31:18,847 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:18,850 vector_processor 13728 32000 Generated embedding for segment 830331ca-6787-4760-b76f-4b84a18a1610 in 0.38s
+WARNING 2025-07-10 13:31:19,707 vector_processor 13728 32000 Embedding usage high: 103 calls today
+DEBUG 2025-07-10 13:31:19,707 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:19,709 vector_processor 13728 32000 Generated embedding for segment c51fbf65-2cfd-4dc2-845b-b29a16192d1a in 0.36s
+WARNING 2025-07-10 13:31:20,143 vector_processor 13728 32000 Embedding usage high: 104 calls today
+DEBUG 2025-07-10 13:31:20,143 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:20,145 vector_processor 13728 32000 Generated embedding for segment f254234c-69ba-49a3-a8bb-196fe76c6b8d in 0.44s
+WARNING 2025-07-10 13:31:20,503 vector_processor 13728 32000 Embedding usage high: 105 calls today
+DEBUG 2025-07-10 13:31:20,503 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:20,506 vector_processor 13728 32000 Generated embedding for segment 11603912-b1d2-458c-9a26-e609e95373f1 in 0.36s
+WARNING 2025-07-10 13:31:21,068 vector_processor 13728 32000 Embedding usage high: 106 calls today
+DEBUG 2025-07-10 13:31:21,068 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:21,071 vector_processor 13728 32000 Generated embedding for segment 22f54691-0b0a-4f62-91f5-5559bfa12920 in 0.57s
+WARNING 2025-07-10 13:31:21,459 vector_processor 13728 32000 Embedding usage high: 107 calls today
+DEBUG 2025-07-10 13:31:21,459 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:21,462 vector_processor 13728 32000 Generated embedding for segment a426b76b-a5af-4b20-a805-531778f424da in 0.39s
+WARNING 2025-07-10 13:31:22,386 vector_processor 13728 32000 Embedding usage high: 108 calls today
+DEBUG 2025-07-10 13:31:22,386 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:22,391 vector_processor 13728 32000 Generated embedding for segment 3fa43a94-18b3-4081-ae8b-399303955494 in 0.43s
+WARNING 2025-07-10 13:31:22,739 vector_processor 13728 32000 Embedding usage high: 109 calls today
+DEBUG 2025-07-10 13:31:22,739 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:22,743 vector_processor 13728 32000 Generated embedding for segment a4b025cd-1c9b-4460-bea9-308abb1cbd6d in 0.35s
+WARNING 2025-07-10 13:31:23,086 vector_processor 13728 32000 Embedding usage high: 110 calls today
+DEBUG 2025-07-10 13:31:23,086 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:23,089 vector_processor 13728 32000 Generated embedding for segment 4444bc8a-02b0-4375-adb5-e12e4b9f3ccc in 0.35s
+WARNING 2025-07-10 13:31:23,486 vector_processor 13728 32000 Embedding usage high: 111 calls today
+DEBUG 2025-07-10 13:31:23,486 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:23,489 vector_processor 13728 32000 Generated embedding for segment 6c1ee699-f753-44dd-a93c-dbc584e7a0fc in 0.40s
+WARNING 2025-07-10 13:31:26,158 vector_processor 13728 32000 Embedding usage high: 112 calls today
+DEBUG 2025-07-10 13:31:26,158 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:26,162 vector_processor 13728 32000 Generated embedding for segment 1604d744-750d-4edc-9a39-f5fe6b5fd519 in 2.67s
+WARNING 2025-07-10 13:31:27,038 vector_processor 13728 32000 Embedding usage high: 113 calls today
+DEBUG 2025-07-10 13:31:27,038 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:27,041 vector_processor 13728 32000 Generated embedding for segment 7fb631fe-68b5-4b1d-9a10-a4b391aa932d in 0.38s
+WARNING 2025-07-10 13:31:27,410 vector_processor 13728 32000 Embedding usage high: 114 calls today
+DEBUG 2025-07-10 13:31:27,410 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:27,411 vector_processor 13728 32000 Generated embedding for segment f61e495e-a4a0-49db-ad32-04d08c306e65 in 0.37s
+WARNING 2025-07-10 13:31:27,834 vector_processor 13728 32000 Embedding usage high: 115 calls today
+DEBUG 2025-07-10 13:31:27,834 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:27,838 vector_processor 13728 32000 Generated embedding for segment 9b131547-e463-42db-b00c-f2d497b5c118 in 0.43s
+WARNING 2025-07-10 13:31:28,254 vector_processor 13728 32000 Embedding usage high: 116 calls today
+DEBUG 2025-07-10 13:31:28,255 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:28,258 vector_processor 13728 32000 Generated embedding for segment 4a15ceff-c5a7-45f0-ad09-b5152c5bec95 in 0.42s
+WARNING 2025-07-10 13:31:28,640 vector_processor 13728 32000 Embedding usage high: 117 calls today
+DEBUG 2025-07-10 13:31:28,640 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:28,643 vector_processor 13728 32000 Generated embedding for segment 0d27ad57-77ba-490f-b635-e40b8154aeb2 in 0.38s
+WARNING 2025-07-10 13:31:29,522 vector_processor 13728 32000 Embedding usage high: 118 calls today
+DEBUG 2025-07-10 13:31:29,523 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:29,526 vector_processor 13728 32000 Generated embedding for segment 502fa265-3011-4a57-add7-157162d64542 in 0.38s
+WARNING 2025-07-10 13:31:29,874 vector_processor 13728 32000 Embedding usage high: 119 calls today
+DEBUG 2025-07-10 13:31:29,874 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:29,915 vector_processor 13728 32000 Generated embedding for segment cdf581b7-310b-475a-9348-0df246d170ef in 0.39s
+WARNING 2025-07-10 13:31:30,323 vector_processor 13728 32000 Embedding usage high: 120 calls today
+DEBUG 2025-07-10 13:31:30,323 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:30,326 vector_processor 13728 32000 Generated embedding for segment 0616d102-ed90-4ce2-9f88-e0f9df98eff9 in 0.41s
+WARNING 2025-07-10 13:31:30,681 vector_processor 13728 32000 Embedding usage high: 121 calls today
+DEBUG 2025-07-10 13:31:30,681 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:30,684 vector_processor 13728 32000 Generated embedding for segment bb25772b-df59-4570-966d-396fc6c97799 in 0.36s
+WARNING 2025-07-10 13:31:31,088 vector_processor 13728 32000 Embedding usage high: 122 calls today
+DEBUG 2025-07-10 13:31:31,088 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:31,091 vector_processor 13728 32000 Generated embedding for segment 17a49141-2fae-44f3-bdd0-3a29423e86c8 in 0.41s
+WARNING 2025-07-10 13:31:32,205 vector_processor 13728 32000 Embedding usage high: 123 calls today
+DEBUG 2025-07-10 13:31:32,206 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:32,209 vector_processor 13728 32000 Generated embedding for segment 46f24d8d-477a-4de7-9e1b-588356d4e9c9 in 0.62s
+WARNING 2025-07-10 13:31:32,688 vector_processor 13728 32000 Embedding usage high: 124 calls today
+DEBUG 2025-07-10 13:31:32,689 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:32,691 vector_processor 13728 32000 Generated embedding for segment 5dca1ced-519a-4d10-b6df-441d721db39c in 0.48s
+WARNING 2025-07-10 13:31:33,092 vector_processor 13728 32000 Embedding usage high: 125 calls today
+DEBUG 2025-07-10 13:31:33,092 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:33,095 vector_processor 13728 32000 Generated embedding for segment d3ed6717-6b29-48ea-94ff-f99238ba9213 in 0.40s
+WARNING 2025-07-10 13:31:33,502 vector_processor 13728 32000 Embedding usage high: 126 calls today
+DEBUG 2025-07-10 13:31:33,502 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:33,505 vector_processor 13728 32000 Generated embedding for segment 86787e0e-5a40-4930-ae3f-99c99a4edc87 in 0.41s
+WARNING 2025-07-10 13:31:33,926 vector_processor 13728 32000 Embedding usage high: 127 calls today
+DEBUG 2025-07-10 13:31:33,926 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:33,929 vector_processor 13728 32000 Generated embedding for segment fb1ae39a-4fb4-4f8c-9b53-559834779889 in 0.42s
+WARNING 2025-07-10 13:31:34,843 vector_processor 13728 32000 Embedding usage high: 128 calls today
+DEBUG 2025-07-10 13:31:34,843 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:34,847 vector_processor 13728 32000 Generated embedding for segment 96665a1a-7cad-42ee-a50f-5b10d86badb8 in 0.42s
+WARNING 2025-07-10 13:31:35,229 vector_processor 13728 32000 Embedding usage high: 129 calls today
+DEBUG 2025-07-10 13:31:35,229 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:35,231 vector_processor 13728 32000 Generated embedding for segment 5b3f33c8-cce0-4dd5-9ecf-a04ac83b1d00 in 0.38s
+WARNING 2025-07-10 13:31:35,649 vector_processor 13728 32000 Embedding usage high: 130 calls today
+DEBUG 2025-07-10 13:31:35,649 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:35,651 vector_processor 13728 32000 Generated embedding for segment 7373887d-9021-46a5-a132-b50d766a2e3c in 0.42s
+WARNING 2025-07-10 13:31:35,976 vector_processor 13728 32000 Embedding usage high: 131 calls today
+DEBUG 2025-07-10 13:31:35,977 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:36,012 vector_processor 13728 32000 Generated embedding for segment 8477b8d5-d6c3-4286-8eeb-b7201726a675 in 0.36s
+WARNING 2025-07-10 13:31:36,380 vector_processor 13728 32000 Embedding usage high: 132 calls today
+DEBUG 2025-07-10 13:31:36,380 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:36,383 vector_processor 13728 32000 Generated embedding for segment 8d89cbaf-e180-419b-9023-0f8fbf16a4db in 0.37s
+WARNING 2025-07-10 13:31:37,290 vector_processor 13728 32000 Embedding usage high: 133 calls today
+DEBUG 2025-07-10 13:31:37,290 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:37,294 vector_processor 13728 32000 Generated embedding for segment 81fdc33e-3e50-4a3b-9d39-9b0d04164672 in 0.41s
+WARNING 2025-07-10 13:31:37,616 vector_processor 13728 32000 Embedding usage high: 134 calls today
+DEBUG 2025-07-10 13:31:37,616 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:37,651 vector_processor 13728 32000 Generated embedding for segment d2ee3179-47df-49bd-9978-91b4fff41e30 in 0.36s
+WARNING 2025-07-10 13:31:38,041 vector_processor 13728 32000 Embedding usage high: 135 calls today
+DEBUG 2025-07-10 13:31:38,041 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:38,080 vector_processor 13728 32000 Generated embedding for segment 229760f3-e759-4752-9eb0-5a1531dbb76a in 0.43s
+WARNING 2025-07-10 13:31:38,621 vector_processor 13728 32000 Embedding usage high: 136 calls today
+DEBUG 2025-07-10 13:31:38,621 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:38,624 vector_processor 13728 32000 Generated embedding for segment c2dfd1ca-54f3-4402-aa39-19b2475f7a98 in 0.54s
+WARNING 2025-07-10 13:31:38,956 vector_processor 13728 32000 Embedding usage high: 137 calls today
+DEBUG 2025-07-10 13:31:38,957 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:38,959 vector_processor 13728 32000 Generated embedding for segment d7cf5cb8-a95b-4804-aa70-b1972b59a77d in 0.34s
+WARNING 2025-07-10 13:31:39,816 vector_processor 13728 32000 Embedding usage high: 138 calls today
+DEBUG 2025-07-10 13:31:39,816 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:39,819 vector_processor 13728 32000 Generated embedding for segment cdc8a725-1a1c-48ce-a3ed-90d703abf832 in 0.36s
+WARNING 2025-07-10 13:31:40,181 vector_processor 13728 32000 Embedding usage high: 139 calls today
+DEBUG 2025-07-10 13:31:40,181 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:40,184 vector_processor 13728 32000 Generated embedding for segment a5aa398a-31aa-42b5-a76b-4f9a2a1b37ad in 0.37s
+WARNING 2025-07-10 13:31:40,597 vector_processor 13728 32000 Embedding usage high: 140 calls today
+DEBUG 2025-07-10 13:31:40,597 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:40,642 vector_processor 13728 32000 Generated embedding for segment 0d68622e-9a99-4872-8b28-ee2b58c98cea in 0.46s
+WARNING 2025-07-10 13:31:40,996 vector_processor 13728 32000 Embedding usage high: 141 calls today
+DEBUG 2025-07-10 13:31:40,996 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:40,998 vector_processor 13728 32000 Generated embedding for segment 48c33f5a-ed37-492a-b5fe-d749c00f601b in 0.36s
+WARNING 2025-07-10 13:31:41,524 vector_processor 13728 32000 Embedding usage high: 142 calls today
+DEBUG 2025-07-10 13:31:41,524 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:41,527 vector_processor 13728 32000 Generated embedding for segment f3b5efe5-c0f1-45cb-942d-cd9729eaade8 in 0.53s
+WARNING 2025-07-10 13:31:42,467 vector_processor 13728 32000 Embedding usage high: 143 calls today
+DEBUG 2025-07-10 13:31:42,467 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:42,469 vector_processor 13728 32000 Generated embedding for segment 8a3c3388-5cfe-40f7-99eb-5644d4a2d66e in 0.44s
+WARNING 2025-07-10 13:31:42,806 vector_processor 13728 32000 Embedding usage high: 144 calls today
+DEBUG 2025-07-10 13:31:42,806 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:42,810 vector_processor 13728 32000 Generated embedding for segment dd288c96-7e1f-49d7-87e1-1c39dbfa0e9d in 0.34s
+WARNING 2025-07-10 13:31:43,150 vector_processor 13728 32000 Embedding usage high: 145 calls today
+DEBUG 2025-07-10 13:31:43,150 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:43,153 vector_processor 13728 32000 Generated embedding for segment 8a6f43e0-6913-4057-af70-1d8eee98a50e in 0.34s
+WARNING 2025-07-10 13:31:43,528 vector_processor 13728 32000 Embedding usage high: 146 calls today
+DEBUG 2025-07-10 13:31:43,528 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:43,541 vector_processor 13728 32000 Generated embedding for segment 04720c52-1a7d-4fdb-82da-0ec0d89227ec in 0.39s
+WARNING 2025-07-10 13:31:43,880 vector_processor 13728 32000 Embedding usage high: 147 calls today
+DEBUG 2025-07-10 13:31:43,880 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:43,882 vector_processor 13728 32000 Generated embedding for segment cbc36358-cbfb-45d0-a759-95ca87fca460 in 0.34s
+WARNING 2025-07-10 13:31:44,821 vector_processor 13728 32000 Embedding usage high: 148 calls today
+DEBUG 2025-07-10 13:31:44,821 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:44,825 vector_processor 13728 32000 Generated embedding for segment 3adebc7d-3390-4ee1-9d78-5ec4ba5e0f15 in 0.44s
+WARNING 2025-07-10 13:31:45,271 vector_processor 13728 32000 Embedding usage high: 149 calls today
+DEBUG 2025-07-10 13:31:45,271 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:45,273 vector_processor 13728 32000 Generated embedding for segment 56b1a647-68da-479e-a0a5-fd05e11822a2 in 0.45s
+WARNING 2025-07-10 13:31:45,636 vector_processor 13728 32000 Embedding usage high: 150 calls today
+DEBUG 2025-07-10 13:31:45,636 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:45,639 vector_processor 13728 32000 Generated embedding for segment 01f5e7c1-77f2-4263-9aa1-5521e298929e in 0.37s
+WARNING 2025-07-10 13:31:46,730 vector_processor 13728 32000 Embedding usage high: 151 calls today
+DEBUG 2025-07-10 13:31:46,731 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:46,732 vector_processor 13728 32000 Generated embedding for segment 36f5ff35-f952-4a81-a013-4fbe6e676ab1 in 1.09s
+WARNING 2025-07-10 13:31:47,126 vector_processor 13728 32000 Embedding usage high: 152 calls today
+DEBUG 2025-07-10 13:31:47,127 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:47,131 vector_processor 13728 32000 Generated embedding for segment 119b2044-c15f-4a69-931b-8730c4dca9b3 in 0.40s
+WARNING 2025-07-10 13:31:48,050 vector_processor 13728 32000 Embedding usage high: 153 calls today
+DEBUG 2025-07-10 13:31:48,050 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:48,053 vector_processor 13728 32000 Generated embedding for segment 309b8bd2-9fde-4d0a-8473-58de2fc5a872 in 0.42s
+WARNING 2025-07-10 13:31:48,508 vector_processor 13728 32000 Embedding usage high: 154 calls today
+DEBUG 2025-07-10 13:31:48,508 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:48,510 vector_processor 13728 32000 Generated embedding for segment 3762f255-6230-4402-bee0-92a18d5ad8ce in 0.46s
+WARNING 2025-07-10 13:31:48,866 vector_processor 13728 32000 Embedding usage high: 155 calls today
+DEBUG 2025-07-10 13:31:48,867 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:48,869 vector_processor 13728 32000 Generated embedding for segment 101c1107-42f0-423e-ac8b-90ac79973d50 in 0.36s
+WARNING 2025-07-10 13:31:49,260 vector_processor 13728 32000 Embedding usage high: 156 calls today
+DEBUG 2025-07-10 13:31:49,260 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:49,262 vector_processor 13728 32000 Generated embedding for segment 9eae229f-1811-4eba-87bd-2e916a6e8a96 in 0.39s
+WARNING 2025-07-10 13:31:49,751 vector_processor 13728 32000 Embedding usage high: 157 calls today
+DEBUG 2025-07-10 13:31:49,751 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:49,752 vector_processor 13728 32000 Generated embedding for segment 224d06db-ea84-4b15-b00b-28816deea237 in 0.49s
+WARNING 2025-07-10 13:31:50,609 vector_processor 13728 32000 Embedding usage high: 158 calls today
+DEBUG 2025-07-10 13:31:50,609 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:50,612 vector_processor 13728 32000 Generated embedding for segment 08d6889e-c57c-4052-91b3-93e097cc201f in 0.36s
+WARNING 2025-07-10 13:31:51,058 vector_processor 13728 32000 Embedding usage high: 159 calls today
+DEBUG 2025-07-10 13:31:51,058 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:51,060 vector_processor 13728 32000 Generated embedding for segment 1e3c3cb9-3703-4b86-bf22-98c8df64d296 in 0.45s
+WARNING 2025-07-10 13:31:51,667 vector_processor 13728 32000 Embedding usage high: 160 calls today
+DEBUG 2025-07-10 13:31:51,667 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:51,670 vector_processor 13728 32000 Generated embedding for segment b9a3cbd7-1491-4796-bb78-8f6fc37cbe95 in 0.61s
+WARNING 2025-07-10 13:31:52,076 vector_processor 13728 32000 Embedding usage high: 161 calls today
+DEBUG 2025-07-10 13:31:52,076 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:52,079 vector_processor 13728 32000 Generated embedding for segment 71d4cc08-4083-4fce-9b57-8e41baf201e9 in 0.41s
+WARNING 2025-07-10 13:31:52,442 vector_processor 13728 32000 Embedding usage high: 162 calls today
+DEBUG 2025-07-10 13:31:52,442 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:52,445 vector_processor 13728 32000 Generated embedding for segment 60ebe687-cc5e-466e-8a9c-7ab5fb79df79 in 0.37s
+WARNING 2025-07-10 13:31:53,383 vector_processor 13728 32000 Embedding usage high: 163 calls today
+DEBUG 2025-07-10 13:31:53,384 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:53,386 vector_processor 13728 32000 Generated embedding for segment 248318bf-ffb7-4e4b-a507-2bcd4397c49b in 0.44s
+WARNING 2025-07-10 13:31:53,788 vector_processor 13728 32000 Embedding usage high: 164 calls today
+DEBUG 2025-07-10 13:31:53,788 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:53,791 vector_processor 13728 32000 Generated embedding for segment d5d657cf-7ee6-4145-9ecb-d3673f72e8b5 in 0.40s
+WARNING 2025-07-10 13:31:54,143 vector_processor 13728 32000 Embedding usage high: 165 calls today
+DEBUG 2025-07-10 13:31:54,144 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:54,146 vector_processor 13728 32000 Generated embedding for segment 6bb01010-0c01-4658-9ac7-de68ddd44576 in 0.35s
+WARNING 2025-07-10 13:31:54,563 vector_processor 13728 32000 Embedding usage high: 166 calls today
+DEBUG 2025-07-10 13:31:54,563 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:54,565 vector_processor 13728 32000 Generated embedding for segment e85dd2ec-2e19-4a04-8ade-6da6bb191eea in 0.42s
+WARNING 2025-07-10 13:31:55,085 vector_processor 13728 32000 Embedding usage high: 167 calls today
+DEBUG 2025-07-10 13:31:55,085 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:55,088 vector_processor 13728 32000 Generated embedding for segment 068f9483-0a09-4fc3-91c0-82081460fa6f in 0.52s
+WARNING 2025-07-10 13:31:56,012 vector_processor 13728 32000 Embedding usage high: 168 calls today
+DEBUG 2025-07-10 13:31:56,013 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:56,043 vector_processor 13728 32000 Generated embedding for segment 63bd9c3a-8ced-40f9-b8d0-354566a61ca4 in 0.45s
+WARNING 2025-07-10 13:31:56,395 vector_processor 13728 32000 Embedding usage high: 169 calls today
+DEBUG 2025-07-10 13:31:56,395 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:56,398 vector_processor 13728 32000 Generated embedding for segment c099b1b7-4d60-401d-9e31-95966355db60 in 0.36s
+WARNING 2025-07-10 13:31:56,725 vector_processor 13728 32000 Embedding usage high: 170 calls today
+DEBUG 2025-07-10 13:31:56,725 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:56,728 vector_processor 13728 32000 Generated embedding for segment 52a1c151-47d9-481f-854d-fb3a49c68769 in 0.33s
+WARNING 2025-07-10 13:31:57,059 vector_processor 13728 32000 Embedding usage high: 171 calls today
+DEBUG 2025-07-10 13:31:57,059 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:57,063 vector_processor 13728 32000 Generated embedding for segment 7d0a8a4b-1f5a-4125-b69e-35fd5a6632d9 in 0.34s
+WARNING 2025-07-10 13:31:57,390 vector_processor 13728 32000 Embedding usage high: 172 calls today
+DEBUG 2025-07-10 13:31:57,390 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:57,402 vector_processor 13728 32000 Generated embedding for segment 69cf039c-946e-4ed2-bab5-0acbcafb6f63 in 0.34s
+WARNING 2025-07-10 13:31:58,579 vector_processor 13728 32000 Embedding usage high: 173 calls today
+DEBUG 2025-07-10 13:31:58,579 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:58,581 vector_processor 13728 32000 Generated embedding for segment 35505c77-21bd-429e-b025-fbc7f1c38dc6 in 0.68s
+WARNING 2025-07-10 13:31:59,036 vector_processor 13728 32000 Embedding usage high: 174 calls today
+DEBUG 2025-07-10 13:31:59,036 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:59,039 vector_processor 13728 32000 Generated embedding for segment 9ddb25cf-6987-40b5-8e7e-fa3574707219 in 0.46s
+WARNING 2025-07-10 13:31:59,454 vector_processor 13728 32000 Embedding usage high: 175 calls today
+DEBUG 2025-07-10 13:31:59,454 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:31:59,457 vector_processor 13728 32000 Generated embedding for segment 643b1366-ac19-4739-ba33-af8553aeade6 in 0.42s
+WARNING 2025-07-10 13:32:00,035 vector_processor 13728 32000 Embedding usage high: 176 calls today
+DEBUG 2025-07-10 13:32:00,035 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:00,037 vector_processor 13728 32000 Generated embedding for segment 1ca32b89-e228-40c1-a2a6-d7491184c2b6 in 0.58s
+WARNING 2025-07-10 13:32:00,402 vector_processor 13728 32000 Embedding usage high: 177 calls today
+DEBUG 2025-07-10 13:32:00,403 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:00,404 vector_processor 13728 32000 Generated embedding for segment 905d62c9-2628-46ae-bb35-2f611df9c9c9 in 0.37s
+WARNING 2025-07-10 13:32:01,238 vector_processor 13728 32000 Embedding usage high: 178 calls today
+DEBUG 2025-07-10 13:32:01,239 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:01,261 vector_processor 13728 32000 Generated embedding for segment 12cb29d0-a938-4f5d-83a4-f4cc5078aa84 in 0.36s
+WARNING 2025-07-10 13:32:01,594 vector_processor 13728 32000 Embedding usage high: 179 calls today
+DEBUG 2025-07-10 13:32:01,595 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:01,596 vector_processor 13728 32000 Generated embedding for segment a98036e3-d0f2-4f6a-b2df-16a87795213d in 0.34s
+WARNING 2025-07-10 13:32:01,946 vector_processor 13728 32000 Embedding usage high: 180 calls today
+DEBUG 2025-07-10 13:32:01,946 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:01,949 vector_processor 13728 32000 Generated embedding for segment cb722403-0624-4453-bd58-c74de38010ba in 0.35s
+WARNING 2025-07-10 13:32:02,282 vector_processor 13728 32000 Embedding usage high: 181 calls today
+DEBUG 2025-07-10 13:32:02,282 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:02,284 vector_processor 13728 32000 Generated embedding for segment 22aa6701-8408-4392-b2a7-e21b9ea618ff in 0.34s
+WARNING 2025-07-10 13:32:02,719 vector_processor 13728 32000 Embedding usage high: 182 calls today
+DEBUG 2025-07-10 13:32:02,719 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:02,721 vector_processor 13728 32000 Generated embedding for segment 7af6da6c-c647-4659-9b9a-010bcfb684a6 in 0.44s
+WARNING 2025-07-10 13:32:03,577 vector_processor 13728 32000 Embedding usage high: 183 calls today
+DEBUG 2025-07-10 13:32:03,577 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:03,580 vector_processor 13728 32000 Generated embedding for segment d23754aa-1d11-4d2f-b4b4-9dad625190af in 0.36s
+WARNING 2025-07-10 13:32:04,009 vector_processor 13728 32000 Embedding usage high: 184 calls today
+DEBUG 2025-07-10 13:32:04,009 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:04,012 vector_processor 13728 32000 Generated embedding for segment 22d41b9c-e095-4534-9b1d-bee83dbbfc78 in 0.43s
+WARNING 2025-07-10 13:32:04,379 vector_processor 13728 32000 Embedding usage high: 185 calls today
+DEBUG 2025-07-10 13:32:04,379 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:04,382 vector_processor 13728 32000 Generated embedding for segment beee5342-72ca-44e9-b546-4c9c9dbdde6c in 0.37s
+WARNING 2025-07-10 13:32:04,816 vector_processor 13728 32000 Embedding usage high: 186 calls today
+DEBUG 2025-07-10 13:32:04,816 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:04,819 vector_processor 13728 32000 Generated embedding for segment bb81bc89-dc72-4896-9c5a-8efd9ffc6198 in 0.44s
+WARNING 2025-07-10 13:32:05,191 vector_processor 13728 32000 Embedding usage high: 187 calls today
+DEBUG 2025-07-10 13:32:05,191 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:05,194 vector_processor 13728 32000 Generated embedding for segment 55b9e55a-26a8-46f1-a571-a2ef199a30a4 in 0.37s
+WARNING 2025-07-10 13:32:06,039 vector_processor 13728 32000 Embedding usage high: 188 calls today
+DEBUG 2025-07-10 13:32:06,039 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:06,040 vector_processor 13728 32000 Generated embedding for segment 0bc28afa-463e-4832-87d7-e2c8c8eabaa1 in 0.35s
+WARNING 2025-07-10 13:32:06,407 vector_processor 13728 32000 Embedding usage high: 189 calls today
+DEBUG 2025-07-10 13:32:06,407 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:06,411 vector_processor 13728 32000 Generated embedding for segment 873e7a06-6041-4702-9217-60e71cda337f in 0.37s
+WARNING 2025-07-10 13:32:06,858 vector_processor 13728 32000 Embedding usage high: 190 calls today
+DEBUG 2025-07-10 13:32:06,858 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:06,860 vector_processor 13728 32000 Generated embedding for segment f623707d-cbe6-49e9-9069-40af7c916918 in 0.45s
+WARNING 2025-07-10 13:32:07,192 vector_processor 13728 32000 Embedding usage high: 191 calls today
+DEBUG 2025-07-10 13:32:07,192 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:07,194 vector_processor 13728 32000 Generated embedding for segment 24905880-6d42-4b0a-a595-a4fa0b592c98 in 0.33s
+WARNING 2025-07-10 13:32:07,639 vector_processor 13728 32000 Embedding usage high: 192 calls today
+DEBUG 2025-07-10 13:32:07,639 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:07,642 vector_processor 13728 32000 Generated embedding for segment 7656d298-0274-4d05-a830-84bbd65430f4 in 0.45s
+WARNING 2025-07-10 13:32:08,487 vector_processor 13728 32000 Embedding usage high: 193 calls today
+DEBUG 2025-07-10 13:32:08,488 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:08,490 vector_processor 13728 32000 Generated embedding for segment 3a3a7de5-2a51-4f28-8d9c-e0c6513877ce in 0.35s
+WARNING 2025-07-10 13:32:08,915 vector_processor 13728 32000 Embedding usage high: 194 calls today
+DEBUG 2025-07-10 13:32:08,915 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:08,918 vector_processor 13728 32000 Generated embedding for segment c3e22170-8a54-4db2-b5c2-2024c7de7d93 in 0.43s
+WARNING 2025-07-10 13:32:09,701 vector_processor 13728 32000 Embedding usage high: 195 calls today
+DEBUG 2025-07-10 13:32:09,701 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:09,703 vector_processor 13728 32000 Generated embedding for segment 43e6304e-cb30-46dd-8a96-d7f25756b389 in 0.78s
+WARNING 2025-07-10 13:32:10,032 vector_processor 13728 32000 Embedding usage high: 196 calls today
+DEBUG 2025-07-10 13:32:10,032 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:10,034 vector_processor 13728 32000 Generated embedding for segment f683d6dc-61d0-4b38-94ff-c1cc30e0028c in 0.33s
+WARNING 2025-07-10 13:32:10,399 vector_processor 13728 32000 Embedding usage high: 197 calls today
+DEBUG 2025-07-10 13:32:10,399 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:10,402 vector_processor 13728 32000 Generated embedding for segment d5e20499-b399-4d87-9cba-3387af038d30 in 0.37s
+WARNING 2025-07-10 13:32:11,256 vector_processor 13728 32000 Embedding usage high: 198 calls today
+DEBUG 2025-07-10 13:32:11,256 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:11,260 vector_processor 13728 32000 Generated embedding for segment d3d03df5-7ab2-4357-8148-90ca9e331578 in 0.36s
+WARNING 2025-07-10 13:32:11,592 vector_processor 13728 32000 Embedding usage high: 199 calls today
+DEBUG 2025-07-10 13:32:11,592 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:11,595 vector_processor 13728 32000 Generated embedding for segment c694a984-0014-4385-8980-7e97f0847e2c in 0.33s
+WARNING 2025-07-10 13:32:12,011 vector_processor 13728 32000 Embedding usage high: 200 calls today
+DEBUG 2025-07-10 13:32:12,011 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:12,014 vector_processor 13728 32000 Generated embedding for segment 4cdd16ef-d134-4cb1-8fd9-80895b3f72e5 in 0.42s
+WARNING 2025-07-10 13:32:12,402 vector_processor 13728 32000 Embedding usage high: 201 calls today
+DEBUG 2025-07-10 13:32:12,402 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:12,408 vector_processor 13728 32000 Generated embedding for segment 01765ef6-d0e2-4c50-be76-29fdb8faf33a in 0.39s
+WARNING 2025-07-10 13:32:12,780 vector_processor 13728 32000 Embedding usage high: 202 calls today
+DEBUG 2025-07-10 13:32:12,780 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:12,783 vector_processor 13728 32000 Generated embedding for segment 43f13b52-1161-4eb3-91ca-edf30e35e560 in 0.38s
+WARNING 2025-07-10 13:32:13,689 vector_processor 13728 32000 Embedding usage high: 203 calls today
+DEBUG 2025-07-10 13:32:13,689 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:13,692 vector_processor 13728 32000 Generated embedding for segment 4bb27161-d405-4cc1-aecb-465b76a81228 in 0.41s
+WARNING 2025-07-10 13:32:14,106 vector_processor 13728 32000 Embedding usage high: 204 calls today
+DEBUG 2025-07-10 13:32:14,106 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:14,108 vector_processor 13728 32000 Generated embedding for segment 2227d60b-5333-4480-b523-a47b33e28f02 in 0.42s
+WARNING 2025-07-10 13:32:14,454 vector_processor 13728 32000 Embedding usage high: 205 calls today
+DEBUG 2025-07-10 13:32:14,454 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:14,456 vector_processor 13728 32000 Generated embedding for segment a70c7379-be36-4d9f-a6e8-16cf916140dc in 0.35s
+WARNING 2025-07-10 13:32:14,877 vector_processor 13728 32000 Embedding usage high: 206 calls today
+DEBUG 2025-07-10 13:32:14,878 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:14,895 vector_processor 13728 32000 Generated embedding for segment 71506904-0268-455f-afd5-dc89d6bcde3b in 0.44s
+WARNING 2025-07-10 13:32:15,290 vector_processor 13728 32000 Embedding usage high: 207 calls today
+DEBUG 2025-07-10 13:32:15,290 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:15,292 vector_processor 13728 32000 Generated embedding for segment 656d5bf9-c755-4046-8d97-452b80b15145 in 0.40s
+WARNING 2025-07-10 13:32:16,540 vector_processor 13728 32000 Embedding usage high: 208 calls today
+DEBUG 2025-07-10 13:32:16,540 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:16,542 vector_processor 13728 32000 Generated embedding for segment 5307b662-7b35-43d6-b0a9-f6b682210f49 in 0.75s
+WARNING 2025-07-10 13:32:16,945 vector_processor 13728 32000 Embedding usage high: 209 calls today
+DEBUG 2025-07-10 13:32:16,945 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:16,948 vector_processor 13728 32000 Generated embedding for segment 26874aec-8963-418c-9b22-2a74ddb29113 in 0.41s
+WARNING 2025-07-10 13:32:17,318 vector_processor 13728 32000 Embedding usage high: 210 calls today
+DEBUG 2025-07-10 13:32:17,318 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:17,321 vector_processor 13728 32000 Generated embedding for segment 47ac4b48-5ba2-4b87-95e0-74e72d762895 in 0.37s
+WARNING 2025-07-10 13:32:17,751 vector_processor 13728 32000 Embedding usage high: 211 calls today
+DEBUG 2025-07-10 13:32:17,751 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:17,753 vector_processor 13728 32000 Generated embedding for segment 40744da7-4570-4e1d-8311-0cf008c49c7f in 0.43s
+WARNING 2025-07-10 13:32:18,125 vector_processor 13728 32000 Embedding usage high: 212 calls today
+DEBUG 2025-07-10 13:32:18,125 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:18,128 vector_processor 13728 32000 Generated embedding for segment 2deb5eb5-5cf3-49d8-b486-6a9300b13834 in 0.38s
+WARNING 2025-07-10 13:32:18,972 vector_processor 13728 32000 Embedding usage high: 213 calls today
+DEBUG 2025-07-10 13:32:18,972 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:18,978 vector_processor 13728 32000 Generated embedding for segment 90461f22-46f1-412d-9293-a195eb18bb1d in 0.35s
+WARNING 2025-07-10 13:32:19,618 vector_processor 13728 32000 Embedding usage high: 214 calls today
+DEBUG 2025-07-10 13:32:19,618 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:19,621 vector_processor 13728 32000 Generated embedding for segment 074a8a2e-c50c-4944-9de2-915b0e9597d2 in 0.64s
+WARNING 2025-07-10 13:32:20,015 vector_processor 13728 32000 Embedding usage high: 215 calls today
+DEBUG 2025-07-10 13:32:20,015 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:20,017 vector_processor 13728 32000 Generated embedding for segment 7f79b687-8c08-40d2-a592-093311b193cf in 0.40s
+WARNING 2025-07-10 13:32:20,510 vector_processor 13728 32000 Embedding usage high: 216 calls today
+DEBUG 2025-07-10 13:32:20,510 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:20,514 vector_processor 13728 32000 Generated embedding for segment 83fad6e4-4d47-4d81-8456-d2bf2b760f89 in 0.50s
+WARNING 2025-07-10 13:32:20,960 vector_processor 13728 32000 Embedding usage high: 217 calls today
+DEBUG 2025-07-10 13:32:20,961 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:20,963 vector_processor 13728 32000 Generated embedding for segment 7318a06b-deb4-432b-8a50-b9bdfb1ec778 in 0.45s
+WARNING 2025-07-10 13:32:21,847 vector_processor 13728 32000 Embedding usage high: 218 calls today
+DEBUG 2025-07-10 13:32:21,847 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:21,849 vector_processor 13728 32000 Generated embedding for segment cc79c238-767a-4702-9f1a-b530f54df6e9 in 0.39s
+WARNING 2025-07-10 13:32:22,272 vector_processor 13728 32000 Embedding usage high: 219 calls today
+DEBUG 2025-07-10 13:32:22,272 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:22,274 vector_processor 13728 32000 Generated embedding for segment a1204fb4-2002-46fd-aedb-dce9bdf5a997 in 0.42s
+WARNING 2025-07-10 13:32:22,650 vector_processor 13728 32000 Embedding usage high: 220 calls today
+DEBUG 2025-07-10 13:32:22,650 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:22,652 vector_processor 13728 32000 Generated embedding for segment 9790f70b-816c-444a-914b-758aebea3261 in 0.38s
+WARNING 2025-07-10 13:32:23,067 vector_processor 13728 32000 Embedding usage high: 221 calls today
+DEBUG 2025-07-10 13:32:23,067 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:23,071 vector_processor 13728 32000 Generated embedding for segment 457904a7-50a1-496e-ac01-9cf9343d6632 in 0.42s
+WARNING 2025-07-10 13:32:23,444 vector_processor 13728 32000 Embedding usage high: 222 calls today
+DEBUG 2025-07-10 13:32:23,444 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:23,446 vector_processor 13728 32000 Generated embedding for segment 56a826fd-ee52-4364-b464-fb579b6ceacd in 0.38s
+WARNING 2025-07-10 13:32:24,313 vector_processor 13728 32000 Embedding usage high: 223 calls today
+DEBUG 2025-07-10 13:32:24,313 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:24,315 vector_processor 13728 32000 Generated embedding for segment d9956ed3-c5e4-4433-81c6-6346d8720d38 in 0.37s
+WARNING 2025-07-10 13:32:24,752 vector_processor 13728 32000 Embedding usage high: 224 calls today
+DEBUG 2025-07-10 13:32:24,752 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:24,754 vector_processor 13728 32000 Generated embedding for segment f270193e-2365-4e55-b456-8dd28eccba20 in 0.44s
+WARNING 2025-07-10 13:32:25,119 vector_processor 13728 32000 Embedding usage high: 225 calls today
+DEBUG 2025-07-10 13:32:25,119 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:25,122 vector_processor 13728 32000 Generated embedding for segment d17c3a6c-3be0-4788-9d82-0f8e83705699 in 0.37s
+WARNING 2025-07-10 13:32:25,510 vector_processor 13728 32000 Embedding usage high: 226 calls today
+DEBUG 2025-07-10 13:32:25,510 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:25,513 vector_processor 13728 32000 Generated embedding for segment c344e745-984a-487a-a016-381be5cb50b0 in 0.39s
+WARNING 2025-07-10 13:32:26,018 vector_processor 13728 32000 Embedding usage high: 227 calls today
+DEBUG 2025-07-10 13:32:26,018 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:26,021 vector_processor 13728 32000 Generated embedding for segment 1db30bb0-b113-40f4-aa57-15157ebc295c in 0.51s
+WARNING 2025-07-10 13:32:26,880 vector_processor 13728 32000 Embedding usage high: 228 calls today
+DEBUG 2025-07-10 13:32:26,880 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:26,883 vector_processor 13728 32000 Generated embedding for segment 34c9e63d-6e60-420a-85e1-4913e12dc816 in 0.36s
+WARNING 2025-07-10 13:32:27,237 vector_processor 13728 32000 Embedding usage high: 229 calls today
+DEBUG 2025-07-10 13:32:27,237 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:27,240 vector_processor 13728 32000 Generated embedding for segment dd83febb-ccd8-45fa-8ba2-60ba5914a93a in 0.36s
+WARNING 2025-07-10 13:32:27,604 vector_processor 13728 32000 Embedding usage high: 230 calls today
+DEBUG 2025-07-10 13:32:27,604 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:27,608 vector_processor 13728 32000 Generated embedding for segment 4c2222bf-6518-48ac-b936-23bca99995ac in 0.37s
+WARNING 2025-07-10 13:32:27,983 vector_processor 13728 32000 Embedding usage high: 231 calls today
+DEBUG 2025-07-10 13:32:27,983 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:27,985 vector_processor 13728 32000 Generated embedding for segment 783f2183-eb00-46d7-8a47-628a28c11a76 in 0.38s
+WARNING 2025-07-10 13:32:28,417 vector_processor 13728 32000 Embedding usage high: 232 calls today
+DEBUG 2025-07-10 13:32:28,417 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:28,419 vector_processor 13728 32000 Generated embedding for segment 8cde2bae-884d-415e-a310-402fa51d56f6 in 0.43s
+WARNING 2025-07-10 13:32:29,313 vector_processor 13728 32000 Embedding usage high: 233 calls today
+DEBUG 2025-07-10 13:32:29,313 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:29,315 vector_processor 13728 32000 Generated embedding for segment c7a737fb-7c1a-4d80-bf79-82fc373f0e5e in 0.40s
+WARNING 2025-07-10 13:32:29,852 vector_processor 13728 32000 Embedding usage high: 234 calls today
+DEBUG 2025-07-10 13:32:29,852 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:29,854 vector_processor 13728 32000 Generated embedding for segment eadec7e9-d1e6-444c-b59b-8ae1f1cf9ba5 in 0.54s
+WARNING 2025-07-10 13:32:30,265 vector_processor 13728 32000 Embedding usage high: 235 calls today
+DEBUG 2025-07-10 13:32:30,266 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:30,268 vector_processor 13728 32000 Generated embedding for segment 574a4250-4e44-495b-9b4f-fd0feb799e0b in 0.41s
+WARNING 2025-07-10 13:32:30,709 vector_processor 13728 32000 Embedding usage high: 236 calls today
+DEBUG 2025-07-10 13:32:30,709 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:30,712 vector_processor 13728 32000 Generated embedding for segment 44d138f2-4737-4cbc-b840-bf7a6c495664 in 0.44s
+WARNING 2025-07-10 13:32:31,141 vector_processor 13728 32000 Embedding usage high: 237 calls today
+DEBUG 2025-07-10 13:32:31,141 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:31,143 vector_processor 13728 32000 Generated embedding for segment 29840d7a-2989-4539-bde7-6eeba8d33004 in 0.43s
+WARNING 2025-07-10 13:32:32,006 vector_processor 13728 32000 Embedding usage high: 238 calls today
+DEBUG 2025-07-10 13:32:32,006 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:32,009 vector_processor 13728 32000 Generated embedding for segment a5ba98ea-6130-4d5d-a2e4-29bae66aa1d7 in 0.37s
+WARNING 2025-07-10 13:32:32,349 vector_processor 13728 32000 Embedding usage high: 239 calls today
+DEBUG 2025-07-10 13:32:32,349 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:32,351 vector_processor 13728 32000 Generated embedding for segment 98b40d7c-9350-4aba-b5cd-12037d811329 in 0.34s
+WARNING 2025-07-10 13:32:32,696 vector_processor 13728 32000 Embedding usage high: 240 calls today
+DEBUG 2025-07-10 13:32:32,696 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:32,699 vector_processor 13728 32000 Generated embedding for segment 4c144e8f-c546-48f9-8549-e1c92eb0dbf3 in 0.35s
+WARNING 2025-07-10 13:32:33,484 vector_processor 13728 32000 Embedding usage high: 241 calls today
+DEBUG 2025-07-10 13:32:33,484 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:33,487 vector_processor 13728 32000 Generated embedding for segment 920ef87d-fb3e-4577-b31e-d71c184b809d in 0.79s
+WARNING 2025-07-10 13:32:33,868 vector_processor 13728 32000 Embedding usage high: 242 calls today
+DEBUG 2025-07-10 13:32:33,868 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:33,871 vector_processor 13728 32000 Generated embedding for segment ed6284b8-48f0-4a16-ba31-b9d32f8451a9 in 0.38s
+WARNING 2025-07-10 13:32:34,710 vector_processor 13728 32000 Embedding usage high: 243 calls today
+DEBUG 2025-07-10 13:32:34,710 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:34,712 vector_processor 13728 32000 Generated embedding for segment 2c16d302-de00-4fe2-aef9-0388274d2271 in 0.34s
+WARNING 2025-07-10 13:32:35,064 vector_processor 13728 32000 Embedding usage high: 244 calls today
+DEBUG 2025-07-10 13:32:35,064 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:35,066 vector_processor 13728 32000 Generated embedding for segment 119c17ed-25ba-4a62-a693-44375fdd4b64 in 0.35s
+WARNING 2025-07-10 13:32:35,451 vector_processor 13728 32000 Embedding usage high: 245 calls today
+DEBUG 2025-07-10 13:32:35,452 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:35,454 vector_processor 13728 32000 Generated embedding for segment 5d10297d-4bf8-4ce2-b3be-b6b2ec04dce5 in 0.39s
+WARNING 2025-07-10 13:32:35,817 vector_processor 13728 32000 Embedding usage high: 246 calls today
+DEBUG 2025-07-10 13:32:35,817 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:35,820 vector_processor 13728 32000 Generated embedding for segment de77304a-8cad-40e1-8804-5a06265037ed in 0.37s
+WARNING 2025-07-10 13:32:37,188 vector_processor 13728 32000 Embedding usage high: 247 calls today
+DEBUG 2025-07-10 13:32:37,188 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:37,191 vector_processor 13728 32000 Generated embedding for segment ff51a2c3-3c99-4056-99e2-6c37e04d6365 in 1.37s
+WARNING 2025-07-10 13:32:38,046 vector_processor 13728 32000 Embedding usage high: 248 calls today
+DEBUG 2025-07-10 13:32:38,047 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:38,065 vector_processor 13728 32000 Generated embedding for segment 04512d68-4bfe-4889-aa08-d93557f27d1d in 0.37s
+WARNING 2025-07-10 13:32:38,428 vector_processor 13728 32000 Embedding usage high: 249 calls today
+DEBUG 2025-07-10 13:32:38,428 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:38,432 vector_processor 13728 32000 Generated embedding for segment 8ec29245-c641-4a66-8a2d-f704c894bf98 in 0.37s
+WARNING 2025-07-10 13:32:38,846 vector_processor 13728 32000 Embedding usage high: 250 calls today
+DEBUG 2025-07-10 13:32:38,846 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:38,849 vector_processor 13728 32000 Generated embedding for segment 5adf776e-adde-4487-9599-5a193722269f in 0.42s
+WARNING 2025-07-10 13:32:39,209 vector_processor 13728 32000 Embedding usage high: 251 calls today
+DEBUG 2025-07-10 13:32:39,209 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:39,212 vector_processor 13728 32000 Generated embedding for segment 458aa90c-84e5-4fad-a086-c494329fdc96 in 0.36s
+WARNING 2025-07-10 13:32:39,540 vector_processor 13728 32000 Embedding usage high: 252 calls today
+DEBUG 2025-07-10 13:32:39,540 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:39,541 vector_processor 13728 32000 Generated embedding for segment 0d7381e8-400e-429b-a36d-fb75356656c3 in 0.33s
+WARNING 2025-07-10 13:32:40,476 vector_processor 13728 32000 Embedding usage high: 253 calls today
+DEBUG 2025-07-10 13:32:40,476 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:40,479 vector_processor 13728 32000 Generated embedding for segment 398a8fef-ee7f-43d2-bd92-291671c497df in 0.44s
+WARNING 2025-07-10 13:32:40,995 vector_processor 13728 32000 Embedding usage high: 254 calls today
+DEBUG 2025-07-10 13:32:40,995 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:41,028 vector_processor 13728 32000 Generated embedding for segment 43e10f90-acf2-4c08-a186-653e41f21fc5 in 0.55s
+WARNING 2025-07-10 13:32:41,464 vector_processor 13728 32000 Embedding usage high: 255 calls today
+DEBUG 2025-07-10 13:32:41,464 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:41,467 vector_processor 13728 32000 Generated embedding for segment 416ec7b3-33b7-492d-8c60-bef0419a3a28 in 0.44s
+WARNING 2025-07-10 13:32:41,913 vector_processor 13728 32000 Embedding usage high: 256 calls today
+DEBUG 2025-07-10 13:32:41,913 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:41,915 vector_processor 13728 32000 Generated embedding for segment e04b100d-c7df-4204-b438-35d1237f0e5a in 0.45s
+WARNING 2025-07-10 13:32:42,336 vector_processor 13728 32000 Embedding usage high: 257 calls today
+DEBUG 2025-07-10 13:32:42,336 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:42,391 vector_processor 13728 32000 Generated embedding for segment 7d71d760-7d6f-4fbb-9ea2-8854101e4c19 in 0.48s
+WARNING 2025-07-10 13:32:43,252 vector_processor 13728 32000 Embedding usage high: 258 calls today
+DEBUG 2025-07-10 13:32:43,252 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:43,255 vector_processor 13728 32000 Generated embedding for segment 5eecf334-ef84-4566-9c64-3892213864f1 in 0.36s
+WARNING 2025-07-10 13:32:43,625 vector_processor 13728 32000 Embedding usage high: 259 calls today
+DEBUG 2025-07-10 13:32:43,625 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:43,628 vector_processor 13728 32000 Generated embedding for segment cec6f3c4-a0f7-4a7b-9764-6626928939ae in 0.37s
+WARNING 2025-07-10 13:32:44,075 vector_processor 13728 32000 Embedding usage high: 260 calls today
+DEBUG 2025-07-10 13:32:44,075 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:44,080 vector_processor 13728 32000 Generated embedding for segment a75c15d9-f95f-43a7-9526-34d815bcc3bd in 0.45s
+WARNING 2025-07-10 13:32:44,726 vector_processor 13728 32000 Embedding usage high: 261 calls today
+DEBUG 2025-07-10 13:32:44,726 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:44,753 vector_processor 13728 32000 Generated embedding for segment 80b234fc-c8df-476b-937d-17449db5f714 in 0.67s
+WARNING 2025-07-10 13:32:45,330 vector_processor 13728 32000 Embedding usage high: 262 calls today
+DEBUG 2025-07-10 13:32:45,331 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:45,333 vector_processor 13728 32000 Generated embedding for segment 2583adec-8b30-4ca8-81e3-af847a25d7bd in 0.58s
+WARNING 2025-07-10 13:32:46,170 vector_processor 13728 32000 Embedding usage high: 263 calls today
+DEBUG 2025-07-10 13:32:46,171 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:46,172 vector_processor 13728 32000 Generated embedding for segment 05b000a9-e043-4bcf-804c-2a94c9d896e5 in 0.34s
+WARNING 2025-07-10 13:32:46,498 vector_processor 13728 32000 Embedding usage high: 264 calls today
+DEBUG 2025-07-10 13:32:46,498 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:46,501 vector_processor 13728 32000 Generated embedding for segment d9cc53bb-3c58-4d0a-8571-4c352c145855 in 0.33s
+WARNING 2025-07-10 13:32:46,836 vector_processor 13728 32000 Embedding usage high: 265 calls today
+DEBUG 2025-07-10 13:32:46,836 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:46,839 vector_processor 13728 32000 Generated embedding for segment 9e8726c8-d7df-4d9f-a451-abfc1aa616cc in 0.34s
+WARNING 2025-07-10 13:32:47,233 vector_processor 13728 32000 Embedding usage high: 266 calls today
+DEBUG 2025-07-10 13:32:47,233 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:47,236 vector_processor 13728 32000 Generated embedding for segment 51b95184-9431-443a-b91e-fa90b4109a69 in 0.40s
+WARNING 2025-07-10 13:32:47,611 vector_processor 13728 32000 Embedding usage high: 267 calls today
+DEBUG 2025-07-10 13:32:47,611 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:47,613 vector_processor 13728 32000 Generated embedding for segment ce5a319e-e40a-4ff3-93f2-4982931c4ad8 in 0.38s
+WARNING 2025-07-10 13:32:48,469 vector_processor 13728 32000 Embedding usage high: 268 calls today
+DEBUG 2025-07-10 13:32:48,469 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:48,471 vector_processor 13728 32000 Generated embedding for segment 1bde0703-1a79-4995-8d6d-dcb6a7e4815b in 0.36s
+WARNING 2025-07-10 13:32:48,867 vector_processor 13728 32000 Embedding usage high: 269 calls today
+DEBUG 2025-07-10 13:32:48,867 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:48,871 vector_processor 13728 32000 Generated embedding for segment d35b8ef9-c0c0-4c2f-b951-49bdd67e5f68 in 0.40s
+WARNING 2025-07-10 13:32:49,660 vector_processor 13728 32000 Embedding usage high: 270 calls today
+DEBUG 2025-07-10 13:32:49,660 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:49,662 vector_processor 13728 32000 Generated embedding for segment 05d0374f-0cfb-4212-9b7a-2b762c3f9c29 in 0.79s
+WARNING 2025-07-10 13:32:50,101 vector_processor 13728 32000 Embedding usage high: 271 calls today
+DEBUG 2025-07-10 13:32:50,102 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:50,104 vector_processor 13728 32000 Generated embedding for segment e9607fbd-8711-4bd4-ad70-8a505376a744 in 0.44s
+WARNING 2025-07-10 13:32:50,454 vector_processor 13728 32000 Embedding usage high: 272 calls today
+DEBUG 2025-07-10 13:32:50,454 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:50,456 vector_processor 13728 32000 Generated embedding for segment a48682fc-a35d-4998-9a4f-3fbd7c228fb7 in 0.35s
+WARNING 2025-07-10 13:32:52,209 vector_processor 13728 32000 Embedding usage high: 273 calls today
+DEBUG 2025-07-10 13:32:52,209 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:52,213 vector_processor 13728 32000 Generated embedding for segment 4fec1db9-a3f9-4a42-9953-324982369fc4 in 1.26s
+WARNING 2025-07-10 13:32:52,631 vector_processor 13728 32000 Embedding usage high: 274 calls today
+DEBUG 2025-07-10 13:32:52,631 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:52,633 vector_processor 13728 32000 Generated embedding for segment 584340e9-9929-4f90-b081-a058fdad9e9e in 0.42s
+WARNING 2025-07-10 13:32:52,998 vector_processor 13728 32000 Embedding usage high: 275 calls today
+DEBUG 2025-07-10 13:32:52,998 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:53,000 vector_processor 13728 32000 Generated embedding for segment 8d4b237e-ee4f-433d-bbdf-d50f4f0424a9 in 0.37s
+WARNING 2025-07-10 13:32:53,332 vector_processor 13728 32000 Embedding usage high: 276 calls today
+DEBUG 2025-07-10 13:32:53,332 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:53,333 vector_processor 13728 32000 Generated embedding for segment 625c07ee-ae1f-4ffa-8d45-eff1c6d20812 in 0.33s
+WARNING 2025-07-10 13:32:53,685 vector_processor 13728 32000 Embedding usage high: 277 calls today
+DEBUG 2025-07-10 13:32:53,686 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:53,688 vector_processor 13728 32000 Generated embedding for segment 0c9bfd18-2341-4132-a377-275e6bd62988 in 0.35s
+WARNING 2025-07-10 13:32:54,761 vector_processor 13728 32000 Embedding usage high: 278 calls today
+DEBUG 2025-07-10 13:32:54,761 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:54,763 vector_processor 13728 32000 Generated embedding for segment d5b18f78-1fa4-4414-83e6-324ce687274c in 0.57s
+WARNING 2025-07-10 13:32:55,113 vector_processor 13728 32000 Embedding usage high: 279 calls today
+DEBUG 2025-07-10 13:32:55,114 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:55,116 vector_processor 13728 32000 Generated embedding for segment 383ef41f-06f6-4554-afcb-e5a07f96e9f7 in 0.35s
+WARNING 2025-07-10 13:32:55,780 vector_processor 13728 32000 Embedding usage high: 280 calls today
+DEBUG 2025-07-10 13:32:55,780 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:55,782 vector_processor 13728 32000 Generated embedding for segment ecbbd8e7-387a-45af-aa7f-bf840775fbe3 in 0.67s
+WARNING 2025-07-10 13:32:56,202 vector_processor 13728 32000 Embedding usage high: 281 calls today
+DEBUG 2025-07-10 13:32:56,202 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:56,205 vector_processor 13728 32000 Generated embedding for segment 82df9903-752d-404e-a60e-6b7531c663f8 in 0.42s
+WARNING 2025-07-10 13:32:56,530 vector_processor 13728 32000 Embedding usage high: 282 calls today
+DEBUG 2025-07-10 13:32:56,530 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:56,533 vector_processor 13728 32000 Generated embedding for segment f692893f-7d8b-4db9-b958-33ba35c30791 in 0.33s
+WARNING 2025-07-10 13:32:57,516 vector_processor 13728 32000 Embedding usage high: 283 calls today
+DEBUG 2025-07-10 13:32:57,516 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:57,519 vector_processor 13728 32000 Generated embedding for segment c3f94bbb-cb3d-45da-8594-ea1cc23d9fff in 0.49s
+WARNING 2025-07-10 13:32:57,941 vector_processor 13728 32000 Embedding usage high: 284 calls today
+DEBUG 2025-07-10 13:32:57,941 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:57,966 vector_processor 13728 32000 Generated embedding for segment fc34ebe5-4b18-466f-8402-de286b3c384b in 0.45s
+WARNING 2025-07-10 13:32:58,305 vector_processor 13728 32000 Embedding usage high: 285 calls today
+DEBUG 2025-07-10 13:32:58,306 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:58,308 vector_processor 13728 32000 Generated embedding for segment ff5049de-7d2f-4c34-8579-5f1ce0e0a081 in 0.34s
+WARNING 2025-07-10 13:32:58,691 vector_processor 13728 32000 Embedding usage high: 286 calls today
+DEBUG 2025-07-10 13:32:58,691 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:58,694 vector_processor 13728 32000 Generated embedding for segment 454e746d-d759-482e-885d-ae888c06643b in 0.39s
+WARNING 2025-07-10 13:32:59,115 vector_processor 13728 32000 Embedding usage high: 287 calls today
+DEBUG 2025-07-10 13:32:59,115 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:59,116 vector_processor 13728 32000 Generated embedding for segment 93dee271-d618-4590-96ae-a8254cc73596 in 0.42s
+WARNING 2025-07-10 13:32:59,960 vector_processor 13728 32000 Embedding usage high: 288 calls today
+DEBUG 2025-07-10 13:32:59,960 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:32:59,962 vector_processor 13728 32000 Generated embedding for segment b1833cdf-5826-4293-827d-d6d5a78d0d3e in 0.34s
+WARNING 2025-07-10 13:33:00,299 vector_processor 13728 32000 Embedding usage high: 289 calls today
+DEBUG 2025-07-10 13:33:00,300 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:00,302 vector_processor 13728 32000 Generated embedding for segment 2d8ed953-abe1-472a-bfa1-e588e63be0a6 in 0.34s
+WARNING 2025-07-10 13:33:00,845 vector_processor 13728 32000 Embedding usage high: 290 calls today
+DEBUG 2025-07-10 13:33:00,845 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:00,847 vector_processor 13728 32000 Generated embedding for segment 66a308ad-c955-4dc7-8a24-2441872301da in 0.54s
+WARNING 2025-07-10 13:33:01,258 vector_processor 13728 32000 Embedding usage high: 291 calls today
+DEBUG 2025-07-10 13:33:01,258 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:01,260 vector_processor 13728 32000 Generated embedding for segment 72425540-663b-4aba-9f90-0efa97983f53 in 0.41s
+WARNING 2025-07-10 13:33:01,614 vector_processor 13728 32000 Embedding usage high: 292 calls today
+DEBUG 2025-07-10 13:33:01,614 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:01,617 vector_processor 13728 32000 Generated embedding for segment 8dbb40ed-451c-4ad4-81a2-f1116ac203a9 in 0.36s
+WARNING 2025-07-10 13:33:02,689 vector_processor 13728 32000 Embedding usage high: 293 calls today
+DEBUG 2025-07-10 13:33:02,689 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:02,692 vector_processor 13728 32000 Generated embedding for segment c3e8bf50-97b0-418f-bc73-6320c3b7ff64 in 0.57s
+WARNING 2025-07-10 13:33:03,041 vector_processor 13728 32000 Embedding usage high: 294 calls today
+DEBUG 2025-07-10 13:33:03,041 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:03,043 vector_processor 13728 32000 Generated embedding for segment 59f9e650-d1bc-4c98-94aa-a586d817dd9a in 0.35s
+WARNING 2025-07-10 13:33:03,466 vector_processor 13728 32000 Embedding usage high: 295 calls today
+DEBUG 2025-07-10 13:33:03,466 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:03,469 vector_processor 13728 32000 Generated embedding for segment 31b3b540-320a-4a2c-91a4-108c4e00e66c in 0.43s
+WARNING 2025-07-10 13:33:03,847 vector_processor 13728 32000 Embedding usage high: 296 calls today
+DEBUG 2025-07-10 13:33:03,847 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:03,850 vector_processor 13728 32000 Generated embedding for segment 5b30a999-eb63-44c0-844e-7da5d2cb6dd6 in 0.38s
+WARNING 2025-07-10 13:33:04,223 vector_processor 13728 32000 Embedding usage high: 297 calls today
+DEBUG 2025-07-10 13:33:04,223 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:04,225 vector_processor 13728 32000 Generated embedding for segment 0fd2daf1-9f46-4540-be2e-27e47b2aa3a2 in 0.37s
+WARNING 2025-07-10 13:33:05,145 vector_processor 13728 32000 Embedding usage high: 298 calls today
+DEBUG 2025-07-10 13:33:05,146 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:05,148 vector_processor 13728 32000 Generated embedding for segment dd6a46ec-c27c-4e1a-807f-a9bbdbaf291d in 0.42s
+WARNING 2025-07-10 13:33:05,484 vector_processor 13728 32000 Embedding usage high: 299 calls today
+DEBUG 2025-07-10 13:33:05,484 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:05,486 vector_processor 13728 32000 Generated embedding for segment c82bff2b-6726-416e-8d14-1f44f3d34969 in 0.34s
+WARNING 2025-07-10 13:33:05,873 vector_processor 13728 32000 Embedding usage high: 300 calls today
+DEBUG 2025-07-10 13:33:05,873 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:05,875 vector_processor 13728 32000 Generated embedding for segment 3099c2ee-8ea0-4a1c-b931-7e8853d5c634 in 0.39s
+WARNING 2025-07-10 13:33:06,264 vector_processor 13728 32000 Embedding usage high: 301 calls today
+DEBUG 2025-07-10 13:33:06,264 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:06,282 vector_processor 13728 32000 Generated embedding for segment 8d3495be-aa80-49d1-b3b9-e040a51a3306 in 0.41s
+WARNING 2025-07-10 13:33:06,659 vector_processor 13728 32000 Embedding usage high: 302 calls today
+DEBUG 2025-07-10 13:33:06,659 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:06,661 vector_processor 13728 32000 Generated embedding for segment f802040b-6535-42fa-a4f4-579475bc7d98 in 0.38s
+WARNING 2025-07-10 13:33:07,514 vector_processor 13728 32000 Embedding usage high: 303 calls today
+DEBUG 2025-07-10 13:33:07,514 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:07,516 vector_processor 13728 32000 Generated embedding for segment ec2819b5-877b-428c-b772-98ea50dd741d in 0.35s
+WARNING 2025-07-10 13:33:07,856 vector_processor 13728 32000 Embedding usage high: 304 calls today
+DEBUG 2025-07-10 13:33:07,856 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:07,859 vector_processor 13728 32000 Generated embedding for segment 537f7c93-2e03-41e0-a40a-498d8ba60ae8 in 0.34s
+WARNING 2025-07-10 13:33:08,333 vector_processor 13728 32000 Embedding usage high: 305 calls today
+DEBUG 2025-07-10 13:33:08,333 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:08,335 vector_processor 13728 32000 Generated embedding for segment 16466622-0159-4596-bffc-3856f6e646af in 0.48s
+WARNING 2025-07-10 13:33:08,999 vector_processor 13728 32000 Embedding usage high: 306 calls today
+DEBUG 2025-07-10 13:33:08,999 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:09,002 vector_processor 13728 32000 Generated embedding for segment a61f53a0-6311-4a3f-9525-f6dd0ede5aae in 0.67s
+WARNING 2025-07-10 13:33:09,483 vector_processor 13728 32000 Embedding usage high: 307 calls today
+DEBUG 2025-07-10 13:33:09,483 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:09,485 vector_processor 13728 32000 Generated embedding for segment 2bd6e0bb-11c5-45cf-971d-e032ce368f7a in 0.48s
+WARNING 2025-07-10 13:33:10,357 vector_processor 13728 32000 Embedding usage high: 308 calls today
+DEBUG 2025-07-10 13:33:10,357 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:10,360 vector_processor 13728 32000 Generated embedding for segment 5968930b-0149-4b35-bd45-083f2e495d46 in 0.37s
+WARNING 2025-07-10 13:33:10,797 vector_processor 13728 32000 Embedding usage high: 309 calls today
+DEBUG 2025-07-10 13:33:10,797 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:10,800 vector_processor 13728 32000 Generated embedding for segment 11d9135e-f13e-4c6c-8859-47e34918d7b5 in 0.44s
+WARNING 2025-07-10 13:33:11,154 vector_processor 13728 32000 Embedding usage high: 310 calls today
+DEBUG 2025-07-10 13:33:11,154 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:11,156 vector_processor 13728 32000 Generated embedding for segment 60c93b14-cc0c-43b9-ae7c-2d33f42de98a in 0.36s
+WARNING 2025-07-10 13:33:11,568 vector_processor 13728 32000 Embedding usage high: 311 calls today
+DEBUG 2025-07-10 13:33:11,568 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:11,570 vector_processor 13728 32000 Generated embedding for segment 119d0769-8589-4b36-9774-ffe8d9cc823a in 0.41s
+WARNING 2025-07-10 13:33:11,974 vector_processor 13728 32000 Embedding usage high: 312 calls today
+DEBUG 2025-07-10 13:33:11,974 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:11,977 vector_processor 13728 32000 Generated embedding for segment 11961c59-215c-4ecb-9f66-6686270113f3 in 0.41s
+WARNING 2025-07-10 13:33:13,066 vector_processor 13728 32000 Embedding usage high: 313 calls today
+DEBUG 2025-07-10 13:33:13,066 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:13,069 vector_processor 13728 32000 Generated embedding for segment b727ad31-0332-43af-a0ac-4ace4395c97d in 0.59s
+WARNING 2025-07-10 13:33:13,513 vector_processor 13728 32000 Embedding usage high: 314 calls today
+DEBUG 2025-07-10 13:33:13,513 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:13,516 vector_processor 13728 32000 Generated embedding for segment 29ae5d5c-53f8-4eed-a100-dc7d17028b2a in 0.45s
+WARNING 2025-07-10 13:33:13,896 vector_processor 13728 32000 Embedding usage high: 315 calls today
+DEBUG 2025-07-10 13:33:13,896 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:13,898 vector_processor 13728 32000 Generated embedding for segment de5be255-e7f6-4e3c-a8ce-baa6317c33e8 in 0.38s
+WARNING 2025-07-10 13:33:14,336 vector_processor 13728 32000 Embedding usage high: 316 calls today
+DEBUG 2025-07-10 13:33:14,336 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:14,339 vector_processor 13728 32000 Generated embedding for segment 5f085063-2cee-412a-b1ce-f2844b1747b0 in 0.44s
+WARNING 2025-07-10 13:33:14,665 vector_processor 13728 32000 Embedding usage high: 317 calls today
+DEBUG 2025-07-10 13:33:14,665 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:14,668 vector_processor 13728 32000 Generated embedding for segment 21c50d4e-1c3c-45d3-a4f9-6f1a0cb297eb in 0.33s
+WARNING 2025-07-10 13:33:15,526 vector_processor 13728 32000 Embedding usage high: 318 calls today
+DEBUG 2025-07-10 13:33:15,526 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:15,530 vector_processor 13728 32000 Generated embedding for segment 0a6babbe-4060-416c-ac31-b7da67a4101a in 0.36s
+WARNING 2025-07-10 13:33:16,273 vector_processor 13728 32000 Embedding usage high: 319 calls today
+DEBUG 2025-07-10 13:33:16,273 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:16,276 vector_processor 13728 32000 Generated embedding for segment 54d24863-ec69-41bc-a855-9eff99abd897 in 0.75s
+WARNING 2025-07-10 13:33:16,736 vector_processor 13728 32000 Embedding usage high: 320 calls today
+DEBUG 2025-07-10 13:33:16,736 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:16,739 vector_processor 13728 32000 Generated embedding for segment c9b895e7-1e0e-438f-a388-8a62b6eb82c8 in 0.46s
+WARNING 2025-07-10 13:33:17,145 vector_processor 13728 32000 Embedding usage high: 321 calls today
+DEBUG 2025-07-10 13:33:17,145 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:17,148 vector_processor 13728 32000 Generated embedding for segment 2f253631-93a5-4b87-aab3-b4772c2deb33 in 0.41s
+WARNING 2025-07-10 13:33:17,571 vector_processor 13728 32000 Embedding usage high: 322 calls today
+DEBUG 2025-07-10 13:33:17,580 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:17,582 vector_processor 13728 32000 Generated embedding for segment e40a6501-3c3d-4e64-a12c-0a77148d7b4e in 0.43s
+WARNING 2025-07-10 13:33:18,417 vector_processor 13728 32000 Embedding usage high: 323 calls today
+DEBUG 2025-07-10 13:33:18,417 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:18,420 vector_processor 13728 32000 Generated embedding for segment 46340b21-b001-442e-b24e-dffcf3cbaf92 in 0.34s
+WARNING 2025-07-10 13:33:18,771 vector_processor 13728 32000 Embedding usage high: 324 calls today
+DEBUG 2025-07-10 13:33:18,771 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:18,773 vector_processor 13728 32000 Generated embedding for segment 0b401c29-3d60-48b3-a48e-c7c34887f766 in 0.35s
+WARNING 2025-07-10 13:33:19,185 vector_processor 13728 32000 Embedding usage high: 325 calls today
+DEBUG 2025-07-10 13:33:19,185 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:19,187 vector_processor 13728 32000 Generated embedding for segment 56ae8f54-cd84-4974-bb5b-cdb2d4d09887 in 0.41s
+WARNING 2025-07-10 13:33:19,709 vector_processor 13728 32000 Embedding usage high: 326 calls today
+DEBUG 2025-07-10 13:33:19,709 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:19,712 vector_processor 13728 32000 Generated embedding for segment f7a127e2-b724-4b27-826a-3a23564f39c7 in 0.52s
+WARNING 2025-07-10 13:33:20,046 vector_processor 13728 32000 Embedding usage high: 327 calls today
+DEBUG 2025-07-10 13:33:20,046 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:20,061 vector_processor 13728 32000 Generated embedding for segment aabc5a3a-532d-4590-9c3b-6a51530d3f2d in 0.35s
+WARNING 2025-07-10 13:33:20,941 vector_processor 13728 32000 Embedding usage high: 328 calls today
+DEBUG 2025-07-10 13:33:20,942 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:20,945 vector_processor 13728 32000 Generated embedding for segment 4eac3aa2-917e-4d2c-8151-4c185708ce73 in 0.38s
+WARNING 2025-07-10 13:33:21,537 vector_processor 13728 32000 Embedding usage high: 329 calls today
+DEBUG 2025-07-10 13:33:21,537 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:21,539 vector_processor 13728 32000 Generated embedding for segment fb76a686-ca8f-4587-b637-3494114856bc in 0.59s
+WARNING 2025-07-10 13:33:22,125 vector_processor 13728 32000 Embedding usage high: 330 calls today
+DEBUG 2025-07-10 13:33:22,125 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:22,126 vector_processor 13728 32000 Generated embedding for segment fcb5616b-15ca-4b8f-a7f5-19041b79a32e in 0.59s
+WARNING 2025-07-10 13:33:22,551 vector_processor 13728 32000 Embedding usage high: 331 calls today
+DEBUG 2025-07-10 13:33:22,551 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:22,553 vector_processor 13728 32000 Generated embedding for segment 2df7a277-698b-4076-92ed-52436d470049 in 0.43s
+WARNING 2025-07-10 13:33:23,074 vector_processor 13728 32000 Embedding usage high: 332 calls today
+DEBUG 2025-07-10 13:33:23,075 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:23,076 vector_processor 13728 32000 Generated embedding for segment 00a0eee8-7370-47c6-828a-f5c94a85734c in 0.52s
+WARNING 2025-07-10 13:33:23,925 vector_processor 13728 32000 Embedding usage high: 333 calls today
+DEBUG 2025-07-10 13:33:23,925 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:23,929 vector_processor 13728 32000 Generated embedding for segment 5138b83a-f745-447e-9304-26348d3149f5 in 0.35s
+WARNING 2025-07-10 13:33:24,358 vector_processor 13728 32000 Embedding usage high: 334 calls today
+DEBUG 2025-07-10 13:33:24,359 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:24,361 vector_processor 13728 32000 Generated embedding for segment 278a71ce-3997-40c7-8f36-eee4a0c67270 in 0.43s
+WARNING 2025-07-10 13:33:24,696 vector_processor 13728 32000 Embedding usage high: 335 calls today
+DEBUG 2025-07-10 13:33:24,696 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:24,698 vector_processor 13728 32000 Generated embedding for segment 377dc1c4-85e1-4e8d-862d-168d52dd55d6 in 0.34s
+WARNING 2025-07-10 13:33:25,047 vector_processor 13728 32000 Embedding usage high: 336 calls today
+DEBUG 2025-07-10 13:33:25,047 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:25,049 vector_processor 13728 32000 Generated embedding for segment 9d7ec055-edc8-4770-bf48-15e57e7bc8cc in 0.35s
+WARNING 2025-07-10 13:33:25,398 vector_processor 13728 32000 Embedding usage high: 337 calls today
+DEBUG 2025-07-10 13:33:25,399 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:25,403 vector_processor 13728 32000 Generated embedding for segment d37f33e6-2deb-4d1a-98a1-7e7e04987d94 in 0.35s
+WARNING 2025-07-10 13:33:26,260 vector_processor 13728 32000 Embedding usage high: 338 calls today
+DEBUG 2025-07-10 13:33:26,260 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:26,262 vector_processor 13728 32000 Generated embedding for segment 71cd8fdf-8cd9-4ca5-a547-cb891ce8a597 in 0.36s
+WARNING 2025-07-10 13:33:26,704 vector_processor 13728 32000 Embedding usage high: 339 calls today
+DEBUG 2025-07-10 13:33:26,704 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:26,706 vector_processor 13728 32000 Generated embedding for segment 2d8465cd-be87-4001-ac32-a3a9ec7c4ffe in 0.44s
+WARNING 2025-07-10 13:33:27,085 vector_processor 13728 32000 Embedding usage high: 340 calls today
+DEBUG 2025-07-10 13:33:27,085 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:27,088 vector_processor 13728 32000 Generated embedding for segment 7fbce310-68ac-4ee0-bd52-f16af604617e in 0.38s
+WARNING 2025-07-10 13:33:27,501 vector_processor 13728 32000 Embedding usage high: 341 calls today
+DEBUG 2025-07-10 13:33:27,501 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:27,503 vector_processor 13728 32000 Generated embedding for segment 7003eeb8-1224-4bdc-9a06-ea7029c1c9c9 in 0.42s
+WARNING 2025-07-10 13:33:27,846 vector_processor 13728 32000 Embedding usage high: 342 calls today
+DEBUG 2025-07-10 13:33:27,846 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:27,849 vector_processor 13728 32000 Generated embedding for segment 036e9c89-0a2e-4006-b4c3-4ff6d0878733 in 0.35s
+WARNING 2025-07-10 13:33:28,798 vector_processor 13728 32000 Embedding usage high: 343 calls today
+DEBUG 2025-07-10 13:33:28,798 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:28,800 vector_processor 13728 32000 Generated embedding for segment d4000365-f77c-4aee-9ca3-b770b01b515d in 0.45s
+WARNING 2025-07-10 13:33:29,294 vector_processor 13728 32000 Embedding usage high: 344 calls today
+DEBUG 2025-07-10 13:33:29,295 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:29,297 vector_processor 13728 32000 Generated embedding for segment 2f3522c5-a931-4ce2-9739-763ca39d35d0 in 0.50s
+WARNING 2025-07-10 13:33:29,649 vector_processor 13728 32000 Embedding usage high: 345 calls today
+DEBUG 2025-07-10 13:33:29,649 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:29,652 vector_processor 13728 32000 Generated embedding for segment 4b74ad46-2ded-4cb2-9bd0-a3b15e22411d in 0.35s
+WARNING 2025-07-10 13:33:30,047 vector_processor 13728 32000 Embedding usage high: 346 calls today
+DEBUG 2025-07-10 13:33:30,047 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:30,097 vector_processor 13728 32000 Generated embedding for segment 72929991-9c6b-4c2b-8a13-ddc39ba82b56 in 0.44s
+WARNING 2025-07-10 13:33:30,635 vector_processor 13728 32000 Embedding usage high: 347 calls today
+DEBUG 2025-07-10 13:33:30,635 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:30,638 vector_processor 13728 32000 Generated embedding for segment 392712bd-5059-4803-a034-e1d722c97557 in 0.54s
+WARNING 2025-07-10 13:33:31,716 vector_processor 13728 32000 Embedding usage high: 348 calls today
+DEBUG 2025-07-10 13:33:31,716 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:31,720 vector_processor 13728 32000 Generated embedding for segment 69485843-846e-4f9f-aba3-85f7f6e7e8b5 in 0.58s
+WARNING 2025-07-10 13:33:32,045 vector_processor 13728 32000 Embedding usage high: 349 calls today
+DEBUG 2025-07-10 13:33:32,045 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:32,095 vector_processor 13728 32000 Generated embedding for segment 320ded6b-711d-482f-adf2-05e8f121a631 in 0.38s
+WARNING 2025-07-10 13:33:32,508 vector_processor 13728 32000 Embedding usage high: 350 calls today
+DEBUG 2025-07-10 13:33:32,508 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:32,511 vector_processor 13728 32000 Generated embedding for segment 1042a1e3-bb0a-454b-9b88-1bccddde5bca in 0.42s
+WARNING 2025-07-10 13:33:32,912 vector_processor 13728 32000 Embedding usage high: 351 calls today
+DEBUG 2025-07-10 13:33:32,912 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:32,914 vector_processor 13728 32000 Generated embedding for segment bf1b4c2e-f30f-4795-a225-5e0149d6507f in 0.40s
+WARNING 2025-07-10 13:33:33,352 vector_processor 13728 32000 Embedding usage high: 352 calls today
+DEBUG 2025-07-10 13:33:33,352 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:33,355 vector_processor 13728 32000 Generated embedding for segment d58f4c90-029a-48c5-9b69-7dca4c4a4805 in 0.44s
+WARNING 2025-07-10 13:33:34,308 vector_processor 13728 32000 Embedding usage high: 353 calls today
+DEBUG 2025-07-10 13:33:34,308 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:34,310 vector_processor 13728 32000 Generated embedding for segment 1131932b-4770-452a-99d0-b78a0540bebb in 0.45s
+WARNING 2025-07-10 13:33:34,731 vector_processor 13728 32000 Embedding usage high: 354 calls today
+DEBUG 2025-07-10 13:33:34,731 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:34,734 vector_processor 13728 32000 Generated embedding for segment 285820cf-9716-41ea-8bc6-3c5eeedebd7a in 0.42s
+WARNING 2025-07-10 13:33:35,190 vector_processor 13728 32000 Embedding usage high: 355 calls today
+DEBUG 2025-07-10 13:33:35,190 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:35,192 vector_processor 13728 32000 Generated embedding for segment db7d7620-e7a9-4d40-b22b-48f64f48cd20 in 0.46s
+WARNING 2025-07-10 13:33:36,582 vector_processor 13728 32000 Embedding usage high: 356 calls today
+DEBUG 2025-07-10 13:33:36,583 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:36,585 vector_processor 13728 32000 Generated embedding for segment 15e6784c-4822-4551-af53-e37784008b46 in 1.39s
+WARNING 2025-07-10 13:33:36,984 vector_processor 13728 32000 Embedding usage high: 357 calls today
+DEBUG 2025-07-10 13:33:36,984 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:36,986 vector_processor 13728 32000 Generated embedding for segment 75b716cd-2c1e-4ab0-8f6f-4d5f6e12068b in 0.40s
+WARNING 2025-07-10 13:33:37,840 vector_processor 13728 32000 Embedding usage high: 358 calls today
+DEBUG 2025-07-10 13:33:37,840 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:37,843 vector_processor 13728 32000 Generated embedding for segment 8d7e7d0f-f48f-4dd3-a92b-4063081df74b in 0.36s
+WARNING 2025-07-10 13:33:38,183 vector_processor 13728 32000 Embedding usage high: 359 calls today
+DEBUG 2025-07-10 13:33:38,183 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:38,186 vector_processor 13728 32000 Generated embedding for segment 83a32a10-a4a3-4e23-950a-74271cf14ea5 in 0.34s
+WARNING 2025-07-10 13:33:38,523 vector_processor 13728 32000 Embedding usage high: 360 calls today
+DEBUG 2025-07-10 13:33:38,523 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:38,526 vector_processor 13728 32000 Generated embedding for segment b433495a-e541-42f5-b93c-5cb02071f77f in 0.34s
+WARNING 2025-07-10 13:33:38,949 vector_processor 13728 32000 Embedding usage high: 361 calls today
+DEBUG 2025-07-10 13:33:38,949 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:38,952 vector_processor 13728 32000 Generated embedding for segment b9171c71-f057-4e13-bfae-ce027d4b86bf in 0.43s
+WARNING 2025-07-10 13:33:39,362 vector_processor 13728 32000 Embedding usage high: 362 calls today
+DEBUG 2025-07-10 13:33:39,363 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:39,406 vector_processor 13728 32000 Generated embedding for segment fad44a45-c8a7-4be9-b19d-683eb15a260a in 0.45s
+WARNING 2025-07-10 13:33:40,451 vector_processor 13728 32000 Embedding usage high: 363 calls today
+DEBUG 2025-07-10 13:33:40,451 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:40,454 vector_processor 13728 32000 Generated embedding for segment d5efbc87-516e-47e0-ac09-aa5508b119ab in 0.55s
+WARNING 2025-07-10 13:33:40,855 vector_processor 13728 32000 Embedding usage high: 364 calls today
+DEBUG 2025-07-10 13:33:40,855 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:40,856 vector_processor 13728 32000 Generated embedding for segment 2614ba0b-fbbf-4aa6-bbcc-43ce3fb575e5 in 0.40s
+WARNING 2025-07-10 13:33:41,320 vector_processor 13728 32000 Embedding usage high: 365 calls today
+DEBUG 2025-07-10 13:33:41,320 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:41,322 vector_processor 13728 32000 Generated embedding for segment dd479252-e8b0-42ca-a52f-43ab8795abef in 0.47s
+WARNING 2025-07-10 13:33:41,708 vector_processor 13728 32000 Embedding usage high: 366 calls today
+DEBUG 2025-07-10 13:33:41,708 vector_processor 13728 32000 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:33:41,711 vector_processor 13728 32000 Generated embedding for segment eadcd318-8df3-41ed-8936-c055f2446986 in 0.39s
+INFO 2025-07-10 13:40:49,964 vector_processor 33876 22868 Processing 82 segments for document: test_excel.xlsx
+INFO 2025-07-10 13:40:49,965 vector_processor 33876 22868 Generating embeddings for 82 segments
+DEBUG 2025-07-10 13:40:51,569 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:51,572 vector_processor 33876 22868 Generated embedding for segment 4e59a714-3632-4528-b96a-e5ee4b90c54c in 1.61s
+DEBUG 2025-07-10 13:40:52,502 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:52,505 vector_processor 33876 22868 Generated embedding for segment 548e0bdc-4141-4efc-9e3f-c0c514e76806 in 0.93s
+DEBUG 2025-07-10 13:40:53,443 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:53,446 vector_processor 33876 22868 Generated embedding for segment c33a6f0e-e352-47a7-bd1c-64168e74d52e in 0.94s
+DEBUG 2025-07-10 13:40:53,794 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:53,798 vector_processor 33876 22868 Generated embedding for segment 464c28e4-b7a2-4c04-9243-33632b59eaab in 0.35s
+DEBUG 2025-07-10 13:40:54,632 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:54,633 vector_processor 33876 22868 Generated embedding for segment 8fb26cb5-b2cf-48d3-8f9e-ac5fd77332ed in 0.84s
+DEBUG 2025-07-10 13:40:55,534 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:55,536 vector_processor 33876 22868 Generated embedding for segment 1c834e88-4e8a-411f-b08e-87f1bf4c1c5f in 0.40s
+DEBUG 2025-07-10 13:40:55,938 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:55,941 vector_processor 33876 22868 Generated embedding for segment 18a6a631-979e-492e-a8c1-e7530a07e25d in 0.41s
+DEBUG 2025-07-10 13:40:56,965 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:56,968 vector_processor 33876 22868 Generated embedding for segment 36e6f531-4e2a-42d5-b5a0-271d645ea5f9 in 1.03s
+DEBUG 2025-07-10 13:40:58,920 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:58,922 vector_processor 33876 22868 Generated embedding for segment c9d01e91-31a3-4069-991e-a710fbc020cb in 1.95s
+DEBUG 2025-07-10 13:40:59,283 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:40:59,285 vector_processor 33876 22868 Generated embedding for segment 444dea01-5afc-4607-8d6c-95347a275b5b in 0.36s
+DEBUG 2025-07-10 13:41:00,981 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:00,983 vector_processor 33876 22868 Generated embedding for segment c01b76a5-6d49-438b-b072-59e96dcc301b in 1.20s
+DEBUG 2025-07-10 13:41:01,385 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:01,387 vector_processor 33876 22868 Generated embedding for segment 3f5872b5-ee30-42c2-8eaa-74072c20d153 in 0.40s
+DEBUG 2025-07-10 13:41:02,295 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:02,298 vector_processor 33876 22868 Generated embedding for segment e3d6fdbf-3ec4-4079-9994-bac43d25b97f in 0.91s
+DEBUG 2025-07-10 13:41:02,675 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:02,677 vector_processor 33876 22868 Generated embedding for segment 9fbb478a-0cc9-4a77-8c0d-48ca3526754f in 0.38s
+DEBUG 2025-07-10 13:41:03,028 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:03,030 vector_processor 33876 22868 Generated embedding for segment ff0481f4-3e09-406d-b6bb-d3353617d903 in 0.35s
+DEBUG 2025-07-10 13:41:03,871 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:03,873 vector_processor 33876 22868 Generated embedding for segment b67f9800-268b-485c-b9ef-58a686dc344a in 0.34s
+DEBUG 2025-07-10 13:41:04,263 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:04,265 vector_processor 33876 22868 Generated embedding for segment 8e804270-9e5c-463f-b176-f2ed1a8b136b in 0.39s
+DEBUG 2025-07-10 13:41:04,615 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:04,617 vector_processor 33876 22868 Generated embedding for segment 1d964578-15b7-476a-8ec1-ded828caa2ed in 0.35s
+DEBUG 2025-07-10 13:41:05,080 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:05,083 vector_processor 33876 22868 Generated embedding for segment f1a52fe7-baad-4cb8-af46-e355b4c3397b in 0.47s
+DEBUG 2025-07-10 13:41:06,121 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:06,122 vector_processor 33876 22868 Generated embedding for segment 01842655-755d-4835-af9f-fd2923bbff4d in 1.04s
+DEBUG 2025-07-10 13:41:06,955 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:06,956 vector_processor 33876 22868 Generated embedding for segment f5c6f2f0-d6c2-43f8-91e5-e09acd2fd9ae in 0.33s
+DEBUG 2025-07-10 13:41:07,373 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:07,376 vector_processor 33876 22868 Generated embedding for segment 0c7e78b7-5525-4814-8299-4bc3443e996a in 0.42s
+DEBUG 2025-07-10 13:41:08,280 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:08,283 vector_processor 33876 22868 Generated embedding for segment 78e98a92-19fa-4d2c-9148-82a1f352f85f in 0.91s
+DEBUG 2025-07-10 13:41:08,635 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:08,671 vector_processor 33876 22868 Generated embedding for segment 08f404e8-125d-49b5-8994-cf2180cfe74f in 0.39s
+DEBUG 2025-07-10 13:41:09,705 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:09,707 vector_processor 33876 22868 Generated embedding for segment 66b8a478-3509-4f8e-9c43-a1202bbfa7ac in 1.04s
+DEBUG 2025-07-10 13:41:10,553 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:10,555 vector_processor 33876 22868 Generated embedding for segment d48b16f8-5109-4d3c-a276-6d9576f30aba in 0.35s
+DEBUG 2025-07-10 13:41:10,969 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:10,972 vector_processor 33876 22868 Generated embedding for segment 38de9ac7-1912-4893-9460-43e2649929f7 in 0.42s
+DEBUG 2025-07-10 13:41:11,886 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:11,889 vector_processor 33876 22868 Generated embedding for segment 8779f1c8-8663-4ca0-94d9-7ddd0efbca5a in 0.92s
+DEBUG 2025-07-10 13:41:12,385 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:12,388 vector_processor 33876 22868 Generated embedding for segment 3a887992-0932-468c-a154-dbf1e2dcf426 in 0.50s
+DEBUG 2025-07-10 13:41:12,815 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:12,819 vector_processor 33876 22868 Generated embedding for segment cb05d54c-dcae-4ede-ac39-8ae046af3130 in 0.43s
+DEBUG 2025-07-10 13:41:13,763 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:13,765 vector_processor 33876 22868 Generated embedding for segment 50f47363-1833-4052-be15-687c40e2f5cf in 0.45s
+DEBUG 2025-07-10 13:41:14,166 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:14,169 vector_processor 33876 22868 Generated embedding for segment 15b2bb81-58c7-4483-96b0-3252f2c6dda1 in 0.40s
+DEBUG 2025-07-10 13:41:14,548 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:14,577 vector_processor 33876 22868 Generated embedding for segment d72a132f-c752-44a6-88d8-0389972a3f3b in 0.41s
+DEBUG 2025-07-10 13:41:15,781 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:15,783 vector_processor 33876 22868 Generated embedding for segment f5d5d3f8-737c-4bee-a083-27dd2faaf6c9 in 1.21s
+DEBUG 2025-07-10 13:41:16,800 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:16,803 vector_processor 33876 22868 Generated embedding for segment c47bda15-3c7d-41b7-b4ca-bf56ceef08a0 in 1.02s
+DEBUG 2025-07-10 13:41:18,036 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:18,038 vector_processor 33876 22868 Generated embedding for segment 30435bc9-942d-40d1-86ce-eabbf02698e7 in 0.73s
+DEBUG 2025-07-10 13:41:18,384 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:18,387 vector_processor 33876 22868 Generated embedding for segment ee93f9c4-4591-407a-ba95-49366f194551 in 0.35s
+DEBUG 2025-07-10 13:41:19,308 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:19,311 vector_processor 33876 22868 Generated embedding for segment 94c26aa0-54ab-438a-8351-ba01b0e6d339 in 0.92s
+DEBUG 2025-07-10 13:41:19,686 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:19,689 vector_processor 33876 22868 Generated embedding for segment 1fc4c56c-29ed-46cf-83ed-1a9d154193de in 0.38s
+DEBUG 2025-07-10 13:41:20,190 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:20,193 vector_processor 33876 22868 Generated embedding for segment f8d821df-55aa-45f8-812c-656e73507bcd in 0.50s
+DEBUG 2025-07-10 13:41:21,111 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:21,116 vector_processor 33876 22868 Generated embedding for segment 0ffee393-db11-49fc-9bd6-e0ca960c2640 in 0.42s
+DEBUG 2025-07-10 13:41:22,013 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:22,015 vector_processor 33876 22868 Generated embedding for segment b64aa69f-3e3c-4ed4-83b4-398722f9ef10 in 0.90s
+DEBUG 2025-07-10 13:41:22,405 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:22,408 vector_processor 33876 22868 Generated embedding for segment e49316c0-f891-4032-91b0-968ef0a08e72 in 0.39s
+DEBUG 2025-07-10 13:41:23,355 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:23,357 vector_processor 33876 22868 Generated embedding for segment e4ec70f3-866f-479d-8146-168f2e749087 in 0.95s
+DEBUG 2025-07-10 13:41:23,765 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:23,769 vector_processor 33876 22868 Generated embedding for segment 2452d3fd-1881-493e-b8d0-ca55e8a082bc in 0.41s
+DEBUG 2025-07-10 13:41:24,617 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:24,619 vector_processor 33876 22868 Generated embedding for segment 506aad3d-3614-4c5d-b0b7-b227498999ba in 0.35s
+DEBUG 2025-07-10 13:41:25,086 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:25,089 vector_processor 33876 22868 Generated embedding for segment 82d302ef-da95-4bcd-a2a7-06f11e0ef903 in 0.47s
+DEBUG 2025-07-10 13:41:25,474 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:25,476 vector_processor 33876 22868 Generated embedding for segment 8abaf3b9-f50b-4d2c-acee-a2986586511d in 0.39s
+DEBUG 2025-07-10 13:41:25,904 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:25,906 vector_processor 33876 22868 Generated embedding for segment bcd7f298-5158-4f3b-8640-04a516b70634 in 0.43s
+DEBUG 2025-07-10 13:41:26,460 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:26,464 vector_processor 33876 22868 Generated embedding for segment 83e36728-3e19-4796-a3e9-c31fe114744c in 0.56s
+DEBUG 2025-07-10 13:41:27,336 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:27,339 vector_processor 33876 22868 Generated embedding for segment 0c439b74-2f3c-4b63-8201-0bceb66c802d in 0.37s
+DEBUG 2025-07-10 13:41:27,810 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:27,813 vector_processor 33876 22868 Generated embedding for segment 287d6d45-34ef-476e-a3b9-2e90423f0f1d in 0.47s
+DEBUG 2025-07-10 13:41:28,243 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:28,246 vector_processor 33876 22868 Generated embedding for segment 3e2ed8fc-ec1c-441e-ab25-c40337c696c5 in 0.43s
+DEBUG 2025-07-10 13:41:28,672 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:28,674 vector_processor 33876 22868 Generated embedding for segment 668a9c9f-7be1-4a32-9346-10b44d3be5c1 in 0.43s
+DEBUG 2025-07-10 13:41:29,104 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:29,106 vector_processor 33876 22868 Generated embedding for segment 556cd52b-4dab-4d12-be91-e27442de3a02 in 0.43s
+DEBUG 2025-07-10 13:41:29,990 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:29,992 vector_processor 33876 22868 Generated embedding for segment a134a19a-8239-40b1-bfa3-df515c150a6c in 0.38s
+DEBUG 2025-07-10 13:41:30,441 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:30,443 vector_processor 33876 22868 Generated embedding for segment 8dd45e92-cedc-4edd-abca-3cacf7acccac in 0.45s
+DEBUG 2025-07-10 13:41:30,835 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:30,837 vector_processor 33876 22868 Generated embedding for segment 88c8ea24-4497-4ecf-be1b-081bdd82a2ab in 0.39s
+DEBUG 2025-07-10 13:41:31,259 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:31,296 vector_processor 33876 22868 Generated embedding for segment 7d991022-cd4d-4082-bee9-0a7ea38e5b7c in 0.46s
+DEBUG 2025-07-10 13:41:31,661 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:31,664 vector_processor 33876 22868 Generated embedding for segment 40fe7539-d9b6-433e-93c5-935a12c0a82c in 0.37s
+DEBUG 2025-07-10 13:41:32,509 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:32,512 vector_processor 33876 22868 Generated embedding for segment 36af854d-7209-4bd3-aa54-4c55986c7788 in 0.35s
+DEBUG 2025-07-10 13:41:33,033 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:33,035 vector_processor 33876 22868 Generated embedding for segment 3723a90d-6c34-4247-b22e-52f3e25d3b95 in 0.52s
+DEBUG 2025-07-10 13:41:33,400 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:33,402 vector_processor 33876 22868 Generated embedding for segment 29f4a2d6-bacc-4eb4-8912-aff4c849a8f8 in 0.37s
+DEBUG 2025-07-10 13:41:33,743 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:33,746 vector_processor 33876 22868 Generated embedding for segment b86882e1-29f4-401b-8e9e-9fd05015489f in 0.34s
+DEBUG 2025-07-10 13:41:34,483 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:34,485 vector_processor 33876 22868 Generated embedding for segment 59aac98d-9de5-402c-a820-2808d5c55143 in 0.74s
+DEBUG 2025-07-10 13:41:35,348 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:35,386 vector_processor 33876 22868 Generated embedding for segment a53aa4ba-988b-481b-a479-693f2f7d8362 in 0.40s
+DEBUG 2025-07-10 13:41:35,763 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:35,765 vector_processor 33876 22868 Generated embedding for segment b8a7ce39-90e5-402e-81b0-ae646f6b71ee in 0.38s
+DEBUG 2025-07-10 13:41:36,195 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:36,199 vector_processor 33876 22868 Generated embedding for segment 3ade0bdb-10b1-44e6-92a1-bcc35118864d in 0.43s
+DEBUG 2025-07-10 13:41:36,630 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:36,633 vector_processor 33876 22868 Generated embedding for segment 08e81df9-06e6-4738-8765-b37fd7e5a5f6 in 0.43s
+DEBUG 2025-07-10 13:41:37,029 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:37,033 vector_processor 33876 22868 Generated embedding for segment d7ed3ba9-a73e-4416-972b-82d108c907c0 in 0.40s
+DEBUG 2025-07-10 13:41:37,880 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:37,882 vector_processor 33876 22868 Generated embedding for segment 6ccbe19e-0cf2-4246-abf1-6ac0a405380f in 0.35s
+DEBUG 2025-07-10 13:41:38,275 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:38,282 vector_processor 33876 22868 Generated embedding for segment 611ca373-22e6-4fbf-be96-4bd575f9530f in 0.40s
+DEBUG 2025-07-10 13:41:38,772 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:38,776 vector_processor 33876 22868 Generated embedding for segment 7c7bb083-2d96-4358-bf04-743f5d9cb684 in 0.49s
+DEBUG 2025-07-10 13:41:39,271 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:39,274 vector_processor 33876 22868 Generated embedding for segment 366c4d0b-115f-4eb9-aa70-f3d529cc96c8 in 0.50s
+DEBUG 2025-07-10 13:41:39,745 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:39,748 vector_processor 33876 22868 Generated embedding for segment 8332448c-95a3-4009-ada5-9fc9bbdf7922 in 0.47s
+DEBUG 2025-07-10 13:41:40,655 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:40,657 vector_processor 33876 22868 Generated embedding for segment 03098e9f-3292-4e98-8ffb-964c13694400 in 0.41s
+DEBUG 2025-07-10 13:41:41,140 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:41,144 vector_processor 33876 22868 Generated embedding for segment 7e87d236-50bf-47aa-b818-f0702df6191b in 0.49s
+DEBUG 2025-07-10 13:41:41,512 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:41,516 vector_processor 33876 22868 Generated embedding for segment d5179e29-6b61-4eb0-aae8-f987777bc612 in 0.37s
+DEBUG 2025-07-10 13:41:42,015 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:42,017 vector_processor 33876 22868 Generated embedding for segment 0fec088d-ba68-4603-a211-d481d52e7b39 in 0.50s
+DEBUG 2025-07-10 13:41:42,423 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:42,426 vector_processor 33876 22868 Generated embedding for segment 7a222fe3-1099-4ec4-a06f-0f78d84dbee9 in 0.41s
+DEBUG 2025-07-10 13:41:43,313 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:43,316 vector_processor 33876 22868 Generated embedding for segment 0e1c2a85-0b57-4770-aff3-05ca9d1ed243 in 0.39s
+DEBUG 2025-07-10 13:41:43,679 vector_processor 33876 22868 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 13:41:43,681 vector_processor 33876 22868 Generated embedding for segment a2e738e8-b096-46ce-99e7-3190e3cb958a in 0.37s
+INFO 2025-07-10 13:41:43,681 vector_processor 33876 22868 Batch processing complete: 82 processed, 0 failed, 0 skipped
+INFO 2025-07-10 13:41:43,683 vector_processor 33876 22868 Updated embedding status for document test_excel.xlsx: completed
+INFO 2025-07-10 14:11:03,040 vector_processor 25496 23392 Processing 8 segments for document: test_word.docx
+DEBUG 2025-07-10 14:11:03,040 vector_processor 25496 23392 Skipped segment 7c40f4f8-0967-43bb-b1dd-184bba3c73b8: Text too short (79 chars)
+DEBUG 2025-07-10 14:11:03,040 vector_processor 25496 23392 Skipped segment eed2f4ab-73fc-48cb-a9a7-e2fe70d55c86: Text too short (55 chars)
+DEBUG 2025-07-10 14:11:03,040 vector_processor 25496 23392 Skipped segment 90bea3bf-0c03-4fd6-969b-f5edc5bd2fea: Text too short (56 chars)
+INFO 2025-07-10 14:11:03,040 vector_processor 25496 23392 Generating embeddings for 5 segments
+DEBUG 2025-07-10 14:11:05,150 vector_processor 25496 23392 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 14:11:05,203 vector_processor 25496 23392 Generated embedding for segment 79a08733-f350-4b86-b207-f95c204b4047 in 2.16s
+DEBUG 2025-07-10 14:11:06,745 vector_processor 25496 23392 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 14:11:06,747 vector_processor 25496 23392 Generated embedding for segment 5d4c9bbb-0ee8-424b-81c0-1caf2ec56ef6 in 1.54s
+DEBUG 2025-07-10 14:11:07,925 vector_processor 25496 23392 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 14:11:07,928 vector_processor 25496 23392 Generated embedding for segment 23b73966-b238-4461-82ec-48a9ab6e0e05 in 1.18s
+DEBUG 2025-07-10 14:11:09,618 vector_processor 25496 23392 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 14:11:09,621 vector_processor 25496 23392 Generated embedding for segment f7929962-5b6b-4406-8e55-fa4d9cc811af in 1.19s
+DEBUG 2025-07-10 14:11:09,997 vector_processor 25496 23392 Successfully generated embedding (attempt 1)
+DEBUG 2025-07-10 14:11:09,999 vector_processor 25496 23392 Generated embedding for segment 229624d1-89c8-4d22-b72f-26c0c469d0bf in 0.38s
+INFO 2025-07-10 14:11:09,999 vector_processor 25496 23392 Batch processing complete: 5 processed, 0 failed, 3 skipped
+INFO 2025-07-10 14:11:10,001 vector_processor 25496 23392 Updated embedding status for document test_word.docx: partial
