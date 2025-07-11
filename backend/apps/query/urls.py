@@ -8,7 +8,9 @@ from .views import (
     NaturalLanguageQueryView,
     DocumentSimilarityView,
     QueryHealthView,
-    quick_query
+    quick_query,
+    batch_query,
+    query_analytics
 )
 
 app_name = 'query'
@@ -25,6 +27,12 @@ urlpatterns = [
     
     # Quick test endpoint
     path('quick/', quick_query, name='quick-query'),
+    
+    # NEW: Batch processing
+    path('batch/', batch_query, name='batch-query'),
+    
+    # NEW: Analytics endpoint
+    path('analytics/', query_analytics, name='query-analytics'),
 ]
 
 """
@@ -45,4 +53,12 @@ GET /api/query/health/
 POST /api/query/quick/
 - Simple test endpoint  
 - Body: {"q": "test question"}
+
+POST /api/query/batch/
+- Process multiple queries at once
+- Body: {"queries": ["What is revenue?", "Who are stakeholders?"], "include_sources": false}
+
+GET /api/query/analytics/
+- Get system analytics and stats
+- No body required
 """

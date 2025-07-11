@@ -7,6 +7,7 @@ Exposes RAG functionality via REST endpoints
 """
 
 import logging
+import time
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -166,7 +167,7 @@ class QueryHealthView(APIView):
                 "service": "ReportMiner Query API",
                 "status": health_status['overall_status'],
                 "checks": health_status,
-                "timestamp": "2025-01-09T00:00:00Z"  # You can use timezone.now()
+                "timestamp": f"{time.time():.0f}"
             }, status=http_status)
             
         except Exception as e:
@@ -215,3 +216,123 @@ def quick_query(request):
         return JsonResponse({
             "error": str(e)
         }, status=500)
+
+
+# Add new endpoint for batch queries
+@api_view(['POST'])
+def batch_query(request):
+    """
+    Process multiple queries at once
+    
+    POST /api/query/batch/
+    Body: {
+        "queries": ["What is revenue?", "Who are the stakeholders?"],
+        "include_sources": false
+    }
+    """
+    try:
+        queries = request.data.get('queries', [])
+        include_sources = request.data.get('include_sources', False)
+        
+        if not isinstance(queries, list) or len(queries) == 0:
+            return Response({
+                "success": False,
+                "error": "queries must be a non-empty list",
+                "example": {
+                    "queries": ["What is revenue?", "Who are stakeholders?"],
+                    "include_sources": False
+                }
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        if len(queries) > 10:
+            return Response({
+                "success": False,
+                "error": "Maximum 10 queries allowed per batch"
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Process each query
+        rag_engine = get_rag_engine()
+        results = []
+        
+        for i, query in enumerate(queries):
+            try:
+                result = rag_engine.query(query, include_sources=include_sources)
+                results.append({
+                    "query_index": i,
+                    "query": query,
+                    "success": result['success'],
+                    "answer": result.get('answer'),
+                    "sources_count": len(result.get('sources', [])),
+                    "metadata": result.get('metadata', {})
+                })
+            except Exception as e:
+                results.append({
+                    "query_index": i,
+                    "query": query,
+                    "success": False,
+                    "error": str(e)
+                })
+        
+        return Response({
+            "success": True,
+            "total_queries": len(queries),
+            "results": results
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        return Response({
+            "success": False,
+            "error": str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Add endpoint for query analytics
+@api_view(['GET'])
+def query_analytics(request):
+    """
+    Get analytics about query system usage
+    
+    GET /api/query/analytics/
+    """
+    try:
+        from apps.ingestion.models import Document, DocumentTextSegment
+        
+        # Basic stats
+        stats = {
+            "database_stats": {
+                "total_documents": Document.objects.count(),
+                "embedded_segments": DocumentTextSegment.objects.filter(
+                    embedding__isnull=False
+                ).count(),
+                "total_segments": DocumentTextSegment.objects.count()
+            },
+            "system_stats": {
+                "rag_engine_available": True,
+                "embedding_dimensions": 1536,
+                "supported_queries": [
+                    "Natural language questions about document content",
+                    "Search for specific information",
+                    "Document comparison and analysis",
+                    "Data extraction and summarization"
+                ]
+            }
+        }
+        
+        # Test RAG engine availability
+        try:
+            rag_engine = get_rag_engine()
+            health = rag_engine.health_check()
+            stats["rag_health"] = health
+        except Exception as e:
+            stats["rag_health"] = {"status": "error", "error": str(e)}
+        
+        return Response({
+            "success": True,
+            "analytics": stats
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        return Response({
+            "success": False,
+            "error": str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
