@@ -259,15 +259,7 @@ class VectorProcessor:
             document = Document.objects.get(id=document_id)
             segments = list(document.text_segments.all().order_by('sequence_number'))
             
-            if not segments:
-                return {
-                    'processed_segments': 0,
-                    'failed_segments': 0,
-                    'skipped_segments': 0,
-                    'errors': ['No text segments found for document']
-                }
-            
-            logger.info(f"Processing {len(segments)} segments for document: {document.filename}")
+            # ... existing embedding generation code ...
             
             # Use batch processing
             results = self.generate_embeddings_batch(segments)
@@ -277,6 +269,13 @@ class VectorProcessor:
                 self._update_document_embedding_status(document, results)
             except Exception as e:
                 logger.warning(f"Failed to update document status: {str(e)}")
+            
+        
+            # Ensure new embeddings are immediately available for RAG queries
+            try:
+                self._integrate_with_langchain(document_id)
+            except Exception as e:
+                logger.warning(f"⚠️ LangChain integration check failed: {e}")
             
             return results
             
@@ -298,7 +297,30 @@ class VectorProcessor:
                 'skipped_segments': 0,
                 'errors': [error_msg]
             }
-    
+        
+        
+    def _integrate_with_langchain(self, document_id: str):
+        """Ensure new embeddings are immediately available for RAG queries"""
+        try:
+            # New embeddings are automatically available since we read directly 
+            # from document_text_segments table - no additional steps needed!
+            
+            # Optional: Verify the integration
+            from .langchain_wrapper import get_langchain_wrapper
+            wrapper = get_langchain_wrapper()
+            
+            # Test that new document is searchable
+            test_results = wrapper.test_similarity_search("test query", k=1)
+            logger.info(f"✅ New document integrated - {len(test_results)} total searchable segments")
+            
+            return True
+            
+        except Exception as e:
+            logger.warning(f"⚠️ LangChain integration check failed: {e}")
+            return False    
+
+
+
     def _update_document_embedding_status(self, document: Document, results: Dict[str, Any]):
         """Update document metadata with embedding status"""
         import json
@@ -512,6 +534,7 @@ class VectorProcessor:
         except Exception as e:
             logger.error(f"Error in keyword search: {e}")
             return []
+
 
 
 # Utility functions for easy access

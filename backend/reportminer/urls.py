@@ -25,10 +25,7 @@ from django.urls import path , include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # Route all ingestion API calls to apps.ingestion
     path('api/ingestion/', include('apps.ingestion.urls')),
-
-    #home page route
-    path('',home),
+    path('api/query/', include('apps.query.urls')),  # ADD THIS LINE
+    path('', home),
 ]
