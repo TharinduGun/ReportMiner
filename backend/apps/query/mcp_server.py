@@ -41,7 +41,7 @@ import plotly.express as px
 
 # Django imports (after setup)
 from apps.ingestion.models import Document, DocumentTextSegment, DocumentStructuredData, DocumentKeyValue
-from rag_engine import get_rag_engine
+from apps.query.rag_engine import get_rag_engine
 
 # Create MCP server instance
 server = Server("reportminer-enhanced")

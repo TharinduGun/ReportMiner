@@ -11,6 +11,9 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_core.documents import Document as LangChainDocument
 from apps.ingestion.langchain_wrapper import ReportMinerLangChainWrapper
+from apps.ingestion.vector_processor import VectorProcessor
+from apps.ingestion.models import Document, DocumentTextSegment
+
 
 logger = logging.getLogger(__name__)
 

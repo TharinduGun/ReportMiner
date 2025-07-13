@@ -13,6 +13,12 @@ from .views import (
     query_analytics
 )
 
+from .chat_views import (
+    ChatQueryView,
+    ChatUploadView, 
+    ChatDocumentListView
+)
+
 app_name = 'query'
 
 urlpatterns = [
@@ -33,6 +39,12 @@ urlpatterns = [
     
     # NEW: Analytics endpoint
     path('analytics/', query_analytics, name='query-analytics'),
+
+
+        # NEW CHAT ENDPOINTS - These are what frontend needs
+    path('chat/query/', ChatQueryView.as_view(), name='chat-query'),
+    path('chat/upload/', ChatUploadView.as_view(), name='chat-upload'),
+    path('chat/documents/', ChatDocumentListView.as_view(), name='chat-documents'),
 ]
 
 """
