@@ -1,4 +1,4 @@
-# ReportMiner: AI-Powered Data Extraction and Query System for 
+# ReportMiner: AI-Powered Data Extraction and Query System for Structured and Unstructured Reports.
 
 ## 🚀 Project Overview
 
