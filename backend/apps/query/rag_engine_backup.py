@@ -43,13 +43,10 @@ class RAGQueryEngine:
         
         # Initialize OpenAI for generating answers
         self.llm = ChatOpenAI(
-            model="gpt-4o",                    # Upgrade from mini to full version for testing
+            model="gpt-4o-mini",
             openai_api_key=settings.OPENAI_API_KEY,
-            temperature=0.0,                   # Zero for maximum accuracy
-            max_tokens=1500,                   # Increased for comprehensive answers
-            top_p=0.1,                        # Focused responses
-            frequency_penalty=0.0,
-            presence_penalty=0.0
+            temperature=0.1,
+            max_tokens=500
         )
         
         # Create custom prompt
@@ -62,27 +59,30 @@ class RAGQueryEngine:
         logger.info("✅ RAG Query Engine initialized with existing embeddings")
     
     def _create_custom_prompt(self) -> PromptTemplate:
-        template = """You are a highly accurate AI document analysis assistant. Your responses must be precise, factual, and based strictly on the provided context.
+        """
+        Create a custom prompt template for better answers
+        
+        Why custom prompt: 
+        - Ensures answers are based on documents
+        - Provides source attribution
+        - Handles cases where no relevant info is found
+        """
+        template = """You are an AI assistant helping users query their document database.
 
-CONTEXT FROM DOCUMENTS:
+Use the following pieces of context to answer the question at the end. 
+If you don't know the answer based on the context, just say that you don't have enough information in the documents to answer that question.
+
+Context from documents:
 {context}
 
-QUESTION: {question}
+Question: {question}
 
-INSTRUCTIONS FOR MAXIMUM ACCURACY:
-1. ONLY use information explicitly stated in the provided context
-2. If you find relevant information, provide a comprehensive and detailed answer
-3. Include specific numbers, dates, names, and quotes when available
-4. If the context doesn't contain sufficient information, clearly state: "Based on the provided documents, I don't have enough information to answer this question accurately."
-5. Always cite which document or section your answer comes from
-6. Do not make assumptions or inferences beyond what's explicitly stated
-7. If there are conflicting pieces of information, mention both and note the discrepancy
-
-ANSWER FORMAT:
-- Start with a direct answer if information is available
-- Provide supporting details with specific references
-- Include relevant quotes or data points
-- End with source attribution
+Instructions:
+1. Base your answer strictly on the provided context
+2. If the context contains relevant information, provide a comprehensive answer
+3. Include specific details, numbers, or quotes when available
+4. If no relevant information is found, clearly state this
+5. Keep your answer concise but informative
 
 Answer:"""
 
@@ -165,9 +165,6 @@ Answer:"""
             
             # Step 4: Generate answer using OpenAI
             answer = self.llm.invoke(prompt_text).content
-
-            # Step 4: Quality assessment (ADD THIS)
-            quality_metrics = self._assess_answer_quality(answer, relevant_docs, question)
             
             # Step 5: Format sources for response
             formatted_sources = []
@@ -175,20 +172,18 @@ Answer:"""
                 formatted_sources = self._format_sources_from_search_results(relevant_docs)
             
             # Step 6: Assess answer quality
-       #     answer_quality = self._assess_answer_quality(answer, relevant_docs)
+            answer_quality = self._assess_answer_quality(answer, relevant_docs)
             
             response = {
                 "success": True,
                 "answer": answer,
-                "sources": formatted_sources if include_sources else [],
-                "quality_metrics": quality_metrics,  # ADD THIS LINE
+                "sources": formatted_sources,
                 "metadata": {
                     "question": question,
                     "sources_found": len(relevant_docs),
-                    "confidence": quality_metrics["confidence"],  # UPDATE THIS
-                    "answer_quality": quality_metrics["quality_score"],  # ADD THIS
-                    "model_used": "gpt-4o",  # UPDATE THIS
-                    "method": "enhanced_rag"  # UPDATE THIS
+                    "answer_quality": answer_quality,
+                    "model_used": "gpt-4o-mini",
+                    "method": "manual_rag"
                 }
             }
             
@@ -307,34 +302,6 @@ Answer:"""
         
         return checks
 
-    def _assess_answer_quality(self, answer: str, sources: List[Dict], question: str) -> Dict[str, Any]:
-        """Comprehensive answer quality assessment"""
-        
-        # Quality factors assessment
-        quality_factors = {
-            "has_sufficient_length": len(answer) > 50,
-            "uses_specific_details": any(char.isdigit() for char in answer),
-            "acknowledges_limitations": "don't have" in answer.lower() if not sources else True,
-            "provides_attribution": any(keyword in answer.lower() for keyword in ["document", "source", "according to"]),
-            "is_comprehensive": len(answer.split()) > 30,
-            "addresses_question": any(word in answer.lower() for word in question.lower().split()[:3])
-        }
-        
-        quality_score = sum(quality_factors.values()) / len(quality_factors)
-        
-        # Confidence calculation
-        base_confidence = quality_score * 0.6  # 60% from quality
-        source_confidence = min(len(sources) / 3, 1.0) * 0.4  # 40% from sources (3+ sources = max confidence)
-        
-        confidence = base_confidence + source_confidence
-        
-        return {
-            "quality_score": round(quality_score, 2),
-            "confidence": round(confidence, 2),
-            "quality_factors": quality_factors,
-            "is_high_confidence": confidence >= 0.8,
-            "source_count": len(sources)
-        }
 
 # Convenience function for easy import
 def get_rag_engine() -> RAGQueryEngine:

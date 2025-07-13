@@ -44,7 +44,7 @@ urlpatterns = [
         # NEW CHAT ENDPOINTS - These are what frontend needs
     path('chat/query/', ChatQueryView.as_view(), name='chat-query'),
     path('chat/upload/', ChatUploadView.as_view(), name='chat-upload'),
-    path('chat/documents/', ChatDocumentListView.as_view(), name='chat-documents'),
+    path('chat/status/', ChatDocumentListView.as_view(), name='chat-status'),
 ]
 
 """

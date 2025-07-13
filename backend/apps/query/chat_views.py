@@ -1,5 +1,6 @@
 import time
 import logging
+import re
 from typing import List, Dict, Any
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -13,181 +14,127 @@ from .mcp_server import (
     handle_visualize_patterns,
     handle_generate_insights
 )
-
+from .llm_orchestrator import get_orchestrator
 from apps.ingestion.models import Document
 from apps.ingestion.views import EnhancedFileUploadView 
+
 logger = logging.getLogger(__name__)
 
 class ChatQueryView(APIView):
     """
     Main chat endpoint that orchestrates RAG + MCP tools
     This is what the frontend will call for all chat interactions
+    
+    MCP Tools are used through the LLM Orchestrator, not directly here.
     """
     
     def post(self, request):
-        """
-        Process a chat query with RAG retrieval and MCP tools
-        
-        Expected request body:
-        {
-            "question": "What financial data is in my documents?",
-            "include_tools": true,
-            "include_sources": true
-        }
-        """
+        """Enhanced chat with LLM orchestration"""
         try:
-            # Extract parameters from request
+            # Extract parameters
             question = request.data.get('question', '')
             include_tools = request.data.get('include_tools', True)
             include_sources = request.data.get('include_sources', True)
-            
+            session_id = request.data.get('session_id', f"session_{int(time.time())}")
+                                          
             if not question.strip():
                 return Response({
                     'success': False,
-                    'error': 'Question cannot be empty'
+                    'message': 'Question cannot be empty',
+                    'error_code': 'EMPTY_QUESTION',
+                    'session_id': session_id,
+                    'timestamp': int(time.time())
                 }, status=status.HTTP_400_BAD_REQUEST)
             
+            # Use intelligent orchestrator (this calls MCP tools intelligently)
+            orchestrator = get_orchestrator()
+            
             start_time = time.time()
-            
-            # STEP 1: RAG Query for base answer
-            rag_engine = get_rag_engine()
-            rag_result = rag_engine.query(question, include_sources=include_sources)
-            
-            if not rag_result['success']:
-                return Response({
-                    'success': False,
-                    'error': 'Failed to retrieve relevant documents'
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-            
-            # STEP 2: Analyze question to determine relevant tools
-            tool_results = []
-            if include_tools and rag_result['success']:
-                relevant_tools = self.analyze_question_for_tools(question)
-                
-                # STEP 3: Execute relevant MCP tools
-                for tool_name in relevant_tools:
-                    tool_result = self.execute_mcp_tool_safely(tool_name, {
-                        'question': question,
-                        'context': rag_result['answer'],
-                        'sources': rag_result.get('sources', [])
-                    })
-                    if tool_result:
-                        tool_results.append(tool_result)
-            
-            # STEP 4: Prepare comprehensive response
+            result = orchestrator.process_query(question)
             processing_time = time.time() - start_time
             
+            # STANDARDIZED response format
             return Response({
-                'success': True,
-                'answer': rag_result['answer'],
-                'tool_results': tool_results,
-                'sources': rag_result.get('sources', []) if include_sources else [],
+                'success': result.get('success', True),
+                'message': result.get('answer', ''),  # Standardized field name
+                'sources': result.get('sources', []) if include_sources else [],
+                'tools_used': [tool['tool'] for tool in result.get('tool_results', [])],  # Simplified tool list
+                'confidence': result.get('confidence', 0.8),
+                'session_id': session_id,
+                'processing_time': round(processing_time, 2),
+                'timestamp': int(time.time()),
                 'metadata': {
-                    'tools_used': len(tool_results),
-                    'sources_found': len(rag_result.get('sources', [])),
-                    'processing_time': round(processing_time, 2),
-                    'response_type': 'enhanced' if tool_results else 'basic'
+                    'sources_found': len(result.get('sources', [])),
+                    'response_type': 'orchestrated',
+                    'model_used': 'gpt-4o',
+                    'tools_executed': len(result.get('tool_results', []))
                 }
-            })
+            }, status=status.HTTP_200_OK)
             
         except Exception as e:
-            logger.error(f"Chat query failed: {str(e)}")
+            logger.error(f"Orchestrated chat query failed: {str(e)}")
             return Response({
                 'success': False,
-                'error': f'Internal server error: {str(e)}'
+                'message': 'I encountered an error processing your request. Please try again.',
+                'error_code': 'PROCESSING_ERROR',
+                'session_id': request.data.get('session_id', ''),
+                'timestamp': int(time.time()),
+                'error_details': str(e)  # Keep for debugging
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    
-    def analyze_question_for_tools(self, question: str) -> List[str]:
-        """
-        Determine which MCP tools are relevant for the question
-        This is keyword-based analysis - you can make it smarter later
-        """
-        question_lower = question.lower()
-        relevant_tools = []
-        
-        # Keywords that suggest specific tools
-        if any(word in question_lower for word in ['data', 'numbers', 'values', 'extract', 'statistics']):
-            relevant_tools.append('extract_numerical_data')
-        
-        if any(word in question_lower for word in ['calculate', 'metrics', 'average', 'trend', 'analysis']):
-            relevant_tools.append('calculate_metrics')
-        
-        if any(word in question_lower for word in ['domain', 'type', 'classification', 'analyze', 'what kind']):
-            relevant_tools.append('domain_analysis')
-        
-        if any(word in question_lower for word in ['visualize', 'chart', 'graph', 'pattern', 'show']):
-            relevant_tools.append('visualize_patterns')
-        
-        if any(word in question_lower for word in ['insights', 'recommendations', 'summary', 'conclude']):
-            relevant_tools.append('generate_insights')
-        
-        # Limit to 3 tools max for performance
-        return relevant_tools[:3]
-    
-    def execute_mcp_tool_safely(self, tool_name: str, args: dict) -> dict:
-        """
-        Execute specific MCP tool with error handling
-        Returns formatted result or None if failed
-        """
-        try:
-            start_time = time.time()
-            
-            # Map tool names to handler functions
-            tool_handlers = {
-                'extract_numerical_data': handle_extract_numerical_data,
-                'calculate_metrics': handle_calculate_metrics,
-                'domain_analysis': handle_domain_analysis,
-                'visualize_patterns': handle_visualize_patterns,
-                'generate_insights': handle_generate_insights
-            }
-            
-            if tool_name not in tool_handlers:
-                logger.warning(f"Unknown tool requested: {tool_name}")
-                return None
-            
-            # Execute the tool
-            handler = tool_handlers[tool_name]
-            result = handler(args)
-            execution_time = time.time() - start_time
-            
-            return {
-                'tool_name': tool_name,
-                'result': result[0].text if result and len(result) > 0 else 'No result generated',
-                'execution_time': round(execution_time, 2),
-                'success': True
-            }
-            
-        except Exception as e:
-            logger.error(f"MCP tool {tool_name} failed: {str(e)}")
-            return {
-                'tool_name': tool_name,
-                'result': f'Tool execution failed: {str(e)}',
-                'execution_time': 0,
-                'success': False
-            }
 
 
 class ChatUploadView(APIView):
     """
     Handle file uploads with full processing pipeline including embeddings
+    Enhanced with comprehensive validation and security checks
     """
     
     def post(self, request):
         try:
+            # Validation 1: File presence
             if 'file' not in request.FILES:
                 return Response({
                     'success': False,
-                    'error': 'No file provided'
+                    'message': 'No file provided',
+                    'error_code': 'NO_FILE',
+                    'timestamp': int(time.time())
                 }, status=status.HTTP_400_BAD_REQUEST)
             
             file = request.FILES['file']
             
-            # Get or generate required fields
+            # Validation 2: File size (100MB limit)
+            MAX_FILE_SIZE = 100 * 1024 * 1024  # 100MB
+            if file.size > MAX_FILE_SIZE:
+                file_size_mb = file.size // (1024 * 1024)
+                return Response({
+                    'success': False,
+                    'message': f'File too large. Maximum size is 100MB, your file is {file_size_mb}MB.',
+                    'error_code': 'FILE_TOO_LARGE',
+                    'timestamp': int(time.time())
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Validation 3: File type
+            file_extension = file.name.split('.')[-1].lower() if '.' in file.name else ''
+            allowed_types = ['pdf', 'docx', 'xlsx']
+            
+            if file_extension not in allowed_types:
+                return Response({
+                    'success': False,
+                    'message': f'File type ".{file_extension}" not supported. Allowed types: {", ".join(allowed_types)}',
+                    'error_code': 'UNSUPPORTED_TYPE',
+                    'timestamp': int(time.time())
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Validation 4: Filename sanitization (security)
             filename = request.data.get('filename', file.name.split('.')[0])
-            file_extension = file.name.split('.')[-1].lower()
+            # Remove potentially dangerous characters
+            filename = re.sub(r'[^\w\s-]', '', filename).strip()
+            if not filename:
+                filename = f"document_{int(time.time())}"
+            
             file_type = request.data.get('type', file_extension)
             
-            # Create FileUpload record first
+            # Create FileUpload record
             from apps.ingestion.models import FileUpload
             from apps.ingestion.serializers import FileUploadSerializer
             
@@ -201,13 +148,14 @@ class ChatUploadView(APIView):
             if not serializer.is_valid():
                 return Response({
                     'success': False,
-                    'error': f'Validation failed: {serializer.errors}'
+                    'message': f'File validation failed: {serializer.errors}',
+                    'error_code': 'VALIDATION_FAILED',
+                    'timestamp': int(time.time())
                 }, status=status.HTTP_400_BAD_REQUEST)
             
-            # Save the file upload
             file_upload = serializer.save()
             
-            # NOW USE THE ENHANCED PIPELINE FOR FULL PROCESSING
+            # Process with enhanced pipeline
             from apps.ingestion.enhanced_upload_pipeline import EnhancedUploadPipeline
             
             pipeline = EnhancedUploadPipeline()
@@ -217,65 +165,150 @@ class ChatUploadView(APIView):
                 return Response({
                     'success': True,
                     'message': 'Document uploaded and processed successfully',
-                    'document_id': result['document_id'],  # ✅ Real UUID from Document table
-                    'filename': filename,
-                    'file_type': file_type,
-                    'processing_status': 'completed',
-                    'upload_id': file_upload.id,
-                    'text_preview': result.get('text_preview', ''),
-                    'processing_results': result.get('processing_results', {}),
-                    'embeddings_created': result['processing_results'].get('embeddings_created', 0)
+                    'data': {
+                        'document_id': result['document_id'],
+                        'filename': filename,
+                        'file_type': file_type,
+                        'status': 'completed',
+                        'processing_results': {
+                            'text_segments': result['processing_results'].get('text_segments_created', 0),
+                            'embeddings': result['processing_results'].get('embeddings_created', 0),
+                            'tables': result['processing_results'].get('tables_extracted', 0),
+                            'key_values': result['processing_results'].get('key_values_extracted', 0)
+                        },
+                        'ready_for_queries': True
+                    },
+                    'timestamp': int(time.time())
                 })
             else:
                 return Response({
                     'success': False,
-                    'error': f"Processing failed: {result.get('errors', ['Unknown error'])}",
-                    'document_id': result.get('document_id'),
-                    'upload_id': file_upload.id
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                    'message': 'Document uploaded but processing failed',
+                    'error_code': 'PROCESSING_FAILED',
+                    'data': {
+                        'document_id': result.get('document_id'),
+                        'filename': filename,
+                        'errors': result.get('errors', [])
+                    },
+                    'timestamp': int(time.time())
+                }, status=status.HTTP_202_ACCEPTED)
                 
         except Exception as e:
-            logger.error(f"Chat upload failed: {str(e)}")
+            logger.error(f"Upload failed: {str(e)}")
             return Response({
                 'success': False,
-                'error': f'Upload error: {str(e)}'
+                'message': 'Upload failed due to server error',
+                'error_code': 'UPLOAD_ERROR',
+                'error_details': str(e),
+                'timestamp': int(time.time())
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class ChatDocumentListView(APIView):
     """
-    List documents for chat interface
+    Enhanced document list with system status and health monitoring
     """
     
     def get(self, request):
         """
-        Get list of user's documents
+        Get list of documents with enhanced metadata and system status
         """
         try:
-            from apps.ingestion.models import Document
+            from apps.ingestion.models import Document, DocumentTextSegment
             
-            documents = Document.objects.all().order_by('-uploaded_at')[:20]
+            # Get pagination parameters
+            limit = min(int(request.GET.get('limit', 20)), 100)  # Max 100 documents
+            offset = int(request.GET.get('offset', 0))
+            
+            # Get documents with embedding status
+            documents = Document.objects.all().order_by('-uploaded_at')[offset:offset+limit]
             
             document_list = []
             for doc in documents:
+                # Calculate embedding coverage
+                segments_count = doc.text_segments.count() if hasattr(doc, 'text_segments') else 0
+                embedded_count = doc.text_segments.filter(embedding__isnull=False).count() if hasattr(doc, 'text_segments') else 0
+                coverage = round((embedded_count / max(segments_count, 1)) * 100, 1)
+                
                 document_list.append({
                     'id': str(doc.id),
                     'filename': doc.filename,
                     'file_type': doc.file_type,
                     'uploaded_at': doc.uploaded_at.isoformat(),
                     'processing_status': doc.processing_status,
-                    'text_segments_count': doc.text_segments.count() if hasattr(doc, 'text_segments') else 0
+                    'file_size': doc.file_size or 0,
+                    'segments': {
+                        'total': segments_count,
+                        'embedded': embedded_count,
+                        'coverage': coverage
+                    },
+                    'ready_for_queries': embedded_count > 0
                 })
+            
+            # System health check
+            system_health = self._get_system_health()
+            
+            # Statistics
+            total_documents = Document.objects.count()
+            total_embeddings = DocumentTextSegment.objects.filter(embedding__isnull=False).count()
             
             return Response({
                 'success': True,
+                'system': system_health,
                 'documents': document_list,
-                'total_count': len(document_list)
+                'pagination': {
+                    'total': total_documents,
+                    'limit': limit,
+                    'offset': offset,
+                    'has_next': offset + limit < total_documents
+                },
+                'statistics': {
+                    'total_documents': total_documents,
+                    'total_embeddings': total_embeddings,
+                    'documents_ready': len([d for d in document_list if d['ready_for_queries']]),
+                    'system_ready': total_embeddings > 0
+                },
+                'timestamp': int(time.time())
             })
             
         except Exception as e:
             logger.error(f"Document list failed: {str(e)}")
             return Response({
                 'success': False,
-                'error': f'Failed to retrieve documents: {str(e)}'
+                'message': f'Failed to retrieve documents: {str(e)}',
+                'error_code': 'DOCUMENT_LIST_ERROR',
+                'timestamp': int(time.time())
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    def _get_system_health(self):
+        """Quick system health check"""
+        health = {'status': 'healthy', 'components': {}}
+        
+        try:
+            # Check RAG engine
+            rag_engine = get_rag_engine()
+            rag_health = rag_engine.health_check()
+            health['components']['rag'] = {
+                'status': rag_health.get('overall_status', 'unknown'),
+                'embedding_count': rag_health.get('embedding_count', 0)
+            }
+        except Exception as e:
+            health['components']['rag'] = {'status': 'unhealthy', 'error': str(e)}
+        
+        try:
+            # Check orchestrator
+            orchestrator = get_orchestrator()
+            health['components']['orchestrator'] = {'status': 'healthy', 'model': 'gpt-4o'}
+        except Exception as e:
+            health['components']['orchestrator'] = {'status': 'unhealthy', 'error': str(e)}
+        
+        # Overall status
+        component_statuses = [comp.get('status', 'unhealthy') for comp in health['components'].values()]
+        if all(status == 'healthy' for status in component_statuses):
+            health['status'] = 'healthy'
+        elif any(status == 'healthy' for status in component_statuses):
+            health['status'] = 'degraded'
+        else:
+            health['status'] = 'unhealthy'
+        
+        return health
