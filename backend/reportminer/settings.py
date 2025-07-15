@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'apps.ingestion',
-    'apps.query',
+    # 'apps.query',
 
 
     #thirdparty apps

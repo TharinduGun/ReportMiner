@@ -1,0 +1,3 @@
+[submodule "report-miner-frontend"]
+	path = report-miner-frontend
+	url = https://github.com/dulanmalinda/report-miner-frontend.git
