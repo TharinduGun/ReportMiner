@@ -155,6 +155,8 @@ class FileUpload(models.Model): #choice for file types
         ('pdf', 'PDF'),
         ('docx', 'Word Document'),
         ('xlsx', 'Excel Sheet'),
+        ('txt', 'Text File'),
+        ('csv', 'CSV File'),
     ]
 
     filename = models.CharField(max_length=255) #File name

@@ -28,9 +28,9 @@ class TextProcessor:
             Dict containing processing results and statistics
         """
         processing_results = {
-            'segments_created': 0,
-            'tables_detected': 0,
-            'key_values_extracted': 0,
+            'text_segments': 0,
+            'tables': 0,
+            'key_values': 0,
             'processing_status': 'completed',
             'errors': []
         }
@@ -43,7 +43,7 @@ class TextProcessor:
             
             # 1. Segment the text into manageable chunks
             segments = self._segment_text(raw_text)
-            processing_results['segments_created'] = len(segments)
+            processing_results['text_segments'] = len(segments)
             
             # 2. Create text segments in database
             self._save_text_segments(document, segments)
@@ -57,29 +57,32 @@ class TextProcessor:
                     vector_processor = VectorProcessor()
                     embedding_results = vector_processor.generate_embeddings_for_document(str(document.id))
                     
+                    processing_results['embeddings'] = embedding_results['processed_segments']
                     processing_results['embeddings_generated'] = embedding_results['processed_segments']
                     processing_results['embedding_errors'] = embedding_results['failed_segments']
                     
                     if embedding_results['errors']:
                         processing_results['errors'].extend(embedding_results['errors'])
                     
-                    print(f"✅ Generated embeddings for {embedding_results['processed_segments']} segments")
+                    print(f"SUCCESS: Generated embeddings for {embedding_results['processed_segments']} segments")
                 else:
+                    processing_results['embeddings'] = 0
                     processing_results['embeddings_generated'] = 0
                     processing_results['embedding_errors'] = 0
-                    print(f"⚠️ Skipped embeddings for cost optimization")   
+                    print(f"WARNING: Skipped embeddings for cost optimization")   
 
                     
             except Exception as e:
                 error_msg = f"Embedding generation failed: {str(e)}"
                 processing_results['errors'].append(error_msg)
+                processing_results['embeddings'] = 0
                 processing_results['embeddings_generated'] = 0
-                print(f"❌ {error_msg}")
+                print(f"ERROR: {error_msg}")
             
 
             # 3. Detect and extract tables
             tables = self._detect_tables(raw_text)
-            processing_results['tables_detected'] = len(tables)
+            processing_results['tables'] = len(tables)
             
             # 4. Save tables and structured data
             for table_data in tables:
@@ -105,18 +108,150 @@ class TextProcessor:
             document.processing_status = 'failed'
             document.processing_error = str(e)
             document.save()
-        
+
+        print(f"DEBUG: Returning processing_results = {processing_results}")
         return processing_results
     
     def _segment_text(self, text: str) -> List[Dict[str, Any]]:
         """
-        Segment text into logical chunks (paragraphs, headings, etc.)
+        Segment text into logical chunks (paragraphs, headings, or tabular data)
         """
         segments = []
         self.sequence_counter = 0
         
         # Clean up the text (but preserve newlines)
         text = self._clean_text(text)
+        
+        # Detect if this is tabular data (CSV/XLSX)
+        if self._is_tabular_data(text):
+            segments = self._segment_tabular_data(text)
+        else:
+            segments = self._segment_regular_text(text)
+        
+        return segments
+
+    def _is_tabular_data(self, text: str) -> bool:
+        """Detect if text contains tabular data (CSV-like structure)"""
+        lines = text.split('\n')
+        if len(lines) < 2:
+            return False
+        
+        # Check for consistent delimiter patterns across lines
+        comma_lines = sum(1 for line in lines[:10] if ',' in line and len(line.split(',')) > 2)
+        tab_lines = sum(1 for line in lines[:10] if '\t' in line and len(line.split('\t')) > 2)
+        
+        # If majority of first 10 lines have consistent delimiters, it's tabular
+        return comma_lines >= 5 or tab_lines >= 5
+
+    def _segment_tabular_data(self, text: str) -> List[Dict[str, Any]]:
+        """Segment tabular data (CSV/XLSX) into AI-queryable text segments"""
+        segments = []
+        lines = text.strip().split('\n')
+        
+        if len(lines) < 2:
+            return segments
+        
+        # Detect delimiter
+        delimiter = ',' if ',' in lines[0] else '\t'
+        
+        # Get headers
+        headers = [col.strip().strip('"') for col in lines[0].split(delimiter)]
+        
+        # Create a summary segment with all unique values from key columns
+        key_columns = self._identify_key_columns(headers)
+        if key_columns:
+            summary_data = self._create_data_summary(lines[1:], headers, key_columns, delimiter)
+            if summary_data:
+                segments.append({
+                    'sequence_number': self.sequence_counter,
+                    'content': summary_data,
+                    'segment_type': 'data_summary',
+                    'section_title': f'Data Summary: {", ".join(key_columns)}',
+                    'content_length': len(summary_data),
+                    'word_count': len(summary_data.split())
+                })
+                self.sequence_counter += 1
+        
+        # Create segments from individual rows (limit to first 30 for performance)
+        for i, line in enumerate(lines[1:31]):
+            if line.strip():
+                row_segment = self._create_row_segment(line, headers, delimiter, i)
+                if row_segment:
+                    segments.append({
+                        'sequence_number': self.sequence_counter,
+                        'content': row_segment,
+                        'segment_type': 'data_row',
+                        'section_title': None,
+                        'content_length': len(row_segment),
+                        'word_count': len(row_segment.split())
+                    })
+                    self.sequence_counter += 1
+        
+        return segments
+
+    def _identify_key_columns(self, headers: List[str]) -> List[str]:
+        """Identify columns that likely contain important searchable data"""
+        key_patterns = [
+            'name', 'model', 'title', 'product', 'company', 'brand', 
+            'type', 'category', 'description', 'item', 'service'
+        ]
+        
+        key_columns = []
+        for header in headers:
+            header_lower = header.lower()
+            if any(pattern in header_lower for pattern in key_patterns):
+                key_columns.append(header)
+        
+        # If no key columns found, use first few columns
+        if not key_columns:
+            key_columns = headers[:3]
+        
+        return key_columns
+
+    def _create_data_summary(self, data_lines: List[str], headers: List[str], 
+                            key_columns: List[str], delimiter: str) -> str:
+        """Create a summary of unique values in key columns"""
+        key_indices = [headers.index(col) for col in key_columns if col in headers]
+        unique_values = {col: set() for col in key_columns}
+        
+        for line in data_lines[:100]:  # Process first 100 rows
+            values = line.split(delimiter)
+            for i, col in enumerate(key_columns):
+                if i < len(key_indices) and key_indices[i] < len(values):
+                    value = values[key_indices[i]].strip().strip('"')
+                    if value and len(value) > 1:  # Skip empty/single char values
+                        unique_values[col].add(value)
+        
+        # Create readable summary
+        summary_parts = []
+        for col, values in unique_values.items():
+            if values:
+                sorted_values = sorted(list(values))[:20]  # Top 20 unique values
+                summary_parts.append(f"{col} includes: {', '.join(sorted_values)}")
+        
+        if summary_parts:
+            return f"This dataset contains the following data: {'. '.join(summary_parts)}"
+        
+        return ""
+
+    def _create_row_segment(self, line: str, headers: List[str], delimiter: str, row_num: int) -> str:
+        """Create a readable text segment from a data row"""
+        values = [val.strip().strip('"') for val in line.split(delimiter)]
+        
+        # Create human-readable description
+        descriptions = []
+        for i, value in enumerate(values):
+            if i < len(headers) and value and len(value) > 1:
+                descriptions.append(f"{headers[i]}: {value}")
+        
+        if descriptions:
+            return f"Record {row_num + 1} - {', '.join(descriptions)}"
+        
+        return ""
+
+    def _segment_regular_text(self, text: str) -> List[Dict[str, Any]]:
+        """Segment regular text (PDF/Word) into paragraphs"""
+        segments = []
         
         # Try multiple splitting strategies
         paragraphs = []
@@ -133,11 +268,11 @@ class TextProcessor:
         
         for paragraph in paragraphs:
             paragraph = paragraph.strip()
-            if not paragraph or len(paragraph) < 50:  # 10 to 50 after embedding hihg risk
+            if not paragraph or len(paragraph) < 50:
                 continue
 
-            # Skip very short segments for Excel
-            if len(paragraph.split()) < 5:  # Skip segments with less than 5 words
+            # Skip very short segments
+            if len(paragraph.split()) < 5:
                 continue
 
             # Determine segment type
@@ -146,7 +281,7 @@ class TextProcessor:
             # Extract section information if it's a heading
             section_title = None
             if segment_type in ['heading', 'title']:
-                section_title = paragraph[:500]  # Truncate long titles
+                section_title = paragraph[:500]
             
             segment = {
                 'sequence_number': self.sequence_counter,
@@ -262,6 +397,25 @@ class TextProcessor:
         """
         tables = []
         
+        if self._is_tabular_data(text):
+            lines = text.strip().split('\n')
+            if len(lines) > 1:
+                delimiter = ',' if ',' in lines[0] else '\t'
+                headers = lines[0].split(delimiter)
+                
+                tables.append({
+                    'table_index': 0,           # Added this
+                    'table_name': 'Data_Table', # Changed from 'title' to 'table_name'
+                    'row_count': len(lines) - 1, # Changed from 'rows' to 'row_count'
+                    'column_count': len(headers), # Changed from 'columns' to 'column_count'
+                    'has_header': True,         # Added this
+                    'table_data': [],           # Added this (empty for now)
+                    'table_type': 'csv_data',
+                    'content': text[:2000]
+                })
+
+
+
         # Look for table patterns (rows with consistent delimiters)
         lines = text.split('\n')
         current_table = []

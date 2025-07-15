@@ -311,7 +311,7 @@ class VectorProcessor:
             
             # Test that new document is searchable
             test_results = wrapper.test_similarity_search("test query", k=1)
-            logger.info(f"✅ New document integrated - {len(test_results)} total searchable segments")
+            logger.info(f"SUCCESS: New document integrated - {len(test_results)} total searchable segments")
             
             return True
             

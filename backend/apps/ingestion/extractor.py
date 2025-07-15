@@ -22,6 +22,9 @@ def extract_text_from_file(file_path, file_type):
 
     elif file_type == 'xlsx':
         return extract_text_from_excel(file_path)
+    
+    elif file_type == 'csv':
+        return extract_text_from_csv(file_path)
 
     else:
         return "Unsupported file type."
@@ -83,4 +86,23 @@ def extract_text_from_excel(file_path):
             text += "\n\n"
     except Exception as e:
         text = f"[Excel Error] {e}"
+    return text
+
+# Extract text from CSV files (.csv)
+def extract_text_from_csv(file_path):
+    text = ""
+    try:
+        # Read CSV file
+        df = pd.read_csv(file_path)
+        
+        # Add header information
+        text += f"CSV File: {file_path}\n"
+        text += f"Columns: {', '.join(df.columns)}\n"
+        text += f"Rows: {len(df)}\n\n"
+        
+        # Convert dataframe to string
+        text += df.to_string(index=False)
+        
+    except Exception as e:
+        text = f"[CSV Error] {e}"
     return text

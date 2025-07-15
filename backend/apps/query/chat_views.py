@@ -115,7 +115,7 @@ class ChatUploadView(APIView):
             
             # Validation 3: File type
             file_extension = file.name.split('.')[-1].lower() if '.' in file.name else ''
-            allowed_types = ['pdf', 'docx', 'xlsx']
+            allowed_types = ['pdf', 'docx', 'xlsx', 'txt', 'csv']
             
             if file_extension not in allowed_types:
                 return Response({
@@ -171,9 +171,9 @@ class ChatUploadView(APIView):
                         'file_type': file_type,
                         'status': 'completed',
                         'processing_results': {
-                            'text_segments': result['processing_results'].get('text_segments_created', 0),
-                            'embeddings': result['processing_results'].get('embeddings_created', 0),
-                            'tables': result['processing_results'].get('tables_extracted', 0),
+                            'text_segments': result['processing_results'].get('segments_created', 0),
+                            'embeddings': result['processing_results'].get('embeddings', 0),
+                            'tables': result['processing_results'].get('tables_detected', 0),
                             'key_values': result['processing_results'].get('key_values_extracted', 0)
                         },
                         'ready_for_queries': True

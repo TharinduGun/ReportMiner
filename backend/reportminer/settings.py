@@ -69,8 +69,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # CORS Configuration for React Frontend
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",    # React development server
-    "http://127.0.0.1:3000",   # Alternative localhost
+    "http://localhost:5173",    # React development server
+    "http://127.0.0.1:5173",   # Alternative localhost
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -189,7 +189,7 @@ SKIP_EMBEDDING_TYPES = ['header', 'footer', 'list_item']  # Add list_item
 # Add new cost control settings
 EMBEDDING_COST_ALERT = 100         # Alert at 100 calls
 MAX_SEGMENTS_PER_DOCUMENT = 500     # Limit segments per document
-SKIP_LARGE_DOCUMENTS = False        # Skip documents with too many segments - this chenged for testing
+SKIP_LARGE_DOCUMENTS = False        # Skip documents with too many segments - this chenged for testingi
 
 # Logging Configuration
 LOGGING = {
