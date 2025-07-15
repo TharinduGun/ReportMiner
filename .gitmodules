@@ -1,0 +1,3 @@
+[submodule "frontend/report-minor-frontend"]
+	path = frontend/report-minor-frontend
+	url = https://github.com/dulanmalinda/report-minor-frontend.git
