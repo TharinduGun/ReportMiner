@@ -2984,3 +2984,9 @@ DEBUG 2025-07-15 04:03:28,178 vector_processor 38452 3768 Skipped segment 3e5427
 INFO 2025-07-15 04:03:28,178 vector_processor 38452 3768 No segments to embed after filtering
 INFO 2025-07-15 04:03:28,180 vector_processor 38452 3768 Updated embedding status for document FINAL YEAR RESEARCH PROJECT  Automatic Door Controller: failed
 INFO 2025-07-15 04:03:31,839 vector_processor 38452 3768 SUCCESS: New document integrated - 1 total searchable segments
+INFO 2025-07-15 10:28:46,111 vector_processor 25276 10392 No segments provided for embedding
+INFO 2025-07-15 10:28:46,113 vector_processor 25276 10392 Updated embedding status for document new planv1: failed
+INFO 2025-07-15 10:28:47,936 vector_processor 25276 10392 SUCCESS: New document integrated - 1 total searchable segments
+INFO 2025-07-15 11:13:51,996 vector_processor 13744 10836 No segments provided for embedding
+INFO 2025-07-15 11:13:51,998 vector_processor 13744 10836 Updated embedding status for document _INTEGRATION ROADMAP: failed
+INFO 2025-07-15 11:13:54,332 vector_processor 13744 10836 SUCCESS: New document integrated - 1 total searchable segments

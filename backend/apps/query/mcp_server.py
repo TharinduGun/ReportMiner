@@ -25,6 +25,7 @@ from typing import List, Dict, Any, Optional
 from decimal import Decimal
 from datetime import datetime
 import io
+from asgiref.sync import sync_to_async
 
 # MCP imports (after Django setup)
 from mcp.server import Server
@@ -48,6 +49,15 @@ server = Server("reportminer-enhanced")
 
 # Global variables
 rag_engine = None
+
+def sync_database_operation(func):
+    """Decorator to safely run Django ORM operations in sync context"""
+    def wrapper(*args, **kwargs):
+        from django.db import connections
+        # Close all connections to avoid async context issues
+        connections.close_all()
+        return func(*args, **kwargs)
+    return wrapper
 
 def get_initialized_rag_engine():
     """Lazy initialization of RAG engine"""
@@ -235,12 +245,12 @@ async def list_tools() -> List[Tool]:
 
 @server.call_tool()
 async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
-    """Enhanced tool execution with proper async/sync handling - FIXED VERSION"""
+    """Enhanced tool execution with proper async/sync handling - WORKING VERSION"""
     try:
         print(f"🔧 MCP Tool called: {name}")
         
-        # Get event loop for running sync code in thread pool
-        loop = asyncio.get_event_loop()
+        # Use run_in_executor with thread pool for Django ORM operations
+        loop = asyncio.get_running_loop()
         
         # Route to appropriate tool handler using thread pool for sync code
         if name == "search_documents":
@@ -250,7 +260,7 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
         elif name == "list_recent_documents":
             return await loop.run_in_executor(None, handle_list_recent_documents, arguments)
         elif name == "query_natural_language":
-            # Run RAG code in thread pool - FIXED VERSION
+            # Run RAG code in thread pool - WORKING VERSION
             return await loop.run_in_executor(None, handle_query_natural_language, arguments)
         elif name == "extract_numerical_data":
             return await loop.run_in_executor(None, handle_extract_numerical_data, arguments)
@@ -275,8 +285,12 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
 # === CORE DOCUMENT TOOL IMPLEMENTATIONS (ALL SYNC) ===
 
 def handle_search_documents(args: Dict[str, Any]) -> List[TextContent]:
-    """Search documents using vector similarity - FIXED VERSION"""
+    """Search documents using vector similarity - WORKING VERSION"""
     try:
+        # Setup Django in this thread
+        import django
+        django.setup()
+        
         query = args.get("query", "")
         limit = args.get("limit", 5)
         
@@ -313,10 +327,21 @@ def handle_search_documents(args: Dict[str, Any]) -> List[TextContent]:
         error_msg = f"❌ Search error: {str(e)}"
         print(error_msg)  # Log for debugging
         return [TextContent(type="text", text=error_msg)]
+    finally:
+        # Clean up database connection
+        try:
+            from django.db import connection
+            connection.close()
+        except:
+            pass
 
 def handle_get_document_summary(args: Dict[str, Any]) -> List[TextContent]:
     """Get detailed document information"""
     try:
+        # Setup Django in this thread
+        import django
+        django.setup()
+        
         doc_id = args.get("document_id")
         
         document = Document.objects.get(id=doc_id)
@@ -353,10 +378,21 @@ def handle_get_document_summary(args: Dict[str, Any]) -> List[TextContent]:
         return [TextContent(type="text", text=f"❌ Document not found: {doc_id}")]
     except Exception as e:
         return [TextContent(type="text", text=f"❌ Summary error: {str(e)}")]
+    finally:
+        # Clean up database connection
+        try:
+            from django.db import connection
+            connection.close()
+        except:
+            pass
 
 def handle_list_recent_documents(args: Dict[str, Any]) -> List[TextContent]:
     """List recent documents"""
     try:
+        # Setup Django in this thread
+        import django
+        django.setup()
+        
         limit = args.get("limit", 10)
         
         documents = Document.objects.order_by('-uploaded_at')[:limit]
@@ -377,10 +413,21 @@ def handle_list_recent_documents(args: Dict[str, Any]) -> List[TextContent]:
         
     except Exception as e:
         return [TextContent(type="text", text=f"❌ List error: {str(e)}")]
+    finally:
+        # Clean up database connection
+        try:
+            from django.db import connection
+            connection.close()
+        except:
+            pass
 
 def handle_query_natural_language(args: Dict[str, Any]) -> List[TextContent]:
-    """Use RAG engine for natural language queries - COMPLETE SYNC VERSION"""
+    """Use RAG engine for natural language queries - WORKING VERSION"""
     try:
+        # Setup Django in this thread
+        import django
+        django.setup()
+        
         question = args.get("question", "")
         include_sources = args.get("include_sources", True)
         
@@ -388,11 +435,6 @@ def handle_query_natural_language(args: Dict[str, Any]) -> List[TextContent]:
             return [TextContent(type="text", text="❌ Question cannot be empty")]
         
         print(f"🔍 MCP RAG Query: {question}")
-        
-        # Force synchronous execution context
-        import django
-        from django.db import connection
-        connection.ensure_connection()
         
         # Use your working RAG engine (SYNCHRONOUS)
         rag = get_initialized_rag_engine()
@@ -430,6 +472,13 @@ def handle_query_natural_language(args: Dict[str, Any]) -> List[TextContent]:
         error_msg = f"❌ MCP RAG integration error: {str(e)}"
         print(error_msg)
         return [TextContent(type="text", text=error_msg)]
+    finally:
+        # Clean up database connection
+        try:
+            from django.db import connection
+            connection.close()
+        except:
+            pass
 
 # === STUB IMPLEMENTATIONS FOR ADVANCED TOOLS ===
 # These return placeholder responses to avoid errors

@@ -19,6 +19,13 @@ from .chat_views import (
     ChatDocumentListView
 )
 
+from .chat_views_with_mcp import (
+    EnhancedChatQueryView,
+    MCPToolDirectView,
+    MCPSystemStatusView,
+    test_mcp_tools
+)
+
 app_name = 'query'
 
 urlpatterns = [
@@ -41,10 +48,16 @@ urlpatterns = [
     path('analytics/', query_analytics, name='query-analytics'),
 
 
-        # NEW CHAT ENDPOINTS - These are what frontend needs
+    # NEW CHAT ENDPOINTS - These are what frontend needs
     path('chat/query/', ChatQueryView.as_view(), name='chat-query'),
     path('chat/upload/', ChatUploadView.as_view(), name='chat-upload'),
     path('chat/status/', ChatDocumentListView.as_view(), name='chat-status'),
+    
+    # WORKING MCP TOOLS ENDPOINTS - Alternative to MCP server
+    path('mcp/chat/', EnhancedChatQueryView.as_view(), name='mcp-enhanced-chat'),
+    path('mcp/tool/', MCPToolDirectView.as_view(), name='mcp-tool-direct'),
+    path('mcp/status/', MCPSystemStatusView.as_view(), name='mcp-system-status'),
+    path('mcp/test/', test_mcp_tools, name='mcp-test-tools'),
 ]
 
 """
