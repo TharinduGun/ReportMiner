@@ -156,6 +156,7 @@ REST_FRAMEWORK = {
 # openAI API key
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+
 # Embedding Configuration - COST OPTIMIZED
 ENABLE_AUTO_EMBEDDINGS = True
 MAX_SEGMENTS_SYNC = 5              # Reduce from 10 to 5
@@ -171,43 +172,24 @@ EMBEDDING_COST_ALERT = 100         # Alert at 100 calls
 MAX_SEGMENTS_PER_DOCUMENT = 50     # Limit segments per document
 SKIP_LARGE_DOCUMENTS = True        # Skip documents with too many segments
 
-# Logging Configuration
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-            'formatter': 'verbose'
-        },
-    },
-    'loggers': {
-        'apps.ingestion.vector_processor': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-        'apps.ingestion.text_processor': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
+
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# ChromaDB persistence configuration
+CHROMA_PERSIST_DIR = os.getenv(
+    "CHROMA_PERSIST_DIR",
+    BASE_DIR / "chroma_data"
+)
+CHROMA_COLLECTION_NAME = os.getenv(
+    "CHROMA_COLLECTION_NAME",
+    "reportminer"
+)
+
+# Celery (background task) configuration
+CELERY_BROKER_URL = os.getenv(
+    "REDIS_URL",
+    "redis://localhost:6379/0"
+)
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+# ────────────────────────────────────────────────────────────────────────────────

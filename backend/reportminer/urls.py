@@ -26,6 +26,6 @@ from django.urls import path , include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/ingestion/', include('apps.ingestion.urls')),
-    path('api/query/', include('apps.query.urls')),  # ADD THIS LINE
+    #path('api/query/', include('apps.query.urls')),  # ADD THIS LINE
     path('', home),
 ]
