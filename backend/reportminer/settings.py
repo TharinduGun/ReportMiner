@@ -92,14 +92,9 @@ WSGI_APPLICATION = 'reportminer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'reportminer',
-        'USER': 'postgres',
-        'PASSWORD': 'fucklife@6999',
-        'HOST': 'localhost',
-        'PORT': '5432',
-     
-}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation
@@ -193,3 +188,13 @@ CELERY_BROKER_URL = os.getenv(
 )
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 # ────────────────────────────────────────────────────────────────────────────────
+
+poppler_path = r"C:\Program Files\poppler-24.08.0\Library\bin"
+if poppler_path not in os.environ.get('PATH', ''):
+    os.environ['PATH'] = poppler_path + os.pathsep + os.environ['PATH']
+
+
+
+#splitter 
+INGESTION_ROW_EMBED_THRESHOLD = 200
+INGESTION_ROW_GROUP_SIZE = 50

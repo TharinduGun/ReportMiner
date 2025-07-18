@@ -3,12 +3,12 @@ from typing import List, Dict, Any
 import chromadb
 from django.conf import settings
 
-# Initialize Chroma client with persistence (NEW API)
+# Initialize ChromaDB persistent client
 chroma_client = chromadb.PersistentClient(
     path=getattr(settings, 'CHROMA_PERSIST_DIR', './chroma')
 )
 
-# Create or get the collection for ingestion
+# Create or get the vector collection
 collection = chroma_client.get_or_create_collection(
     name=getattr(settings, 'CHROMA_COLLECTION_NAME', 'reportminer')
 )
@@ -18,15 +18,15 @@ def add_vectors(
     embeddings: List[List[float]]
 ) -> None:
     """
-    Add a batch of embeddings to ChromaDB.
+    Add a batch of embeddings to ChromaDB, sanitizing metadata to remove None values.
 
     Args:
         chunks: List of dicts with keys 'text', 'metadata', and 'token_count'.
-        embeddings: List of embedding vectors matching order of chunks.
+        embeddings: Corresponding list of vector embeddings.
 
     Raises:
-        ValueError: if lengths of chunks and embeddings differ.
-        Exception: on ChromaDB add/persist failure.
+        ValueError: If lengths of chunks and embeddings differ.
+        Exception: On failure to add to ChromaDB.
     """
     if len(chunks) != len(embeddings):
         raise ValueError(
@@ -42,11 +42,13 @@ def add_vectors(
         chunk_id = str(uuid.uuid4())
         ids.append(chunk_id)
         documents.append(chunk['text'])
-        # Copy metadata and include token count and chunk_id
+
+        # Copy and enrich metadata, then drop None values
         meta = chunk.get('metadata', {}).copy()
-        meta['token_count'] = chunk.get('token_count')
         meta['chunk_id'] = chunk_id
-        metadatas.append(meta)
+        meta['token_count'] = chunk.get('token_count')
+        clean_meta = {k: v for k, v in meta.items() if v is not None}
+        metadatas.append(clean_meta)
 
     try:
         collection.add(
@@ -55,7 +57,5 @@ def add_vectors(
             embeddings=embeddings,
             metadatas=metadatas
         )
-        # Note: PersistentClient automatically persists, no need to call persist()
     except Exception as e:
-        # Consider logging error here
         raise Exception(f"Failed to add vectors to ChromaDB: {e}")

@@ -1,14 +1,17 @@
 import os
+import pandas as pd
 from dataclasses import dataclass
 from typing import List, Dict, Any
-import pandas as pd
+from django.conf import settings
 from langchain_community.document_loaders import UnstructuredPDFLoader, UnstructuredWordDocumentLoader
+
 @dataclass
 class RawDocument:
     """
     RawDocument holds the extracted pages and tables from an input file.
-    pages: list of dicts with keys 'text' and 'metadata' (including page number)
-    tables: list of dicts with keys 'sheet_name' and 'dataframe' for structured data
+
+    pages: list of dicts with 'text' and 'metadata'
+    tables: list of dicts with 'sheet_name' and 'dataframe'
     """
     pages: List[Dict[str, Any]]
     tables: List[Dict[str, Any]]
@@ -18,11 +21,8 @@ def extract_raw(file_path: str) -> RawDocument:
     """
     Load and parse the file into raw text pages and DataFrame tables.
 
-    - PDF & DOCX use LangChain's Unstructured loaders for page-level extraction
-    - XLSX/CSV use pandas, each sheet or file becomes a table
-
-    Returns:
-        RawDocument(pages, tables)
+    Supports CSV fallback encoding and chunked CSV reading for large files,
+    with Unicode errors replaced to avoid crashes.
     """
     ext = os.path.splitext(file_path)[1].lower()
     pages: List[Dict[str, Any]] = []
@@ -33,8 +33,7 @@ def extract_raw(file_path: str) -> RawDocument:
         docs = loader.load()
         for idx, doc in enumerate(docs):
             md = doc.metadata.copy()
-            md['source'] = file_path
-            md['page'] = idx + 1
+            md.update({'source': file_path, 'page': idx + 1})
             pages.append({'text': doc.page_content, 'metadata': md})
 
     elif ext == '.docx':
@@ -42,8 +41,7 @@ def extract_raw(file_path: str) -> RawDocument:
         docs = loader.load()
         for idx, doc in enumerate(docs):
             md = doc.metadata.copy()
-            md['source'] = file_path
-            md['page'] = idx + 1
+            md.update({'source': file_path, 'page': idx + 1})
             pages.append({'text': doc.page_content, 'metadata': md})
 
     elif ext in {'.xlsx', '.xls'}:
@@ -53,9 +51,20 @@ def extract_raw(file_path: str) -> RawDocument:
             tables.append({'sheet_name': sheet_name, 'dataframe': df})
 
     elif ext == '.csv':
-        df = pd.read_csv(file_path)
-        tables.append({'sheet_name': os.path.basename(file_path), 'dataframe': df})
-
+        # Attempt to read CSV in chunks, catching Unicode errors at read or iteration time
+        chunksize = getattr(settings, 'CSV_CHUNKSIZE', 50000)
+        try:
+            reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize)
+            for i, chunk_df in enumerate(reader):
+                part_name = f"{os.path.basename(file_path)}_part{i+1}"
+                tables.append({'sheet_name': part_name, 'dataframe': chunk_df})
+        except UnicodeDecodeError:
+            # Fallback: replace invalid UTF-8 bytes, then re-read
+            with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
+                reader = pd.read_csv(f, iterator=True, chunksize=chunksize)
+                for i, chunk_df in enumerate(reader):
+                    part_name = f"{os.path.basename(file_path)}_part{i+1}"
+                    tables.append({'sheet_name': part_name, 'dataframe': chunk_df})
     else:
         raise ValueError(f"Unsupported file extension: {ext}")
 
