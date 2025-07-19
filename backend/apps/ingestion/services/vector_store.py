@@ -1,17 +1,21 @@
 import uuid
 from typing import List, Dict, Any
+
 import chromadb
 from django.conf import settings
 
-# Initialize ChromaDB persistent client
+# ── Initialize ChromaDB client & collection ─────────────────────────────────────
+
+# Persistent client rooted at your settings path (default './chroma')
 chroma_client = chromadb.PersistentClient(
     path=getattr(settings, 'CHROMA_PERSIST_DIR', './chroma')
 )
 
-# Create or get the vector collection
+# Create or get the collection in one call
 collection = chroma_client.get_or_create_collection(
     name=getattr(settings, 'CHROMA_COLLECTION_NAME', 'reportminer')
 )
+
 
 def add_vectors(
     chunks: List[Dict[str, Any]],
@@ -38,18 +42,23 @@ def add_vectors(
     metadatas: List[Dict[str, Any]] = []
 
     for chunk, vector in zip(chunks, embeddings):
-        # Generate unique ID per chunk
+        # 1) Assign a unique ID per chunk
         chunk_id = str(uuid.uuid4())
         ids.append(chunk_id)
+
+        # 2) Document text
         documents.append(chunk['text'])
 
-        # Copy and enrich metadata, then drop None values
+        # 3) Copy & enrich metadata, then drop None values
         meta = chunk.get('metadata', {}).copy()
-        meta['chunk_id'] = chunk_id
-        meta['token_count'] = chunk.get('token_count')
+        meta.update({
+            'chunk_id':   chunk_id,
+            'token_count': chunk.get('token_count')
+        })
         clean_meta = {k: v for k, v in meta.items() if v is not None}
         metadatas.append(clean_meta)
 
+    # 4) Add to ChromaDB
     try:
         collection.add(
             ids=ids,

@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import List, Dict, Any
 from django.conf import settings
 from langchain_community.document_loaders import UnstructuredPDFLoader, UnstructuredWordDocumentLoader
-
+from langchain.document_loaders import PyPDFLoader
 @dataclass
 class RawDocument:
     """
@@ -29,8 +29,9 @@ def extract_raw(file_path: str) -> RawDocument:
     tables: List[Dict[str, Any]] = []
 
     if ext == '.pdf':
-        loader = UnstructuredPDFLoader(file_path)
-        docs = loader.load()
+        from langchain.document_loaders import PyPDFLoader
+        loader = PyPDFLoader(file_path)
+        docs   = loader.load_and_split()
         for idx, doc in enumerate(docs):
             md = doc.metadata.copy()
             md.update({'source': file_path, 'page': idx + 1})
