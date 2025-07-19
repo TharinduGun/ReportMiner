@@ -6,6 +6,7 @@ from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
+
 # Prompt template that instructs the LLM to ground its answer in provided context
 QA_PROMPT = PromptTemplate(
     input_variables=["context", "question"],
@@ -16,6 +17,7 @@ QA_PROMPT = PromptTemplate(
         "Answer: "
     )
 )
+
 
 def get_retriever(top_k: int = 5):
     """
@@ -31,6 +33,8 @@ def get_retriever(top_k: int = 5):
     return vector_store.as_retriever(search_kwargs={"k": top_k})
 
 
+
+
 def build_qa_chain(
     top_k: int = 5,
     llm_model: str = "gpt-4o",
@@ -42,6 +46,7 @@ def build_qa_chain(
       - A Chroma retriever for semantic search
       - Optional custom prompt when using 'stuff' chain_type
 
+
     Returns a callable `qa_chain({"query": question})` ->
     {"result": ..., "source_documents": [...]}
     """
@@ -52,8 +57,10 @@ def build_qa_chain(
         temperature=0
     )
 
+
     # Get the retriever for top-k chunks
     retriever = get_retriever(top_k)
+
 
     # Build the RAG QA chain
     if chain_type == "stuff":
@@ -73,5 +80,6 @@ def build_qa_chain(
             retriever=retriever,
             return_source_documents=True
         )
+
 
     return qa_chain
