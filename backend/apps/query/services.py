@@ -4,8 +4,8 @@ import chromadb
 from django.conf import settings
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.chains import RetrievalQA
-from langchain.chat_models import ChatOpenAI
+from langchain.chains import RetrievalQA 
+from langchain_openai import ChatOpenAI
 
 # ── 1) Build a persistent Chroma client (no deprecated API) ────────────────
 chroma_client = chromadb.PersistentClient(
@@ -24,7 +24,10 @@ retriever = vectordb.as_retriever(search_kwargs={"k": 5})
 
 # ── 4) Build the RAG chain ────────────────────────────────────────────────
 qa_chain = RetrievalQA.from_chain_type(
-    llm=ChatOpenAI(temperature=0),
+    llm=ChatOpenAI(
+        temperature=0,
+        model_name=settings.CHAT_MODEL_NAME,
+        openai_api_key=settings.OPENAI_API_KEY),
     chain_type="stuff",
     retriever=retriever,
     return_source_documents=True,

@@ -150,6 +150,7 @@ REST_FRAMEWORK = {
 
 # openAI API key
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+CHAT_MODEL_NAME = os.getenv("CHAT_MODEL_NAME", "gpt-4o")
 
 
 # Embedding Configuration - COST OPTIMIZED
