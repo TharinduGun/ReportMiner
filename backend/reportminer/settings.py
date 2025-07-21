@@ -199,3 +199,14 @@ if poppler_path not in os.environ.get('PATH', ''):
 #splitter 
 INGESTION_ROW_EMBED_THRESHOLD = 200
 INGESTION_ROW_GROUP_SIZE = 50
+
+
+# ── CSV & EXCEL INGESTION TOGGLES ──────────────────────────────────────────
+# When True, load the entire CSV as one chunk. Otherwise split into row-chunks.
+CSV_FULL_SHEET_INGESTION: bool = False
+
+# If CSV_FULL_SHEET_INGESTION=False, this many rows per chunk:
+CSV_CHUNKSIZE: int = 50_000
+
+# When True, load each Excel sheet as one chunk. Otherwise fall back to row-by-row.
+EXCEL_FULL_SHEET_INGESTION: bool = True

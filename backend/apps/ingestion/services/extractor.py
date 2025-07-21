@@ -71,29 +71,70 @@ def extract_raw(file_path: str) -> RawDocument:
             pages.append({'text': doc.page_content, 'metadata': md})
 
     elif ext in {'.xlsx', '.xls'}:
+        # Excel: full-sheet ingestion (default)
+        full_sheet_excel = getattr(settings, 'EXCEL_FULL_SHEET_INGESTION', True)
         xls = pd.ExcelFile(file_path)
         for sheet_name in xls.sheet_names:
             df = xls.parse(sheet_name)
-            # Full-sheet ingest: one chunk per sheet
+            if full_sheet_excel:
+                # one chunk per sheet
+                tables.append({
+                    'sheet_name': sheet_name,
+                    'dataframe': df,
+                    'metadata': {
+                        'source': file_path,
+                        'chunk_type': 'csv_sheet',
+                        'sheet_name': sheet_name,
+                        'row_count': len(df),
+                        'columns': df.columns.tolist()
+                    }
+                })
+            else:
+                # optional: row-by-row or custom chunking for large sheets
+                for i, row in df.iterrows():
+                    part_name = f"{sheet_name}_row{i+1}"
+                    tab_df = pd.DataFrame([row.values], columns=df.columns)
+                    tables.append({
+                        'sheet_name': part_name,
+                        'dataframe': tab_df,
+                        'metadata': {
+                            'source': file_path,
+                            'chunk_type': 'csv_sheet',
+                            'sheet_name': part_name,
+                            'row_count': 1,
+                            'columns': df.columns.tolist()
+                        }
+                    })
+
+    elif ext == '.csv':
+        # CSV: full-sheet or chunked by rows
+        csv_full_sheet = getattr(settings, 'CSV_FULL_SHEET_INGESTION', False)
+        if csv_full_sheet:
+            try:
+                df = pd.read_csv(file_path)
+            except UnicodeDecodeError:
+                df = pd.read_csv(file_path, encoding='utf-8', errors='replace')
             tables.append({
-                'sheet_name': sheet_name,
+                'sheet_name': os.path.basename(file_path),
                 'dataframe': df,
                 'metadata': {
                     'source': file_path,
                     'chunk_type': 'csv_sheet',
-                    'sheet_name': sheet_name,
+                    'sheet_name': os.path.basename(file_path),
                     'row_count': len(df),
                     'columns': df.columns.tolist()
                 }
             })
+        else:
+            chunksize = getattr(settings, 'CSV_CHUNKSIZE', 50000)
+            try:
+                reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize)
+            except UnicodeDecodeError:
+                with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
+                    reader = pd.read_csv(f, iterator=True, chunksize=chunksize)
 
-    elif ext == '.csv':
-        # Attempt to read CSV in chunks, catching Unicode errors
-        chunksize = getattr(settings, 'CSV_CHUNKSIZE', 50000)
-        try:
-            reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize)
-            for i, chunk_df in enumerate(reader):
-                part_name = f"{os.path.basename(file_path)}_part{i+1}"
+            for i, chunk_df in enumerate(reader, start=1):
+                part_name = f"{os.path.basename(file_path)}_part{i}"
                 tables.append({
                     'sheet_name': part_name,
                     'dataframe': chunk_df,
@@ -105,23 +146,7 @@ def extract_raw(file_path: str) -> RawDocument:
                         'columns': chunk_df.columns.tolist()
                     }
                 })
-        except UnicodeDecodeError:
-            # Fallback: replace invalid bytes then re-read
-            with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
-                reader = pd.read_csv(f, iterator=True, chunksize=chunksize)
-                for i, chunk_df in enumerate(reader):
-                    part_name = f"{os.path.basename(file_path)}_part{i+1}"
-                    tables.append({
-                        'sheet_name': part_name,
-                        'dataframe': chunk_df,
-                        'metadata': {
-                            'source': file_path,
-                            'chunk_type': 'csv_sheet',
-                            'sheet_name': part_name,
-                            'row_count': len(chunk_df),
-                            'columns': chunk_df.columns.tolist()
-                        }
-                    })
+
     else:
         raise ValueError(f"Unsupported file extension: {ext}")
 
