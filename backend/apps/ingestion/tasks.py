@@ -83,21 +83,21 @@ from celery.utils.log import get_task_logger
 logger = get_task_logger(__name__)
 
 def sanitize_metadata(metadata_dict):
-    """
-    Convert metadata values to ChromaDB-compatible types.
-    ChromaDB only accepts: str, int, float, bool, or None
-    """
+    """Ensure all metadata keys/values are valid for ChromaDB."""
     sanitized = {}
     for key, value in metadata_dict.items():
+        # Ensure the key is a string (convert if not)
+        str_key = str(key) if key is not None else "unknown_key"
+
+        # Convert value to allowed types
         if isinstance(value, (str, int, float, bool)) or value is None:
-            sanitized[key] = value
+            sanitized[str_key] = value
         elif isinstance(value, list):
-            # Convert lists to comma-separated strings
-            sanitized[key] = ", ".join(str(item) for item in value)
+            sanitized[str_key] = ", ".join(str(item) for item in value)
         else:
-            # Convert everything else to string
-            sanitized[key] = str(value)
+            sanitized[str_key] = str(value)
     return sanitized
+
 
 @shared_task(bind=True)
 def process_document(self, document_id):
@@ -130,13 +130,10 @@ def process_document(self, document_id):
             df = table["dataframe"]
             sheet = table.get("sheet_name", "")
             for _, row in df.iterrows():
-                row_meta = row.to_dict()  # {col: primitive}
-                # Sanitize metadata for ChromaDB compatibility
-                row_meta = sanitize_metadata(row_meta)
-                # you can include sheet name too:
+                row_dict = row.to_dict()  # ✅ define it once
+                row_meta = sanitize_metadata(row_dict)
                 row_meta["sheet_name"] = sheet
-                # text could be JSON or just CSV‐stringified
-                row_text = row.to_json()
+                row_text = "; ".join(f"{k}: {v}" for k, v in row_dict.items())  # ✅ now it exists
                 chunks.append({"text": row_text, "metadata": row_meta})
 
         # 4. Embed texts

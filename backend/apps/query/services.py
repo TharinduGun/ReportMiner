@@ -20,7 +20,7 @@ vectordb = Chroma(
 )
 
 # ── 3) Create a Top-K retriever ────────────────────────────────────────────
-retriever = vectordb.as_retriever(search_kwargs={"k": 5})
+retriever = vectordb.as_retriever(search_kwargs={"k": 2})
 
 # ── 4) Build the RAG chain ────────────────────────────────────────────────
 qa_chain = RetrievalQA.from_chain_type(
@@ -28,7 +28,7 @@ qa_chain = RetrievalQA.from_chain_type(
         temperature=0,
         model_name=settings.CHAT_MODEL_NAME,
         openai_api_key=settings.OPENAI_API_KEY),
-    chain_type="stuff",
+    chain_type="map_reduce",
     retriever=retriever,
     return_source_documents=True,
 )
