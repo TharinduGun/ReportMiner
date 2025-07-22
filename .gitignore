@@ -23,6 +23,11 @@ staticfiles/
 # PyCharm
 .idea/
 
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
 # OS
 .DS_Store
 Thumbs.db*.log

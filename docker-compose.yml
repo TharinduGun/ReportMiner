@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: reportminer-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  web:
+    build: .
+    container_name: reportminer-web
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/documents:/app/backend/documents
+      - ./backend/db.sqlite3:/app/backend/db.sqlite3
+      - ./chroma_data:/app/chroma_data
+      - ./backend/chroma_db:/app/backend/chroma_db
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=reportminer.settings
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  celery:
+    build: .
+    container_name: reportminer-celery
+    command: celery -A reportminer worker -l info
+    volumes:
+      - ./backend/documents:/app/backend/documents
+      - ./backend/db.sqlite3:/app/backend/db.sqlite3
+      - ./chroma_data:/app/chroma_data
+      - ./backend/chroma_db:/app/backend/chroma_db
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=reportminer.settings
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+      - web
+    restart: unless-stopped
+
+  celery-beat:
+    build: .
+    container_name: reportminer-celery-beat
+    command: celery -A reportminer beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - ./backend/documents:/app/backend/documents
+      - ./backend/db.sqlite3:/app/backend/db.sqlite3
+      - ./chroma_data:/app/chroma_data
+      - ./backend/chroma_db:/app/backend/chroma_db
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=reportminer.settings
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+      - web
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+    driver: local

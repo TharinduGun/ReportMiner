@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: reportminer-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  web:
+    build: .
+    container_name: reportminer-web-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./report-miner-frontend:/app/frontend
+      - ./backend/documents:/app/backend/documents
+      - ./backend/db.sqlite3:/app/backend/db.sqlite3
+      - ./chroma_data:/app/chroma_data
+      - ./backend/chroma_db:/app/backend/chroma_db
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=reportminer.settings
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+    restart: unless-stopped
+    command: sh -c "cd /app/backend && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+  celery:
+    build: .
+    container_name: reportminer-celery-dev
+    volumes:
+      - ./backend:/app/backend
+      - ./backend/documents:/app/backend/documents
+      - ./backend/db.sqlite3:/app/backend/db.sqlite3
+      - ./chroma_data:/app/chroma_data
+      - ./backend/chroma_db:/app/backend/chroma_db
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=reportminer.settings
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+      - web
+    restart: unless-stopped
+    command: sh -c "cd /app/backend && celery -A reportminer worker -l info"
+
+volumes:
+  redis_data:
+    driver: local
