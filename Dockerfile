@@ -27,8 +27,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 WORKDIR /app
 
 # Copy and install Python dependencies first (for better caching)
-COPY backend/requirements.txt ./backend/
-RUN pip install --no-cache-dir -r ./backend/requirements.txt
+COPY backend/requirements-minimal.txt ./backend/
+RUN pip install --no-cache-dir -r ./backend/requirements-minimal.txt
 
 # Copy and build frontend
 COPY report-miner-frontend/ ./frontend/
