@@ -173,9 +173,10 @@ SKIP_LARGE_DOCUMENTS = True        # Skip documents with too many segments
 
 # ────────────────────────────────────────────────────────────────────────────────
 # ChromaDB persistence configuration
+# ChromaDB persistence configuration
 CHROMA_PERSIST_DIR = os.getenv(
     "CHROMA_PERSIST_DIR",
-    BASE_DIR / "chroma_data"
+    str(BASE_DIR / "chroma_data")  # ← Convert Path to string with str()
 )
 CHROMA_COLLECTION_NAME = os.getenv(
     "CHROMA_COLLECTION_NAME",

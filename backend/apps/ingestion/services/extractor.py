@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import List, Dict, Any
 from django.conf import settings
 from langchain_community.document_loaders import UnstructuredPDFLoader, UnstructuredWordDocumentLoader
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 
 @dataclass
 class RawDocument:

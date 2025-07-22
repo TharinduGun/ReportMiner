@@ -1,19 +1,25 @@
+# apps/ingestion/services/vector_store.py
+
 import uuid
+import logging
 from typing import List, Dict, Any
 
-import chromadb
 from django.conf import settings
 
+#from chromadb.config import Settings
+import chromadb
+logger = logging.getLogger(__name__)
+
 # ── Initialize ChromaDB client & collection ─────────────────────────────────────
+from chromadb.config import Settings
 
-# Persistent client rooted at your settings path (default './chroma')
 chroma_client = chromadb.PersistentClient(
-    path=getattr(settings, 'CHROMA_PERSIST_DIR', './chroma')
-)
+    path=settings.CHROMA_PERSIST_DIR,
+    settings=Settings(),
+) 
 
-# Create or get the collection in one call
 collection = chroma_client.get_or_create_collection(
-    name=getattr(settings, 'CHROMA_COLLECTION_NAME', 'reportminer')
+    name=getattr(settings, "CHROMA_COLLECTION_NAME", "reportminer")
 )
 
 
@@ -29,8 +35,8 @@ def add_vectors(
         embeddings: Corresponding list of vector embeddings.
 
     Raises:
-        ValueError: If lengths of chunks and embeddings differ.
-        Exception: On failure to add to ChromaDB.
+        ValueError: If lengths of chunks and embeddings differ, or if required fields missing.
+        RuntimeError: On failure to add to ChromaDB.
     """
     if len(chunks) != len(embeddings):
         raise ValueError(
@@ -38,33 +44,33 @@ def add_vectors(
         )
 
     ids: List[str] = []
-    documents: List[str] = []
-    metadatas: List[Dict[str, Any]] = []
+    docs: List[str] = []
+    metas: List[Dict[str, Any]] = []
 
     for chunk, vector in zip(chunks, embeddings):
-        # 1) Assign a unique ID per chunk
+        text = chunk.get("text")
+        if text is None:
+            raise ValueError("Each chunk must include a 'text' field")
         chunk_id = str(uuid.uuid4())
-        ids.append(chunk_id)
 
-        # 2) Document text
-        documents.append(chunk['text'])
-
-        # 3) Copy & enrich metadata, then drop None values
-        meta = chunk.get('metadata', {}).copy()
+        meta = dict(chunk.get("metadata", {}))
         meta.update({
-            'chunk_id':   chunk_id,
-            'token_count': chunk.get('token_count')
+            "chunk_id":   chunk_id,
+            "token_count": chunk.get("token_count"),
         })
         clean_meta = {k: v for k, v in meta.items() if v is not None}
-        metadatas.append(clean_meta)
 
-    # 4) Add to ChromaDB
+        ids.append(chunk_id)
+        docs.append(text)
+        metas.append(clean_meta)
+
     try:
         collection.add(
             ids=ids,
-            documents=documents,
+            documents=docs,
             embeddings=embeddings,
-            metadatas=metadatas
+            metadatas=metas,
         )
     except Exception as e:
-        raise Exception(f"Failed to add vectors to ChromaDB: {e}")
+        logger.error("ChromaDB vector insert failed: %s", e)
+        raise RuntimeError("Failed to add vectors to ChromaDB") from e
