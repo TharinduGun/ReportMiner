@@ -5,7 +5,7 @@ import logging
 from typing import List, Dict, Any
 
 from django.conf import settings
-
+from langchain_chroma import Chroma
 #from chromadb.config import Settings
 import chromadb
 logger = logging.getLogger(__name__)
