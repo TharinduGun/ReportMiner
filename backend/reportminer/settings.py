@@ -92,14 +92,9 @@ WSGI_APPLICATION = 'reportminer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'reportminer',
-        'USER': 'postgres',
-        'PASSWORD': 'fucklife@6999',
-        'HOST': 'localhost',
-        'PORT': '5432',
-     
-}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation
@@ -155,6 +150,8 @@ REST_FRAMEWORK = {
 
 # openAI API key
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+CHAT_MODEL_NAME = os.getenv("CHAT_MODEL_NAME", "gpt-4o")
+
 
 # Embedding Configuration - COST OPTIMIZED
 ENABLE_AUTO_EMBEDDINGS = True
@@ -171,43 +168,46 @@ EMBEDDING_COST_ALERT = 100         # Alert at 100 calls
 MAX_SEGMENTS_PER_DOCUMENT = 50     # Limit segments per document
 SKIP_LARGE_DOCUMENTS = True        # Skip documents with too many segments
 
-# Logging Configuration
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-            'formatter': 'verbose'
-        },
-    },
-    'loggers': {
-        'apps.ingestion.vector_processor': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-        'apps.ingestion.text_processor': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
+
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# ChromaDB persistence configuration
+# ChromaDB persistence configuration
+CHROMA_PERSIST_DIR = os.getenv(
+    "CHROMA_PERSIST_DIR",
+    str(BASE_DIR / "chroma_data")  # ← Convert Path to string with str()
+)
+CHROMA_COLLECTION_NAME = os.getenv(
+    "CHROMA_COLLECTION_NAME",
+    "reportminer"
+)
+
+# Celery (background task) configuration
+CELERY_BROKER_URL = os.getenv(
+    "REDIS_URL",
+    "redis://localhost:6379/0"
+)
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+# ────────────────────────────────────────────────────────────────────────────────
+
+poppler_path = r"C:\Program Files\poppler-24.08.0\Library\bin"
+if poppler_path not in os.environ.get('PATH', ''):
+    os.environ['PATH'] = poppler_path + os.pathsep + os.environ['PATH']
+
+
+
+#splitter 
+INGESTION_ROW_EMBED_THRESHOLD = 200
+INGESTION_ROW_GROUP_SIZE = 50
+
+
+# ── CSV & EXCEL INGESTION TOGGLES ──────────────────────────────────────────
+# When True, load the entire CSV as one chunk. Otherwise split into row-chunks.
+CSV_FULL_SHEET_INGESTION: bool = False
+
+# If CSV_FULL_SHEET_INGESTION=False, this many rows per chunk:
+CSV_CHUNKSIZE: int = 50_000
+
+# When True, load each Excel sheet as one chunk. Otherwise fall back to row-by-row.
+EXCEL_FULL_SHEET_INGESTION: bool = True
