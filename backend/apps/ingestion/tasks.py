@@ -77,7 +77,7 @@ from .services.extractor import extract_raw
 from .services.splitter import split_text
 from .services.embedder import embed_texts
 from .services.vector_store import add_vectors
-
+from django.conf import settings
 from celery.utils.log import get_task_logger
 
 logger = get_task_logger(__name__)
@@ -143,6 +143,7 @@ def process_document(self, document_id):
     # ——>>> add this:
         logger.info(f"Generated {len(embeddings)} embeddings for Document {document_id}")
 
+        logger.info(f"[Celery] CHROMA_PERSIST_DIR = {settings.CHROMA_PERSIST_DIR}")
 
         # 5. Add vectors to ChromaDB
         add_vectors(chunks, embeddings)

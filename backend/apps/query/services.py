@@ -1,6 +1,9 @@
-# backend/apps/query/services.py
+# apps/query/services.py
 
+# 1) imports
 import chromadb
+from chromadb import PersistentClient
+from chromadb.config import Settings
 from django.conf import settings
 
 from langchain_chroma import Chroma
@@ -8,28 +11,26 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-# ── 1) Initialize Chroma client with persistent path ────────────────────────
-chroma_client = chromadb.PersistentClient(
-    path=getattr(settings, "CHROMA_PERSIST_DIR", "./chroma")
+# 2) initialize the Chroma client (using your settings value, no fallback)
+chroma_client = PersistentClient(
+    path=settings.CHROMA_PERSIST_DIR,
+    settings=Settings()
 )
 
-# ── 2) Configure embedding function (must match ingestion) ──────────────────
+# 3) configure the rest exactly as before
 embedding_function = OpenAIEmbeddings(
     model="text-embedding-ada-002",
     api_key=settings.OPENAI_API_KEY
 )
 
-# ── 3) Connect to Chroma vector store ───────────────────────────────────────
 vectordb = Chroma(
     client=chroma_client,
     collection_name=settings.CHROMA_COLLECTION_NAME,
     embedding_function=embedding_function,
 )
 
-# ── 4) Create retriever with top-k chunk recall ─────────────────────────────
 retriever = vectordb.as_retriever(search_kwargs={"k": 10})
 
-# ── 5) Custom prompt for better grounding ───────────────────────────────────
 QA_PROMPT = PromptTemplate(
     input_variables=["context", "question"],
     template=(
@@ -40,11 +41,10 @@ QA_PROMPT = PromptTemplate(
     )
 )
 
-# ── 6) Build the Retrieval-Augmented Generation (RAG) QA chain ──────────────
 qa_chain = RetrievalQA.from_chain_type(
     llm=ChatOpenAI(
         temperature=0,
-        model=settings.CHAT_MODEL_NAME,  # e.g. "gpt-4o" or "gpt-3.5-turbo"
+        model=settings.CHAT_MODEL_NAME,
         api_key=settings.OPENAI_API_KEY
     ),
     chain_type="stuff",
@@ -53,17 +53,10 @@ qa_chain = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": QA_PROMPT}
 )
 
-# ── 7) Run Query Interface ──────────────────────────────────────────────────
 def run_query(question: str) -> dict:
-    """
-    Run the RAG chain on `question` and return a dict with 'answer' and 'sources'.
-    """
-    result = qa_chain({"query": question})
+    result = qa_chain.invoke({"query": question})
     sources = [
-        {
-            **doc.metadata,           # Includes chunk_id, page, etc.
-            "text": doc.page_content  # Actual source text
-        }
+        {**doc.metadata, "text": doc.page_content}
         for doc in result["source_documents"]
     ]
     return {
