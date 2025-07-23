@@ -5,6 +5,7 @@ from .extractor import RawDocument
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tiktoken
 import re
+import pandas as pd
 
 
 # # Configurable thresholds for grouping large tables
@@ -152,25 +153,78 @@ def split_text(raw: RawDocument) -> List[Dict[str, Any]]:
                     "token_count": token_count
                 })
 
-    # ── Structured tables (no change) ────────────────────────────
+    # ── Structured tables with smart chunking ─────────────
     for table in raw.tables:
         sheet = table['sheet_name']
         df    = table['dataframe']
 
-        # Single full-table chunk
-        table_json = df.to_json(orient="records")
-        metadata = {
-            "source":     sheet,
-            "type":       "table",
-            "row_count":  len(df),
-            "columns":    df.columns.tolist()
-        }
-        token_count = count_tokens(table_json)
-        chunks.append({
-            "text":        table_json,
-            "metadata":    metadata,
-            "token_count": token_count
-        })
+        # Create base description for all chunks
+        base_description = f"This is a {sheet} dataset with the following columns: {', '.join(df.columns.tolist())}\n\n"
+        
+        # Check if table is too large for single chunk
+        test_json = df.to_json(orient="records")
+        estimated_tokens = count_tokens(base_description + test_json)
+        
+        # If table is small enough, keep as single chunk
+        if estimated_tokens <= 15000:  # Safe limit for single chunk
+            # Add sample data for better semantic understanding
+            if len(df) > 0:
+                base_description += "Sample records:\n"
+                sample_size = min(3, len(df))
+                for i in range(sample_size):
+                    row = df.iloc[i]
+                    row_desc = ", ".join([f"{col}: {val}" for col, val in row.items() if pd.notna(val)])
+                    base_description += f"- {row_desc}\n"
+                base_description += "\n"
+            
+            full_content = base_description + f"Complete dataset:\n{test_json}"
+            
+            metadata = {
+                "source":     sheet,
+                "type":       "table",
+                "row_count":  len(df),
+                "columns":    ", ".join(df.columns.tolist()),
+                "chunk_part": "complete"
+            }
+            token_count = count_tokens(full_content)
+            chunks.append({
+                "text":        full_content,
+                "metadata":    metadata,
+                "token_count": token_count
+            })
+        else:
+            # Split large table into smaller chunks
+            rows_per_chunk = 50  # Adjust based on data complexity
+            total_chunks = (len(df) + rows_per_chunk - 1) // rows_per_chunk
+            
+            for chunk_idx in range(total_chunks):
+                start_idx = chunk_idx * rows_per_chunk
+                end_idx = min(start_idx + rows_per_chunk, len(df))
+                chunk_df = df.iloc[start_idx:end_idx]
+                
+                # Create chunk-specific description
+                chunk_description = base_description
+                chunk_description += f"This is part {chunk_idx + 1} of {total_chunks}, containing rows {start_idx + 1}-{end_idx} ({len(chunk_df)} records):\n\n"
+                
+                # Add chunk data
+                chunk_json = chunk_df.to_json(orient="records")
+                full_content = chunk_description + chunk_json
+                
+                metadata = {
+                    "source":     sheet,
+                    "type":       "table",
+                    "row_count":  len(chunk_df),
+                    "columns":    ", ".join(df.columns.tolist()),
+                    "chunk_part": f"{chunk_idx + 1}/{total_chunks}",
+                    "start_row":  start_idx + 1,
+                    "end_row":    end_idx
+                }
+                token_count = count_tokens(full_content)
+                chunks.append({
+                    "text":        full_content,
+                    "metadata":    metadata,
+                    "token_count": token_count
+                })
 
     return chunks
 

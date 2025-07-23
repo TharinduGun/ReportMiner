@@ -113,7 +113,11 @@ def extract_raw(file_path: str) -> RawDocument:
             try:
                 df = pd.read_csv(file_path)
             except UnicodeDecodeError:
-                df = pd.read_csv(file_path, encoding='utf-8', errors='replace')
+                # Try different encodings
+                try:
+                    df = pd.read_csv(file_path, encoding='latin-1')
+                except:
+                    df = pd.read_csv(file_path, encoding='cp1252')
             tables.append({
                 'sheet_name': os.path.basename(file_path),
                 'dataframe': df,
@@ -130,8 +134,10 @@ def extract_raw(file_path: str) -> RawDocument:
             try:
                 reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize)
             except UnicodeDecodeError:
-                with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
-                    reader = pd.read_csv(f, iterator=True, chunksize=chunksize)
+                try:
+                    reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize, encoding='latin-1')
+                except:
+                    reader = pd.read_csv(file_path, iterator=True, chunksize=chunksize, encoding='cp1252')
 
             for i, chunk_df in enumerate(reader, start=1):
                 part_name = f"{os.path.basename(file_path)}_part{i}"
