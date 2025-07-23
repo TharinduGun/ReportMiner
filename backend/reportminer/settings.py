@@ -120,6 +120,9 @@ REST_FRAMEWORK = {
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 CHAT_MODEL_NAME = os.getenv('CHAT_MODEL_NAME', 'gpt-4o')
 
+# MCP (Model Context Protocol) settings
+MCP_ENABLED = os.getenv('MCP_ENABLED', 'False').lower() in ('true', '1', 'yes', 'on')
+
 # ChromaDB settings
 CHROMA_PERSIST_DIR = os.getenv(
     "CHROMA_PERSIST_DIR",
